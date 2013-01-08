@@ -885,6 +885,9 @@ h3 {
   font-size: 20.5px;
   color: #999;
 }
+li {
+  margin-left: 24px;
+}
 .profile {
   margin-top: 20px;
 }
