@@ -870,6 +870,16 @@ button.close{padding:0;cursor:pointer;background:transparent;border:0;-webkit-ap
   margin-bottom: 50px;
   padding-top: 60px;
 }
+.navbar-inner {
+  height: 39px;
+  min-height: 39px;
+  background: url(../img/headerbg.png) repeat-x !important;
+  background-color: #333 !important;
+}
+.navbar .linkedin,
+.navbar .github {
+  padding-top: 8px;
+}
 h3 {
   line-height: 1;
   font-size: 20.5px;
