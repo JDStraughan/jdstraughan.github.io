@@ -1,0 +1,93 @@
+---
+title: "Creating forms that don't resubmit in Kohana"
+layout: default
+---
+
+<h1 class="post">Creating forms that don't resubmit in Kohana</h1>
+<p class="date_published">30 Mar 2011</p>
+<div id="post">
+	<p>It is&nbsp;definitely&nbsp;one of my pet peeves: reloading a page only to see the "Confirm Form Resubmission" alert box that wants me to find my mouse and click on something that could have easily been prevented by the developer. &nbsp;This is 2011, for crying out loud, can't we have forms that don't suck?</p>
+
+<p>The easiest solution to this problem is to load all posted form data into the session, and then reload the page internally. &nbsp;This clears the POST request while maintaining the submission and makes for happier users (and less headaches about the same comment submitted 14 times in a row).</p>
+
+<p>Using Kohana's Session class makes it even simpler to remedy this ill of the internet. &nbsp;It really does not matter which driver you use, simply create a session and drop in the submission. &nbsp;The following controller action demonstrates the basics of this feature:</p>
+
+{% highlight php %}
+<?php defined('SYSPATH') or die('No direct script access.');
+
+class Controller_Form extends Controller {
+
+	public function action_test()
+	{
+		$session = Session::instance();
+		
+		$example = new Model_Example;
+		
+		$this->template->content = View::factory('form/test')
+			->bind('post', $post)
+			->bind('errors', $errors);
+		
+		if ($_POST)
+		{
+			
+			$post = $example->validate($_POST);
+			
+			if ($post->check())
+			{
+				// Process Form
+				$this->session->set('post', array());
+				Request::instance()->redirect(url::site('somewhere'));
+			} 
+			else
+			{
+				$this->session->set('errors', $e->errors());
+				$this->session->set('post', $_POST);
+				Request::instance()->redirect(url::site('back-here'));
+			}
+		} 
+		elseif ($this->session->get('post')) 
+		{
+			$_POST = $this->session->get('post');
+			$errors = $this->session->get('errors');
+			$this->session->delete('post');
+			$this->session->delete('errors');
+		}
+	}
+}
+{% endhighlight %}
+
+<p>Now a simple view script with a form is all that is needed to complete this exercise.  Although this is really just pseudo-code, I hope you get the idea.</p>
+
+<p>To see this in action, fill out the comment section below, but leave the email input blank. &nbsp;The form will have errors, the messages will be displayed, the from will remain sticky (you other data will persist), but a refresh of the page will not show any resubmission warnings. &nbsp;Hopefully, this makes you a happier user.  If not, let me know by commenting below, and feel free to ask any questions.</p></div>
+<div id="comments" class="clearfix">
+		
+	<div id="comment_header">
+		<h3>Comments (2) <br> These comments are frozen, as they are archived from my previous blog.</h3>
+	</div>
+		
+				<div class="comment clearfix ">
+			<p class="span2">
+								<img src="http://www.gravatar.com/avatar/d792df8d71cdd919daf59ef2fec048bf" alt="gravatar" />
+				<br /> 
+				 
+					<a href="http://kloopko.com">kemo</a>								<br /> 
+				<span class="date_created">
+					about a year ago				</span>
+			</p>
+			<p class="span10 pull-right">
+				I like the way of writting but there's a catch with the session key you're using: you should point users to use the actual form's name for it so that they can still normally use other forms after validation in this one fails (example).			</p>
+			
+		</div>
+				<div class="comment clearfix author-comment">
+			<p class="span2">
+								<img src="http://www.gravatar.com/avatar/159950296dc98fc2efde54faa38e04f8" alt="gravatar" />
+				<br /> 
+				 
+					<a href="http://jdstraughan.com">JDStraughan</a>								<br /> 
+				<span class="date_created">
+					about a year ago				</span>
+			</p>
+			<p class="span10 pull-right">
+				@kemo: That is a very good point.  I named the session 'post' key as it is really just psuedo-code, and wanted people to understand the concept.  I agree that in a real world scenario the session keys should be unique to the form being used.			</p>
+			
+		</div>
