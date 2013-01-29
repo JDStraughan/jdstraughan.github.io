@@ -1,122 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Jason D. Straughan - Ruby on Rails Developer - Texas</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jason Straughan is a Ruby/PHP developer, published author, and generally geeky dude from the Texas hill country.">
-    <meta name="author" content="Jason D. Straughan">
+---
+layout: default
+title: blog
+---
 
-    <link href="./assets/bootstrap.min.css" rel="stylesheet">
+{% for post in paginator.posts %}
 
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+   <!-- here add you post markup -->
+   <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+   <p class="author">
+    <span class="date">{{post.date | date_to_long_string }}</span>
+  </p>
+  <div class="content">
+    {{ post.excerpt }}
+  </div>
+{% endfor %}
 
-  </head>
+{% if paginator.total_pages > 1 %}
+<!-- Pagination links -->
+<div id="post-pagination" class="pagination">
 
-  <body>
+  {% if paginator.previous_page %}
+  <p class="previous">
+    {% if paginator.previous_page == 1 %}
+    <a href="/">Previous</a>
+    {% else %}
+    <a href="/page{{paginator.previous_page}}">Previous</a>
+    {% endif %}
+  </p>
+  {% else %}
+  <p class="previous disabled">
+    <span>Previous</span>
+  </p>
+  {% endif %}
 
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <div class="row">
-            <div class="span12">
-              <a href="https://github.com/jdstraughan" class='pull-right github'>
-                <img src="./img/github.png" />
-              </a>
-              <a href="http://www.linkedin.com/in/jdstraughan" class='pull-right linkedin'>
-                <img src="./img/linkedin.png" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <ul class="pages">
+    <li class="page">
+      {% if paginator.page == 1 %}
+      <span class="current-page">1</span>
+      {% else %}
+      <a href="/">1</a>
+      {% endif %}
+    </li>
 
-    <div class="container main-body">
-      <div class="row">      
-        <div class="span3 profile pull-right">
-          <p>
-            <img src="http://m.c.lnkd.licdn.com/mpr/mpr/shrink_200_200/p/1/000/0a9/169/1c491c9.jpg" alt="Jason Straughan, web developer"/>
-          </p> 
-          <ul class="contact-info">
-            <li><i class="icon-share"></i> <a href="http://jdstraughan.com">Visit my blog</a></li>
-            <li><i class="icon-share"></i> <a href="http://jdstraughan.com/page/resume">View my resume</a></li>
-            <li><i class="icon-share"></i> <a href="http://jdstraughan.com/page/portfolio">View my portfolio</a></li>
-            <li><i class="icon-share"></i> <a href="http://www.linkedin.com/in/jdstraughan">Visit my LinkedIn page</a></li>
-              <li><i class="icon-envelope"></i> <a href="mailto:jdstraughan@gmail.com?subject=We want to hire you NOW!&amp;body=We love your work and want to hire you at twice your normal rate.">Contact Jason via Email</a></li>
-          </ul>
-        </div>
-        <div class="span9">
-          <h1>Jason D. Straughan</h1>
-          <h3>Web Developer, Rubyist, Disc Golfer</h3>
-      
-          <h2>Summary</h2>
-          <p>
-            I enjoy developing software that allows me to find elegant solutions to complex problems. Recently converted Rubyist, I have a history developing in many languages, libraries, and frameworks, in medium to high traffic web properties for both the server and client side.
-          </p>
-          <p>
-          In the last few years I have lead development teams in the social networking and Software as a Service (SaaS) spaces to successful product launches.
-          </p>
-          <p>
-          I am also the author of the first published book on the Kohana 3 PHP Framework, "Beginning Kohana 3 Development", released in 2011 by Packt Publishing.
-          </p>  
-        </div>       
-      </div>
-      
-      <div class="row span12">
-        <h2>Skills</h2>
-         <ul class="skills span6">
-           <li>Ruby / Ruby on Rails / Rake applications</li>
-           <li>PHP including Kohana, ZendFramework, and CodeIgniter</li>
-           <li>ORM/DBAL - including ActiveRecord, Kohana ORM, and Doctrine 2</li>
-           <li>Javascript / AJAX including jQuery and MooTools</li>
-           <li>NoSQL Database experience - including MongoDB, CouchDB, Redis</li>
-           <li>Web Server experience with Apache and nginx</li>
-         </ul>
-         <ul class="span5">
-           <li>MySQL and PostgreSQL for RDBMS solutions</li>
-           <li>Git and SVN for source code management (SCM)</li>
-           <li>Frontend markup: HTML5, XHTML, XML, etc</li>
-           <li>CSS including preprocessors like SASS and LESS</li>
-           <li>Search Server Experience - including Solr and Sphinx</li>
-           <li>Hosting on AWS, Rackspace cloud, EngineYard, Heroku</li>
-         </ul>     
-       </div>   
-       <div class="span12">
-         <div class="hero-button">
-           <a href="mailto:jdstraughan@gmail.com?subject=We want to hire you NOW!&amp;body=We love your work and want to hire you at twice your normal rate." class="btn btn-success ">
-             <h2>Jason Straughan is Available for Hire</h2>
-             <p class="disclaimer">
-              Seeking: Full-time, Contract, Freelance, or Telecommute
-             </p>
-          </a>
-        </div>
-      </div>  
-     <footer class="footer span12">
-       <p>&copy; 2013 JDStraughan</p>
-     </footer>         
-    </div> <!-- /container -->
-  
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
-    <script type="text/javascript">google.load("jquery", "1.7.1");</script>
-    <script type="text/javascript" src="./assets/bootstrap.min.js"></script>
-    
-    <script type="text/javascript">
-    var clicky_site_ids = clicky_site_ids || [];
-    clicky_site_ids.push(100566336);
-    (function() {
-      var s = document.createElement('script');
-      s.type = 'text/javascript';
-      s.async = true;
-      s.src = '//static.getclicky.com/js';
-      ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
-    })();
-    </script>
-    <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100566336ns.gif" /></p></noscript>
-    
-  </body>
-</html>
+    {% for count in (2..paginator.total_pages) %}
+    <li class="page">
+      {% if count == paginator.page %}
+      <span class="current-page">{{count}}</span>
+      {% else %}
+      <a href="/page{{count}}">{{count}}</a>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+
+  {% if paginator.next_page %}
+  <p class="next">
+    <a href="/page{{paginator.next_page}}">Next</a>
+  </p>
+  {% else %}
+  <p class="next disabled">
+    <span>Next</span>
+  </p>
+  {% endif %}
+
+</div>
+{% endif %}

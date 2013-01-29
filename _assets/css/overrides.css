@@ -1,0 +1,10 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Droid Serif', serif;
+}
+code, pre, h1.about {
+  font-family: 'Droid Sans Mono', sans-serif;
+}
+h2.about {
+  color: #999;
+  font-size: 26px;
+}
