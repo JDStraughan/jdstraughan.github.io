@@ -36,7 +36,7 @@ Enter [NoNews](http://www.nonews.info) - the browser extension to save my (and y
 
 I've flirted with the idea of creating a browser extension for Google Chrome for quite some time.  After realizing my new found desire to avoid reading news sites would directly clash with my lack of will power, I decided to do what any lazy programmer would do: make some software to do it for me!
 
-Once installed, NoNews filters the sites visited by your browser, and issues a warning page whenever you attempt to view a news site.  For me, passive browsing has introduced me to countless depressing stories that have little direct impact on my life - I just get click, read, rinse, and repeat.  NoNews is designed to break this vicious cycle, reminding the user that this behavior is potentially harmful.
+Once installed, NoNews filters the sites visited by your browser, and issues a warning page whenever you attempt to view a news site.  For me, passive browsing has introduced me to countless depressing stories that have little direct impact on my life - I just click, read, rinse, and repeat.  NoNews is designed to break this vicious cycle, reminding the user that this behavior is potentially harmful.
 
 Recognizing that not all news is bad news, or unavoidable, I did include a couple of overrides.  First of all, every warning page has the ability to continue on to the news source using a one time pass.  The other option is the [snooze bar](http://www.nonews.info/how-to-snooze.html), which disables the NoNews filter for 15 minutes, allowing unbridled access to all the news that is news.
 
