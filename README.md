@@ -21,7 +21,3 @@ To make a similar pre-commit hook, follow these directions that I kindly lifted 
 ```
 
 Then just commit away and be happy.
-
-# License
-
-Public Domain - use at your own risk
