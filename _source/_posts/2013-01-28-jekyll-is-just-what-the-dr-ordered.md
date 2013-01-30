@@ -34,7 +34,7 @@ The part with static html pages, just like 1996.
 
 Only better.  Way better.
 
-Unlink anything 1996, jekyll is _blog aware_.  It is scriptable through [Liquid](http://liquidmarkup.org/) and extendable via [plugin system](https://github.com/mojombo/jekyll/wiki/Plugins). Best of all, plugins are just ruby scripts, so making your own is quite simple.  To get a jekyll blog up and running, all you need to do is install jekyll, create some posts, a layout, and voila: you have a blog.  It can get much more complex, but from 10,000 feet, jekyll is infinitely easier than any of the big blogging systems for a personal style blog.
+Unlike anything 1996, jekyll is _blog aware_.  It is scriptable through [Liquid](http://liquidmarkup.org/) and extendable via [plugin system](https://github.com/mojombo/jekyll/wiki/Plugins). Best of all, plugins are just ruby scripts, so making your own is quite simple.  To get a jekyll blog up and running, all you need to do is install jekyll, create some posts, a layout, and voila: you have a blog.  It can get much more complex, but from 10,000 feet, jekyll is infinitely easier than any of the big blogging systems for a personal style blog.
 
 What jekyll gives you for free is an incredibly fast, infinitely scalable, fun and easy to maintain blog that can be hosted for [free on GitHub](http://pages.github.com/), on [AWS S3](http://aws.typepad.com/aws/2011/02/host-your-static-website-on-amazon-s3.html), or anywhere html is served.
 
