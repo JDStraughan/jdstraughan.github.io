@@ -2,7 +2,7 @@
 layout: post
 published: true
 title: Jekyll is just what the doctor ordered
-tags: ["jekyll", "liquid"]
+tags: ["jekyll"]
 excerpt: "New year, new blog, new blog engine.  For the last few years, my blog has successfully sat stagnant with 2 posts in it.  Despite my total lack of attention to this site, it still managed to garner a few dozen readers a day, mainly from stackoverflow and some Russian blog. For several months I have been eyeing jekyll, the blog engine from Tom Preston-Werner of GitHub fame."
 ---
 
