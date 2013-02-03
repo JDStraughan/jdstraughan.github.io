@@ -10,8 +10,8 @@ There are several solutions to this problem, I found most of them suck.
 
 To solve this problem for myself, I simply have 2 repos:
 
-[JDStraughan.com](https://github.com/JDStraughan/JDStraughan.com) -> Contains the source for jekyll.
-[jdstraughan.github.com](https://github.com/JDStraughan/JDStraughan.com) -> Is just a git repo initialized inside my _site directory in the JDStraughan.com repo.
+- [JDStraughan.com](https://github.com/JDStraughan/JDStraughan.com) -> Contains the source for jekyll.
+- [jdstraughan.github.com](https://github.com/JDStraughan/jdstraughan.github.com) -> Is just a git repo initialized inside my _site directory in the JDStraughan.com repo.
 
 So now I can make all the changes I want to JDStraughan.com source, commit, etc.  When I am ready to publish (deploy) the changes to by site, I just commit and push the contents of my _site directory to jdstraughan.github.com repo and github publishes my static site.
 
