@@ -92,12 +92,14 @@
 
 <p>The biggest challenge I faced was understanding the difference between <a href="http://developer.chrome.com/extensions/manifestVersion.html">manifest versions 1 and 2</a>.  More importantly, I would find example code written for manifest v1, and attempt to make it work in v2.  This was the source of much frustration.  NoNews is written using manifest v2, so hopefully you don't have the same issues I did.</p>
 
+<p>Note: if there are future updates and you need to match source code, this walkthrough is using <a href="https://github.com/JDStraughan/nonews/tags">tagged version 0.5 of NoNews</a>.</p>
+
 <p>Speaking of manifest files, lets take a look at <code>manifest.json</code>:</p>
 
 <div class="highlight"><pre><code class="javascript"><span class="p">{</span>
   <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;No News (is Good News!)&quot;</span><span class="p">,</span>
   <span class="s2">&quot;manifest_version&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-  <span class="s2">&quot;version&quot;</span><span class="o">:</span> <span class="s2">&quot;0.4&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;version&quot;</span><span class="o">:</span> <span class="s2">&quot;0.5&quot;</span><span class="p">,</span>
   <span class="s2">&quot;homepage_url&quot;</span> <span class="o">:</span> <span class="s2">&quot;http://www.nonews.info&quot;</span><span class="p">,</span>
   <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;Warns you of news pages that may ruin your day ;)&quot;</span><span class="p">,</span>
   <span class="s2">&quot;icons&quot;</span><span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;16&quot;</span><span class="o">:</span> <span class="s2">&quot;img/icon16.png&quot;</span><span class="p">,</span>
@@ -415,7 +417,7 @@
 
 <div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">now</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">().</span><span class="nx">getTime</span><span class="p">();</span>
 <span class="kd">var</span> <span class="nx">snooze_end</span> <span class="o">=</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nx">nonews_snooze_end</span><span class="p">;</span>
-<span class="nx">setSnoozedClass</span><span class="p">(</span><span class="nx">now</span><span class="p">,</span> <span class="nx">snooze_end</span><span class="p">);</span>
+<span class="nx">setSnoozeContents</span><span class="p">(</span><span class="nx">now</span><span class="p">,</span> <span class="nx">snooze_end</span><span class="p">);</span>
 <span class="kd">var</span> <span class="nx">el</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;nonews_snooze&quot;</span><span class="p">);</span> 
 
 <span class="k">if</span> <span class="p">(</span><span class="nx">el</span><span class="p">)</span> <span class="p">{</span>
@@ -435,7 +437,7 @@
   <span class="nx">localStorage</span><span class="p">.</span><span class="nx">nonews_snooze_end</span> <span class="o">=</span> <span class="nx">now</span> <span class="o">+</span> <span class="mi">900000</span><span class="p">;</span>
 
   <span class="c1">// Update the class to reflect snooziness</span>
-  <span class="nx">setSnoozedClass</span><span class="p">(</span><span class="nx">now</span><span class="p">,</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nx">nonews_snooze_end</span><span class="p">);</span>
+  <span class="nx">setSnoozeContents</span><span class="p">(</span><span class="nx">now</span><span class="p">,</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nx">nonews_snooze_end</span><span class="p">);</span>
 
 <span class="p">}</span>
 
@@ -452,7 +454,7 @@
 <span class="p">}</span>
 
 <span class="c1">// Updates the snooze container with proper html to operate snooze bar</span>
-<span class="kd">function</span> <span class="nx">setSnoozedClass</span><span class="p">(</span><span class="nx">now</span><span class="p">,</span> <span class="nx">snooze_end</span><span class="p">)</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nx">setSnoozeContents</span><span class="p">(</span><span class="nx">now</span><span class="p">,</span> <span class="nx">snooze_end</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">if</span> <span class="p">(</span><span class="nx">snooze_end</span> <span class="o">&gt;</span> <span class="nx">now</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">contents</span> <span class="o">=</span> <span class="s1">&#39;&lt;span class=&quot;snoozing&quot;&gt;NoNews is snoozing for  the next &#39;</span> <span class="o">+</span> <span class="nx">snoozeTimeRemaining</span><span class="p">(</span><span class="nx">now</span><span class="p">,</span> <span class="nx">snooze_end</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;.&lt;/span&gt;&#39;</span><span class="p">;</span>
   <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
