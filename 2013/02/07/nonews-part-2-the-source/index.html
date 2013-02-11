@@ -181,36 +181,35 @@
 <span class="lineno"> 5</span>   <span class="nx">xmlreq</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="nx">fileURL</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
 <span class="lineno"> 6</span>   <span class="nx">xmlreq</span><span class="p">.</span><span class="nx">send</span><span class="p">();</span>
 <span class="lineno"> 7</span> 
-<span class="lineno"> 8</span>   <span class="c1">// The file should be in xmlreq.responseText array</span>
-<span class="lineno"> 9</span>   <span class="nx">blacklist</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">xmlreq</span><span class="p">.</span><span class="nx">responseText</span><span class="p">);</span>
-<span class="lineno">10</span>   <span class="nx">localStorage</span><span class="p">.</span><span class="nx">nonews_blacklist_urls</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">blacklist</span><span class="p">.</span><span class="nx">urls</span><span class="p">);</span>
-<span class="lineno">11</span> <span class="p">}</span>
-<span class="lineno">12</span> 
-<span class="lineno">13</span> <span class="c1">// Add the event listener with filters</span>
-<span class="lineno">14</span> <span class="nx">chrome</span><span class="p">.</span><span class="nx">webRequest</span><span class="p">.</span><span class="nx">onBeforeRequest</span><span class="p">.</span><span class="nx">addListener</span><span class="p">(</span>
-<span class="lineno">15</span>   <span class="kd">function</span><span class="p">(</span><span class="nx">tab</span><span class="p">)</span> <span class="p">{</span>
-<span class="lineno">16</span>     <span class="c1">// Check for manual bypass via query string</span>
-<span class="lineno">17</span>     <span class="k">if</span> <span class="p">(</span><span class="nx">tab</span><span class="p">.</span><span class="nx">url</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&quot;nonews_bypass=true&quot;</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-<span class="lineno">18</span>       <span class="k">return</span><span class="p">;</span>
-<span class="lineno">19</span>     <span class="p">}</span>
-<span class="lineno">20</span>     <span class="c1">// Check for snooze option</span>
-<span class="lineno">21</span>     <span class="nx">now</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">().</span><span class="nx">getTime</span><span class="p">();</span>
-<span class="lineno">22</span>     <span class="k">if</span> <span class="p">(</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">nonews_snooze_end</span> <span class="o">&gt;</span> <span class="nx">now</span><span class="p">)</span> <span class="p">{</span>
-<span class="lineno">23</span>       <span class="k">return</span><span class="p">;</span>
-<span class="lineno">24</span>     <span class="p">}</span>
-<span class="lineno">25</span>     <span class="c1">// Redirect to blocked site page, passing url for bypass option</span>
-<span class="lineno">26</span>     <span class="k">return</span> <span class="p">{</span> 
-<span class="lineno">27</span>       <span class="nx">redirectUrl</span><span class="o">:</span> <span class="s1">&#39;http://www.nonews.info/blocked-site.html?site=&#39;</span> <span class="o">+</span> <span class="nx">tab</span><span class="p">.</span><span class="nx">url</span>
-<span class="lineno">28</span>     <span class="p">}</span>
-<span class="lineno">29</span>   <span class="p">},</span>
-<span class="lineno">30</span>   <span class="c1">// filters</span>
-<span class="lineno">31</span>   <span class="p">{</span>
-<span class="lineno">32</span>     <span class="nx">urls</span><span class="o">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">nonews_blacklist_urls</span><span class="p">),</span>
-<span class="lineno">33</span>     <span class="nx">types</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;main_frame&quot;</span><span class="p">]</span>
-<span class="lineno">34</span>   <span class="p">},</span>
-<span class="lineno">35</span>   <span class="c1">// extratabSpec</span>
-<span class="lineno">36</span>   <span class="p">[</span><span class="s2">&quot;blocking&quot;</span><span class="p">]</span>
-<span class="lineno">37</span> <span class="p">);</span>
+<span class="lineno"> 8</span>   <span class="c1">// The file should be in xmlreq.responseText</span>
+<span class="lineno"> 9</span>   <span class="nx">localStorage</span><span class="p">.</span><span class="nx">nonews_blacklist_urls</span> <span class="o">=</span> <span class="nx">xmlreq</span><span class="p">.</span><span class="nx">responseText</span><span class="p">;</span>
+<span class="lineno">10</span> <span class="p">}</span>
+<span class="lineno">11</span> 
+<span class="lineno">12</span> <span class="c1">// Add the event listener with filters</span>
+<span class="lineno">13</span> <span class="nx">chrome</span><span class="p">.</span><span class="nx">webRequest</span><span class="p">.</span><span class="nx">onBeforeRequest</span><span class="p">.</span><span class="nx">addListener</span><span class="p">(</span>
+<span class="lineno">14</span>   <span class="kd">function</span><span class="p">(</span><span class="nx">tab</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">15</span>     <span class="c1">// Check for manual bypass via query string</span>
+<span class="lineno">16</span>     <span class="k">if</span> <span class="p">(</span><span class="nx">tab</span><span class="p">.</span><span class="nx">url</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&quot;nonews_bypass=true&quot;</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">17</span>       <span class="k">return</span><span class="p">;</span>
+<span class="lineno">18</span>     <span class="p">}</span>
+<span class="lineno">19</span>     <span class="c1">// Check for snooze option</span>
+<span class="lineno">20</span>     <span class="nx">now</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">().</span><span class="nx">getTime</span><span class="p">();</span>
+<span class="lineno">21</span>     <span class="k">if</span> <span class="p">(</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">nonews_snooze_end</span> <span class="o">&gt;</span> <span class="nx">now</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">22</span>       <span class="k">return</span><span class="p">;</span>
+<span class="lineno">23</span>     <span class="p">}</span>
+<span class="lineno">24</span>     <span class="c1">// Redirect to blocked site page, passing url for bypass option</span>
+<span class="lineno">25</span>     <span class="k">return</span> <span class="p">{</span> 
+<span class="lineno">26</span>       <span class="nx">redirectUrl</span><span class="o">:</span> <span class="s1">&#39;http://www.nonews.info/blocked-site.html?site=&#39;</span> <span class="o">+</span> <span class="nx">tab</span><span class="p">.</span><span class="nx">url</span>
+<span class="lineno">27</span>     <span class="p">}</span>
+<span class="lineno">28</span>   <span class="p">},</span>
+<span class="lineno">29</span>   <span class="c1">// filters</span>
+<span class="lineno">30</span>   <span class="p">{</span>
+<span class="lineno">31</span>     <span class="nx">urls</span><span class="o">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">nonews_blacklist_urls</span><span class="p">),</span>
+<span class="lineno">32</span>     <span class="nx">types</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;main_frame&quot;</span><span class="p">]</span>
+<span class="lineno">33</span>   <span class="p">},</span>
+<span class="lineno">34</span>   <span class="c1">// extratabSpec</span>
+<span class="lineno">35</span>   <span class="p">[</span><span class="s2">&quot;blocking&quot;</span><span class="p">]</span>
+<span class="lineno">36</span> <span class="p">);</span>
 </code></pre></div>
 
 
@@ -223,10 +222,9 @@
 <span class="lineno"> 5</span>   <span class="nx">xmlreq</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="nx">fileURL</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
 <span class="lineno"> 6</span>   <span class="nx">xmlreq</span><span class="p">.</span><span class="nx">send</span><span class="p">();</span>
 <span class="lineno"> 7</span> 
-<span class="lineno"> 8</span>   <span class="c1">// The file should be in xmlreq.responseText array</span>
-<span class="lineno"> 9</span>   <span class="nx">blacklist</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">xmlreq</span><span class="p">.</span><span class="nx">responseText</span><span class="p">);</span>
-<span class="lineno">10</span>   <span class="nx">localStorage</span><span class="p">.</span><span class="nx">nonews_blacklist_urls</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">blacklist</span><span class="p">.</span><span class="nx">urls</span><span class="p">);</span>
-<span class="lineno">11</span> <span class="p">}</span>
+<span class="lineno"> 8</span>   <span class="c1">// The file should be in xmlreq.responseText</span>
+<span class="lineno"> 9</span>   <span class="nx">localStorage</span><span class="p">.</span><span class="nx">nonews_blacklist_urls</span> <span class="o">=</span> <span class="nx">xmlreq</span><span class="p">.</span><span class="nx">responseText</span><span class="p">;</span>
+<span class="lineno">10</span> <span class="p">}</span>
 </code></pre></div>
 
 
@@ -250,7 +248,7 @@
 
 <p>The actual file is over 6300 lines long, containing most of the websites from <a href="http://www.labnol.org/tech/google-news-sources/19321/">this list of Google News sources</a>. I am sure you have observed that these are not URLs, rather they are <a href="http://developer.chrome.com/extensions/match_patterns.html">match patterns</a> that define our blacklist of sites.</p>
 
-<p>In lines 9 and 10 of the <code>nonews.js</code> file we see that the blacklist is loaded as a string into <code>localStorage</code>, and is now available for our extension to use.  Moving on we see the 2nd half of the event page:</p>
+<p>In line 9 of the <code>nonews.js</code> file we see that the blacklist is loaded as a string into <code>localStorage</code>, and is now available for our extension to use.  Moving on we see the 2nd half of the event page:</p>
 
 <div class="highlight"><pre><code class="javascript"><span class="c1">// Add the event listener with filters</span>
 <span class="nx">chrome</span><span class="p">.</span><span class="nx">webRequest</span><span class="p">.</span><span class="nx">onBeforeRequest</span><span class="p">.</span><span class="nx">addListener</span><span class="p">(</span>
