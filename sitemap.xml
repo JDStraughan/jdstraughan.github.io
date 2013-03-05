@@ -2,42 +2,46 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://jdstraughan.com/2013/01/28/jekyll-is-just-what-the-dr-ordered</loc>
-        <lastmod>2013-02-14T14:26:02-06:00</lastmod>
+        <lastmod>2013-03-04T17:38:29-06:00</lastmod>
     </url>
     <url>
         <loc>http://jdstraughan.com/2013/01/29/nonews-is-good-news</loc>
-        <lastmod>2013-02-14T14:26:02-06:00</lastmod>
+        <lastmod>2013-03-04T17:38:29-06:00</lastmod>
     </url>
     <url>
         <loc>http://jdstraughan.com/2013/02/07/nonews-part-2-the-source</loc>
-        <lastmod>2013-02-14T14:26:02-06:00</lastmod>
+        <lastmod>2013-03-04T17:38:29-06:00</lastmod>
     </url>
     <url>
         <loc>http://jdstraughan.com/2013/02/14/my-first-game-html5-lightcycles</loc>
-        <lastmod>2013-02-14T14:43:57-06:00</lastmod>
+        <lastmod>2013-03-04T17:38:29-06:00</lastmod>
+    </url>
+    <url>
+        <loc>http://jdstraughan.com/2013/03/05/html5-snake-with-source-code-walkthrough</loc>
+        <lastmod>2013-03-05T11:24:30-06:00</lastmod>
     </url>
     <url>
         <loc>http://jdstraughan.com/about.html</loc>
-        <lastmod>2013-02-14T14:26:02-06:00</lastmod>
+        <lastmod>2013-03-04T17:38:29-06:00</lastmod>
     </url>
     <url>
         <loc>http://jdstraughan.com/</loc>
-        <lastmod>2013-02-14T14:43:57-06:00</lastmod>
+        <lastmod>2013-03-05T11:24:30-06:00</lastmod>
     </url>
     <url>
         <loc>http://jdstraughan.com/page/resume/</loc>
-        <lastmod>2013-02-14T14:43:57-06:00</lastmod>
+        <lastmod>2013-03-05T11:24:30-06:00</lastmod>
     </url>
     <url>
         <loc>http://jdstraughan.com/portfolio.html</loc>
-        <lastmod>2013-02-14T14:26:02-06:00</lastmod>
+        <lastmod>2013-03-04T17:38:29-06:00</lastmod>
     </url>
     <url>
         <loc>http://jdstraughan.com/post/auth-module-for-kohana-31-using-orm-driver/</loc>
-        <lastmod>2013-02-14T14:43:57-06:00</lastmod>
+        <lastmod>2013-03-05T11:24:30-06:00</lastmod>
     </url>
     <url>
         <loc>http://jdstraughan.com/post/creating-forms-that-dont-resubmit-in-kohana/</loc>
-        <lastmod>2013-02-14T14:43:57-06:00</lastmod>
+        <lastmod>2013-03-05T11:24:30-06:00</lastmod>
     </url>
 </urlset>
