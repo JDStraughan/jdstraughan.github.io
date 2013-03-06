@@ -98,10 +98,10 @@
 
 <p>If you are visiting this page in an HTML5 capable browser, and are not on a mobile device, then this game should work for you.</p>
 
-<iframe style="width: 100%; height: 480px" src="http://jsfiddle.net/zT7V4/7/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe style="width: 100%; height: 480px" src="http://jsfiddle.net/zT7V4/13/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 
-<p>You can also view/play the game (in 640x480 mode) directly on <a href="http://jsfiddle.net/zT7V4/5/embedded/result/">jsfiddle</a>.</p>
+<p>You can also view/play the game (in 640x480 mode) directly on <a href="http://jsfiddle.net/zT7V4/9/embedded/result/">jsfiddle</a>.</p>
 
 <h2>The Source Code</h2>
 
@@ -545,11 +545,9 @@
 
 <p>Here were are, the final stage.  We've done all the heavy lifting of creating our game environment, our player, objectives, scoring, difficulty increases and even the drawing of our assets.  Now we need to pull it all together and make it run.</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">requestAnimationFrame</span> <span class="o">=</span>  <span class="nx">requestAnimationFrame</span> <span class="o">||</span>
-      <span class="nx">webkitRequestAnimationFrame</span> <span class="o">||</span>
-      <span class="nx">mozRequestAnimationFrame</span> <span class="o">||</span>
-      <span class="nx">msRequestAnimationFrame</span> <span class="o">||</span>
-      <span class="nx">oRequestAnimationFrame</span><span class="p">;</span>
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">requestAnimationFrame</span> <span class="o">=</span>  <span class="nb">window</span><span class="p">.</span><span class="nx">requestAnimationFrame</span> <span class="o">||</span>
+      <span class="nb">window</span><span class="p">.</span><span class="nx">webkitRequestAnimationFrame</span> <span class="o">||</span>
+      <span class="nb">window</span><span class="p">.</span><span class="nx">mozRequestAnimationFrame</span><span class="p">;</span>
 
 <span class="kd">function</span> <span class="nx">loop</span><span class="p">()</span> <span class="p">{</span>
   <span class="k">if</span> <span class="p">(</span><span class="nx">game</span><span class="p">.</span><span class="nx">over</span> <span class="o">==</span> <span class="kc">false</span><span class="p">)</span> <span class="p">{</span>
