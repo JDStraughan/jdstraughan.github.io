@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Meet neo4j - or how to stop worrying and love the graph | Jason Straughan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jason Straughan is a web developer living in San Antonio, Texas that specializes in Ruby, Rails, and all things web.">
+    <meta name="author" content="Jason D. Straughan (JDStraughan)">
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono|Droid+Serif:700' rel='stylesheet' type='text/css'>
+    <link href="http://jdstraughan.com/feed.xml" rel="alternate" type="application/rss+xml" title="JDStraughan | Rubyist, Web Developer, Disc Golfer" />
+    <link href='/assets/global-f7b1e142f4b49f865581d6a1996bdbdd.css' rel='stylesheet' type='text/css' />
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container-fluid">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="/">JDStraughan.com</a>
+            <div class="nav-collapse collapse">
+              <ul class="nav pull-right">
+                
+                  
+                    
+                      <li class="active">
+                    
+                  
+                
+                  <a href="/">blog</a></li>  
+                
+                
+                
+  
+    
+      <li><a href="/about.html">about</a></li>
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+      <li><a href="/portfolio.html">portfolio</a></li>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </div>
+      </div>
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        
+        <div class="span9">
+          <section class="main-content">
+            <div class="content">
+  <div id="post">
+    <h1>Meet neo4j - or how to stop worrying and love the graph</h1>
+    <h6>
+      28 Jun 2013 | Tags: <a href="/tag/neo4j.html" rel="tag">neo4j</a>, <a href="/tag/database.html" rel="tag">database</a>, <a href="/tag/graph.html" rel="tag">graph</a> 
+    </h6>
+    <hr>
+    <p>At just that moment when I was convinced the social networking revolution was no more enlightening than reality television, I began to realize that there was one great and powerful idea that needed this exact environment to gestate: the graph database. From Facebook's Graph Search, to LinkedIn's connection recommendations, graph databases are shaping the world around us.  Although graph theory has been around for centuries, its penchant for highly-related datasets makes it an attractive alternative to traditional RDBMS solutions in some situations.</p>
+
+<h3>What is a graph database?</h3>
+
+<p>For those that are unfamiliar with graph databases, they do not store graphs in the chart sense, but rather <a href="http://en.wikipedia.org/wiki/Graph_(abstract_data_type)">graph structures</a>. The three moving parts are nodes, properties, and relationships (edges).  These can be visualized nicely in this image from wikimedia:</p>
+
+<p><img src="http://upload.wikimedia.org/wikipedia/commons/3/3a/GraphDatabase_PropertyGraph.png" alt="graph example" /></p>
+
+<p>Just by looking at this first example, we can see that even representing a graph looks much different than the tables with relationship arrows that are generally associated with visualizing relational databases.</p>
+
+<p>The circles in this diagram are referred to as <strong>nodes</strong>. Each node has an identifier, and then a set of <strong>properties</strong> represented as key/value pairs. Further inspection of these nodes reveal they are schemaless, with 2 of the nodes containing name and age properties, and one of the nodes containing type and name properties.  This is common in other NoSQL databases, so we've not seen anything unique so far.</p>
+
+<p>Next we can see the arrow pointing from one node to another.  These arrows are <strong>relationships</strong> between the nodes.  Relating database records is common in both the NoSQL and SQL worlds. In our graph example, the astute observer would notice these relationships also have properties that are represented as key/value pairs.  Like their node counterparts, they are also schemaless, allowing arbitrary keys on different relationships.  It is worth noting, in the graph world, these relationships are referred to as <strong>edges</strong>.</p>
+
+<h3>Why use a graph database?</h3>
+
+<p>The most often use case given as an example for graphs is social networking.  This is also the arena that has (re)introduced graph structures to developers, however, graphs also offer a solution for modeling other data, and can be a powerful tool for recommendations, ratings, and highly interconnected data.</p>
+
+<p>Once we begin to understand how the graph works, we can begin to see uses for it everywhere.  Imagine dungeon games, where map locations, guild relationships, and other related data lives in a graph structure.  Family trees also come to mind, where you can traverse a <a href="http://en.wikipedia.org/wiki/Tree_(data_structure)">tree shaped graph</a> to learn more about one's heritage.</p>
+
+<p>Traversal is the way we <em>walk</em> graph structures, and in a tree shaped result, it is referred to as <a href="http://en.wikipedia.org/wiki/Tree_(data_structure)#Traversal_methods">walking the tree</a>.</p>
+
+<h3>Walking trees (and other fun shapes)</h3>
+
+<p>Traversal is simply the process of working from one node to the next, using relationships, based on whatever parameters have been established. <a href="http://en.wikipedia.org/wiki/Tree_traversal">Tree traversal</a> is more complex than <em>walking</em> a linear path, like steps 1 - 5, that can easily be visited in order.  With a tree shaped data structure, you can choose paths to visit every node, or find paths based on other criteria to return subsets of the total structure.</p>
+
+<p><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Sorted_binary_tree_inorder.svg/336px-Sorted_binary_tree_inorder.svg.png" alt="example of tree graph" /></p>
+
+<p>This is an example of a binary tree, being traversed in order.  Following the dotted line, we can see how the tree is traversed, or walked, to get all the nodes along the edges.</p>
+
+<p>Shapes refer to named structures found in graphs.  Most are named after the way they look when visualized.  Popular <em>shapes</em> include trees, stars, wheels, and <a href="http://en.wikipedia.org/wiki/Gallery_of_named_graphs">many others</a>.</p>
+
+<p><img src="http://upload.wikimedia.org/wikipedia/commons/7/7d/Star_graphs.svg" alt="example of star graph" /></p>
+
+<p>A <a href="http://en.wikipedia.org/wiki/Star_(graph_theory)">star graph</a> shows one node, with all the nodes directly connected to it via an edge (relationship).</p>
+
+<p>Now that we've reviewed the basics of graphs and their structures, lets take a look at using them in an actual database.</p>
+
+<h3>Introducing neo4j</h3>
+
+<p>There are several graph databases available to choose from, but the one I've worked with, and seems to have the most popularity right now, is neo4j. Neo4j's API can be accessed via Java, JPython, JRuby, PHP, .NET, Clojure, and REST.  There are several choices for querying neo4j, with cypher, neo4j's query language, being the most prominent. Neo4j ships with a data browser, uses ACID transactions, and scales via replication.  For a more in depth view, I'd encourage <a href="http://www.neo4j.org/">visiting their website</a>.</p>
+
+<h4>Learning neo4j</h4>
+
+<p>The neo4j team and community have done a great job of supplying educational material and <a href="http://www.neo4j.org/develop/example_data">sample datasets</a> for exploration. At the time of this blog post, they are even giving away a <a href="http://www.neo4j.org/learn">free copy of O'Reilly's new book: Graph Databases</a>.  The <a href="http://www.neo4j.org/learn/videos">video section</a> of their site is very informative, with the <a href="http://www.neo4j.org/learn/videos_webinar">webinars</a> particularly useful.</p>
+
+<h4>Querying with Cypher</h4>
+
+<p>The cypher query language is unique to neo4j, and while it is very different than other database query languages, I have found it to be quite expressive and easy to use.  The basics are simple: each query has a start, a match, and a return.  Traversing a graph requires knowing where you want to begin (the start node), the rules that will allow traversal (the match segment) and what data you are expecting back (the return).</p>
+
+<p>A simple cypher query looks something like this:</p>
+
+<pre><code>START n
+MATCH n-[r]-m
+RETURN r;
+</code></pre>
+
+<p>Before we can show an actual query that retrieves data, we need to load some nodes and relationships into our graph.</p>
+
+<p>Creating new nodes and relationships are also fairly straightforward. To create the graph example we've used above in neo4j (version 1.9) using cypher, we would need the following queries to create the nodes:</p>
+
+<pre><code>CREATE (n { name : 'Alice' , age : 18 });
+CREATE (n { name : 'Bob' , age : 22 });
+CREATE (n { type : 'Group' , name : 'Chess' });
+</code></pre>
+
+<p>These 3 queries each create a new node with properties.  The first 2 create people, the last one creates the "Chess" group.  Each query would also assign an internal ID to each node.</p>
+
+<p>Given the knowledge that Bob's node has an ID of 1, and Alice has an ID of 2, we can use these queries to create the relationships:</p>
+
+<pre><code>START alice = node(1), bob = node(2) 
+CREATE alice-[r:KNOWS { since:"2001/10/03"}]-&gt;bob
+RETURN r;
+
+START alice = node(1), bob = node(2) 
+CREATE bob-[r:KNOWS { since:"2001/10/04"}]-&gt;alice
+RETURN r;
+</code></pre>
+
+<p>Here we see 2 relationships defined: one from Alice to Bob, and another that relates Bob to Alice.  In neo4j relationships are unidirectional, so to represent the graph as described in our example image above, we needed to create 2 relationships.</p>
+
+<p>Given that the group Chess has a node ID of 3, we can relate Bob and Alice to the Chess group as follows:</p>
+
+<pre><code>START alice = node(1), chess_group = node(3) 
+CREATE alice-[r:IS_MEMBER { since:"2005/7/1"}]-&gt;chess_group
+RETURN r;
+
+START alice = node(1), chess_group = node(3) 
+CREATE chess_group-[r:MEMBERS]-&gt;alice 
+RETURN r;
+
+START bob = node(2), chess_group = node(3) 
+CREATE bob-[r:IS_MEMBER { since:"2011/2/14"}]-&gt;chess_group 
+RETURN r;
+
+START bob = node(2), chess_group = node(3) 
+CREATE chess_group-[r:MEMBERS]-&gt;bob 
+RETURN r;
+</code></pre>
+
+<p>Again, we created on directional relationship from Bob and Alice to the group, and another back from the group for each member.</p>
+
+<p>It is possible to create nodes and relationships in a single query.  For example, if we wanted to add a node for Joe, aged 19, and relate him as a friend of Alice starting on 2013/7/1, we could do this:</p>
+
+<pre><code>START alice=node(1) 
+CREATE p = (n {name:'Joe', age: 19})-[:KNOWS {since:"2013/7/1"}]-&gt;alice
+RETURN p;
+</code></pre>
+
+<p>Now that we've loaded some data into our graph, let's see what it takes to get some results back from some queries.</p>
+
+<p>Using our example graph from above, if we wanted to know who Bob knows, we could ask:</p>
+
+<pre><code>START bob=node(2) MATCH bob-[r:KNOWS]-&gt;m RETURN m.name;
+</code></pre>
+
+<p>Neo4j will reply:</p>
+
+<pre><code>+---------+
+| m.name  |
++---------+
+| "Alice" |
++---------+
+1 row
+</code></pre>
+
+<p>If we wanted to know the members of our Chess group, we could query:</p>
+
+<pre><code>START chess_group=node(3) MATCH chess_group-[r:MEMBERS]-&gt;m RETURN m.name;
+</code></pre>
+
+<p>Which returns:</p>
+
+<pre><code>+---------+
+| m.name  |
++---------+
+| "Bob"   |
+| "Alice" |
++---------+
+2 rows
+</code></pre>
+
+<p>While these examples are fairly simple, the larger the dataset becomes, the more complex queries you can make.  There are also methods to help you find things like the shortest path between nodes, etc.</p>
+
+<p>You can <a href="http://www.neo4j.org/learn/try">try cypher live on real data</a> via the neo4j website.  The web interface is very nice for playing with existing datasets, or creating your own.</p>
+
+<h3>Conclusion</h3>
+
+<p>While graph databases are not the silver bullet for all our data needs, they do offer a unique way of modeling data that is highly interconnected.  For web developers, the possibilities for graphs in web applications is almost endless.</p>
+
+<p>Neo4j is as good as a place as any to start learning about these data stores. With a robust API, active community, and the expressiveness of the cypher query language, I look forward to continuing developing web applications backed by graph databases for years to come.</p>
+
+  </div>
+  
+  <hr>
+  
+  
+    <p>Previous post: <a href="/2013/04/18/the-day-the-music-went-blind">The day the music went blind</a></p>
+  
+  
+
+  <hr>
+    
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'jdstraughan'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+  <hr>
+  
+  Related Posts
+  <ul class="naked">
+  
+    <li><a href="/2013/04/18/the-day-the-music-went-blind">The day the music went blind</a></li>
+  
+    <li><a href="/2013/03/31/darth-vader-dreams-of-electric-sheep">Darth Vader Dreams of Electric Sheep</a></li>
+  
+    <li><a href="/2013/03/14/homemade-ginger-ale-is-so-easy">Homemade Ginger Ale that is so easy (even a 7 year old can do it)</a></li>
+  
+    <li><a href="/2013/03/05/html5-snake-with-source-code-walkthrough">HTML5 Snake source code walkthrough</a></li>
+  
+    <li><a href="/2013/02/14/my-first-game-html5-lightcycles">My first game - HTML5 lightcycles</a></li>
+  
+    <li><a href="/2013/02/07/nonews-part-2-the-source">NoNews Part II - The Source</a></li>
+  
+    <li><a href="/2013/01/29/nonews-is-good-news">NoNews (is Good News!)</a></li>
+  
+    <li><a href="/2013/01/28/jekyll-is-just-what-the-dr-ordered">Jekyll is just what the doctor ordered</a></li>
+  
+  </ul>
+</div>
+
+          </section>
+        </div><!--/span-->
+        
+        <div class="span3">
+
+          <img src="/img/jason-straughan.png" width="183" height="275" alt="Jason Straughan" class="mypic">
+          <h5 class="myname">Jason Straughan</h5>
+          <p class="mybio">I live in the beautiful Texas hill country where I concentrate on building great web applications, writing, and enjoying time with my family. When I'm not building web stuff, I like to play disc golf and build LEGOs with my son.</p>
+          
+          <hr>
+          
+          <div class="contact-me">
+            <a href="https://github.com/jdstraughan">
+              <img src="/img/icons/Github.png" width="47" height="47" alt="Github">
+            </a>
+            <a href="https://twitter.com/jdstraughan">
+              <img src="/img/icons/Twitter.png" width="47" height="47" alt="Twitter">
+            </a>
+            <a href="http://www.linkedin.com/in/jdstraughan/">
+              <img src="/img/icons/LinkedIn.png" width="47" height="47" alt="LinkedIn">
+            </a>
+            <a href="http://jdstraughan.com/feed.xml">
+              <img src="/img/icons/RSS.png" width="47" height="47" alt="RSS">
+            </a>
+            <a href="mailto:jasons@grok-interactive.com">
+              <img src="/img/icons/Mail.png" width="47" height="47" alt="Mail">
+            </a>
+          </div>
+                    
+          <hr>
+          
+          <div class="grok">
+            <a href="http://www.grok-interactive.com">
+              <img src="/img/grok-transparent.png" width="143" height="59" alt="Grok Interactive, LLC">
+              <p>We Grok the Web</p>  
+            </a>
+          </div>
+          
+          <hr>
+          
+          <h3>Recent Posts</h3>
+          <ul class="naked">
+          
+           <li><a href="/2013/06/28/neo4j-or-how-to-stop-worrying-and-love-the-graph">Meet neo4j - or how to stop worrying and love the graph</a></li>
+          
+           <li><a href="/2013/04/18/the-day-the-music-went-blind">The day the music went blind</a></li>
+          
+           <li><a href="/2013/03/31/darth-vader-dreams-of-electric-sheep">Darth Vader Dreams of Electric Sheep</a></li>
+          
+           <li><a href="/2013/03/14/homemade-ginger-ale-is-so-easy">Homemade Ginger Ale that is so easy (even a 7 year old can do it)</a></li>
+          
+           <li><a href="/2013/03/05/html5-snake-with-source-code-walkthrough">HTML5 Snake source code walkthrough</a></li>
+          
+           <li><a href="/2013/02/14/my-first-game-html5-lightcycles">My first game - HTML5 lightcycles</a></li>
+          
+          </ul>
+          
+          <hr>
+          
+          <h3>Posts by Tag</h3>
+          <div id="tag-cloud">
+            <a href="/tag/chrome%20extension.html" class="set-2">chrome extension</a> <a href="/tag/cooking.html" class="set-1">cooking</a> <a href="/tag/database.html" class="set-1">database</a> <a href="/tag/game%20development.html" class="set-2">game development</a> <a href="/tag/general.html" class="set-2">general</a> <a href="/tag/graph.html" class="set-1">graph</a> <a href="/tag/html5.html" class="set-2">html5</a> <a href="/tag/javascript.html" class="set-5">javascript</a> <a href="/tag/jekyll.html" class="set-1">jekyll</a> <a href="/tag/neo4j.html" class="set-1">neo4j</a> <a href="/tag/soda%20making.html" class="set-1">soda making</a>
+          </div>
+          
+        </div><!--/span-->
+      </div><!--/row-->
+
+      <hr>
+
+      <footer>
+        <p>&copy; 2012 Jason D. Straughan | JDStraughan.com</p>
+        <p>Hosted for free on <a href="http://pages.github.com/">GitHub Pages</a> and powered by <a href="http://jekyllrb.com/">jekyll</a>.</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src='/assets/global-4889471e1c5cff846d798343dbe2fc7f.js' type='text/javascript'></script>
+
+    <script src="//static.getclicky.com/js" type="text/javascript"></script>
+    <script type="text/javascript">try{ clicky.init(66405120); }catch(e){}</script>
+    <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/66405120ns.gif" /></p></noscript>
+  </body>
+</html>
