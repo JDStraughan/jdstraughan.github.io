@@ -7,7 +7,7 @@
 		<atom:link href="http://jdstraughan.com//feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
-				<title>Meet neo4j - or how to stop worrying and love the graph</title>
+				<title>Neo4j - or how I learned to stop worrying and love the graph</title>
 				<description>&lt;p&gt;At just that moment when I was convinced the social networking revolution was no more enlightening than reality television, I began to realize that there was one great and powerful idea that needed this exact environment to gestate: the graph database. From Facebook's Graph Search, to LinkedIn's connection recommendations, graph databases are shaping the world around us.  Although graph theory has been around for centuries, its penchant for highly-related datasets makes it an attractive alternative to traditional RDBMS solutions in some situations.&lt;/p&gt;
 
 &lt;h3&gt;What is a graph database?&lt;/h3&gt;
@@ -161,8 +161,8 @@ RETURN p;
 &lt;p&gt;Neo4j is as good as a place as any to start learning about these data stores. With a robust API, active community, and the expressiveness of the cypher query language, I look forward to continuing developing web applications backed by graph databases for years to come.&lt;/p&gt;
 </description>
 				<pubDate>Fri, 28 Jun 2013 00:00:00 -0500</pubDate>
-				<link>http://jdstraughan.com//2013/06/28/neo4j-or-how-to-stop-worrying-and-love-the-graph</link>
-				<guid isPermaLink="true">http://jdstraughan.com//2013/06/28/neo4j-or-how-to-stop-worrying-and-love-the-graph</guid>
+				<link>http://jdstraughan.com//2013/06/28/neo4j-or-how-I-learned-to-stop-worrying-and-love-the-graph</link>
+				<guid isPermaLink="true">http://jdstraughan.com//2013/06/28/neo4j-or-how-I-learned-to-stop-worrying-and-love-the-graph</guid>
 			</item>
 		
 			<item>
