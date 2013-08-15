@@ -33,10 +33,12 @@
         <lastmod>2013-07-01T09:08:30-05:00</lastmod>
     </url>
     <url>
-        <loc>
-            http://jdstraughan.com/2013/07/01/neo4j-or-how-I-learned-to-stop-worrying-and-love-the-graph
-        </loc>
-        <lastmod>2013-07-01T14:14:37-05:00</lastmod>
+        <loc>http://jdstraughan.com/2013/07/01/introduction-to-graph-databases-using-neo4j</loc>
+        <lastmod>2013-07-01T18:29:30-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://jdstraughan.com/2013/08/14/3-Day-Startup-San-Antonio-at-Geekdom-2013</loc>
+        <lastmod>2013-08-15T07:34:33-05:00</lastmod>
     </url>
     <url>
         <loc>http://jdstraughan.com/about.html</loc>
@@ -48,11 +50,11 @@
     </url>
     <url>
         <loc>http://jdstraughan.com/</loc>
-        <lastmod>2013-07-01T14:14:37-05:00</lastmod>
+        <lastmod>2013-08-15T07:34:33-05:00</lastmod>
     </url>
     <url>
         <loc>http://jdstraughan.com/page/resume/</loc>
-        <lastmod>2013-07-01T14:14:37-05:00</lastmod>
+        <lastmod>2013-08-15T07:34:33-05:00</lastmod>
     </url>
     <url>
         <loc>http://jdstraughan.com/portfolio.html</loc>
@@ -60,10 +62,10 @@
     </url>
     <url>
         <loc>http://jdstraughan.com/post/auth-module-for-kohana-31-using-orm-driver/</loc>
-        <lastmod>2013-07-01T14:14:37-05:00</lastmod>
+        <lastmod>2013-08-15T07:34:33-05:00</lastmod>
     </url>
     <url>
         <loc>http://jdstraughan.com/post/creating-forms-that-dont-resubmit-in-kohana/</loc>
-        <lastmod>2013-07-01T14:14:37-05:00</lastmod>
+        <lastmod>2013-08-15T07:34:33-05:00</lastmod>
     </url>
 </urlset>

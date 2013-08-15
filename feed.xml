@@ -7,7 +7,80 @@
 		<atom:link href="http://jdstraughan.com//feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
-				<title>Neo4j - or how I learned to stop worrying and love the graph</title>
+				<title>3 Day Startup San Antonio at Geekdom (Summer 2013)</title>
+				<description>&lt;p&gt;This past weekend I was fortunate enough to participate in the &lt;a href=&quot;http://3dssanantonio.com/&quot;&gt;3 Day Startup | San Antonio&lt;/a&gt; event at &lt;a href=&quot;http://geekdom.com/&quot;&gt;Geekdom&lt;/a&gt; as a mentor.  If you are not familiar with 3 Day Startup (3DS), the website offers this description:&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;The idea of 3 Day Startup is simple: start a company over the course of three days. We rent work space for an entire weekend, recruit 40 students and young professionals with a wide range of backgrounds, cater food and drinks, invite top-notch entrepreneurs and investors, pick the best idea for a software startup during the Friday brainstorming session, and release a minimal prototype by Sunday night. The goal is to build enough momentum among a network of motivated people to sustain the company beyond the weekend.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;The program embraces the &lt;a href=&quot;http://en.wikipedia.org/wiki/Lean_Startup&quot;&gt;lean startup&lt;/a&gt; methodology to engage customers along the product development lifecycle to properly align the company's offerings with the customer's needs.  Using the &lt;a href=&quot;http://leanstack.com/&quot;&gt;lean canvas&lt;/a&gt; as a guide map, teams are challenged to identify a problem, propose a solution, engage in customer development, pivot as necessary, and emerge with a prototype that can be pitched to a panel of investors.&lt;/p&gt;
+
+&lt;p&gt;On the first day, participants were broken into groups where they brainstormed ideas for problems and solutions that could be prototyped in 72 hours or less. They voted on a subset of these ideas, and the idea originators began recruiting talent to join their company for the weekend.  Then the teams organize and begin the first draft of their lean canvases.&lt;/p&gt;
+
+&lt;p&gt;After spending Friday night determining their problem, unique value proposition, potential customers, potential solutions, and filling out the rest of the lean canvas worksheet, Saturday starts off with a presentation on customer development.  Then the participants are asked to leave the building, and actually go out into the world in search of potential customers to interview.&lt;/p&gt;
+
+&lt;p&gt;Much like performing experiments in a chemistry lab to determined the plausibility of a theory, the teams used real potential customers to help them determine the validity of their problem, and find out if their solution was the right fit.  By learning more about the actual customer needs in the domain, the teams could make more informed decisions about how their company was going to move forward.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3&gt;Example Lean Canvas&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/cornholio_lean_canvas_example.png&quot; alt=&quot;Lean Canvas Example&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This lean canvas for a fictitious startup, &lt;a href=&quot;http://cornhol.io&quot;&gt;cornhol.io&lt;/a&gt;, was created using the &lt;a href=&quot;https://drive.google.com/previewtemplate?id=16uOd158UzJM9oqGWgJOtbppzGNPmZ4fWMSV6_xBz3Z8&amp;amp;mode=public&amp;amp;pli=1#&quot;&gt;Lean Canvas Google Docs Template&lt;/a&gt; by &lt;a href=&quot;https://drive.google.com/templates?view=public&amp;amp;authorId=11994523493363598636&quot;&gt;Lucas Rodriguez Cervera&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;By Saturday afternoon, most teams had realized they were going to need to make some adjustments to properly align themselves with their target market.  For some teams this meant changing their solution, others had to adjust the problem as well, while some teams had to find new problems to solve altogether.  Much like in a real business, adaptation is requisite to survival.&lt;/p&gt;
+
+&lt;p&gt;Teams worked late into the night on Saturday, rounding out their lean canvases, making the necessary changes to stay relevant to their demographic.  They began to analyze revenue streams, customer acquisition funnels, discuss product details, and start thinking about what a prototype was going to look like.&lt;/p&gt;
+
+&lt;p&gt;Sunday morning started off with breakfast presentation on how to pitch to investors.  Examples were shown, dos and don'ts were advised, and the teams were sent back to their rooms to work on their pitches, with first drafts being given to the entire group over lunch. Slide decks began to came together, presenters were picked from each group, and each company had their first opportunity to show off their new product or service.&lt;/p&gt;
+
+&lt;p&gt;After having a chance to practice their first draft pitches to the group, and eating lunch watching the other groups in turn, teams scrambled to make the adjustments needed to bring their ideas to life.&lt;/p&gt;
+
+&lt;p&gt;It's crunch-time.  In mere hours each team will go before potential investors, family, friends, and members of the business community to pitch their companies, and answer questions from our panel of experts.  Their stories are tightened up, the slides are scrutinized, rearranged, and reordered.  The presenter practices over and over, perfecting each idea, sentence, word.&lt;/p&gt;
+
+&lt;p&gt;Then it happens.  One by one, the teams present their idea, pitching to live people.  The panelists ask questions, prod for deeper understanding, and try to determine the viability of the ideas and teams.&lt;/p&gt;
+
+&lt;p&gt;An important lesson I learned from 3DS: the idea is the vehicle needed to learn the process. While some ideas are better than others, it is customer interviews that hammer these ideas into viable business candidates.  Tenacity is often the deciding factor in a team's success.  Mentors give advice, customers give feedback, but ultimately it is the teams that must make the hard decisions, assemble a solution, and stand by it during the final presentation.&lt;/p&gt;
+
+&lt;p&gt;This was my first experience with 3DS and I was thankful to be paired with seasoned mentors; entrepreneurs that had one or more 3DS weekend under their belt.  I'm confident I learned just as much as the participants, maybe more. I was very impressed with the teams and their accomplishments in such a short amount of time, and hope to stay in contact with many participants for years to come.  The lessons, people, and inspiration will have long-term effects on my professional and personal life.&lt;/p&gt;
+
+&lt;p&gt;A special thanks to the 3DS organizers: &lt;a href=&quot;http://girdley.com/&quot;&gt;Michael Girdley&lt;/a&gt;, &lt;a href=&quot;http://www.ryantanner.org/&quot;&gt;Ryan Tanner&lt;/a&gt;, and &lt;a href=&quot;http://venturelab.net/about/our-team/&quot;&gt;Luz Cristal Glangchai&lt;/a&gt; for making this happen, and giving me the opportunity to participate.&lt;/p&gt;
+
+&lt;p&gt;Below you'll find links to the final pitches, and an interview with some of the mentors (including myself).&lt;/p&gt;
+
+&lt;h3&gt;Final Pitches&lt;/h3&gt;
+
+&lt;iframe width=&quot;640&quot; height=&quot;385&quot; src=&quot;http://cdn.livestream.com/embed/3dssasummer?layout=4&amp;clip=flv_8840c91a-53b8-4694-aee4-5792e03f2d05&amp;color=0xe7e7e7&amp;autoPlay=false&amp;mute=false&amp;iconColorOver=0x888888&amp;iconColor=0x777777&amp;allowchat=true&amp;height=385&amp;width=640&quot; style=&quot;border:0;outline:0&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt;
+
+
+&lt;div style=&quot;font-size:11px;padding-top:10px;text-align:center;width:640px&quot;&gt;Watch &lt;a href=http://www.livestream.com/?utm_source=lsplayer&amp;amp;utm_medium=embed&amp;amp;utm_campaign=footerlinks title=live streaming video&gt;live streaming video&lt;/a&gt; from &lt;a href=http://www.livestream.com/3dssasummer?utm_source=lsplayer&amp;amp;utm_medium=embed&amp;amp;utm_campaign=footerlinks title=Watch 3dssasummer at livestream.com&gt;3dssasummer&lt;/a&gt; at livestream.com&lt;/div&gt;
+
+
+&lt;h3&gt;Interviews&lt;/h3&gt;
+
+&lt;iframe width=&quot;640&quot; height=&quot;385&quot; src=&quot;http://cdn.livestream.com/embed/3dssasummer?layout=4&amp;clip=flv_fe20f99d-dbbb-4e4c-a30e-d7534c82d0f8&amp;color=0xe7e7e7&amp;autoPlay=false&amp;mute=false&amp;iconColorOver=0x888888&amp;iconColor=0x777777&amp;allowchat=true&amp;height=385&amp;width=640&quot; style=&quot;border:0;outline:0&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt;
+
+
+&lt;div style=&quot;font-size:11px;padding-top:10px;text-align:center;width:640px&quot;&gt;Watch &lt;a href=http://www.livestream.com/?utm_source=lsplayer&amp;amp;utm_medium=embed&amp;amp;utm_campaign=footerlinks title=live streaming video&gt;live streaming video&lt;/a&gt; from &lt;a href=http://www.livestream.com/3dssasummer?utm_source=lsplayer&amp;amp;utm_medium=embed&amp;amp;utm_campaign=footerlinks title=Watch 3dssasummer at livestream.com&gt;3dssasummer&lt;/a&gt; at livestream.com&lt;/div&gt;
+
+
+
+
+&lt;iframe width=&quot;640&quot; height=&quot;385&quot; src=&quot;http://cdn.livestream.com/embed/3dssasummer?layout=4&amp;clip=flv_52c129ee-39e1-4259-bfaa-b88def9e3d5a&amp;color=0xe7e7e7&amp;autoPlay=false&amp;mute=false&amp;iconColorOver=0x888888&amp;iconColor=0x777777&amp;allowchat=true&amp;height=385&amp;width=640&quot; style=&quot;border:0;outline:0&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt;
+
+
+&lt;div style=&quot;font-size:11px;padding-top:10px;text-align:center;width:640px&quot;&gt;Watch &lt;a href=http://www.livestream.com/?utm_source=lsplayer&amp;amp;utm_medium=embed&amp;amp;utm_campaign=footerlinks title=live streaming video&gt;live streaming video&lt;/a&gt; from &lt;a href=http://www.livestream.com/3dssasummer?utm_source=lsplayer&amp;amp;utm_medium=embed&amp;amp;utm_campaign=footerlinks title=Watch 3dssasummer at livestream.com&gt;3dssasummer&lt;/a&gt; at livestream.com&lt;/div&gt;
+
+</description>
+				<pubDate>Wed, 14 Aug 2013 00:00:00 -0500</pubDate>
+				<link>http://jdstraughan.com//2013/08/14/3-Day-Startup-San-Antonio-at-Geekdom-2013</link>
+				<guid isPermaLink="true">http://jdstraughan.com//2013/08/14/3-Day-Startup-San-Antonio-at-Geekdom-2013</guid>
+			</item>
+		
+			<item>
+				<title>Introduction to Graph Databases using Neo4j</title>
 				<description>&lt;p&gt;At just that moment when I was convinced the social networking revolution was no more enlightening than reality television, I began to realize that there was one great and powerful idea that needed this exact environment to gestate: the graph database. From Facebook's Graph Search, to LinkedIn's connection recommendations, graph databases are shaping the world around us.  Although graph theory has been around for centuries, its penchant for highly-related datasets makes it an attractive alternative to traditional RDBMS solutions in some situations.&lt;/p&gt;
 
 &lt;h3&gt;What is a graph database?&lt;/h3&gt;
@@ -154,6 +227,10 @@ RETURN p;
 
 &lt;p&gt;You can &lt;a href=&quot;http://www.neo4j.org/learn/try&quot;&gt;try cypher live on real data&lt;/a&gt; via the neo4j website.  The web interface is very nice for playing with existing datasets, or creating your own.&lt;/p&gt;
 
+&lt;h3&gt;Beyond Bob and Alice&lt;/h3&gt;
+
+&lt;p&gt;Looking at social graphs with Bob and Alice is fun and all, but the real world is a bit more interesting that 2 folks and a chess club.  To really our hands dirty using graphs, lets explore something a bit more real.&lt;/p&gt;
+
 &lt;h3&gt;Conclusion&lt;/h3&gt;
 
 &lt;p&gt;While graph databases are not the silver bullet for all our data needs, they do offer a unique way of modeling data that is highly interconnected.  For web developers, the possibilities for graphs in web applications is almost endless.&lt;/p&gt;
@@ -161,8 +238,8 @@ RETURN p;
 &lt;p&gt;Neo4j is as good as a place as any to start learning about these data stores. With a robust API, active community, and the expressiveness of the cypher query language, I look forward to continuing developing web applications backed by graph databases for years to come.&lt;/p&gt;
 </description>
 				<pubDate>Mon, 01 Jul 2013 00:00:00 -0500</pubDate>
-				<link>http://jdstraughan.com//2013/07/01/neo4j-or-how-I-learned-to-stop-worrying-and-love-the-graph</link>
-				<guid isPermaLink="true">http://jdstraughan.com//2013/07/01/neo4j-or-how-I-learned-to-stop-worrying-and-love-the-graph</guid>
+				<link>http://jdstraughan.com//2013/07/01/introduction-to-graph-databases-using-neo4j</link>
+				<guid isPermaLink="true">http://jdstraughan.com//2013/07/01/introduction-to-graph-databases-using-neo4j</guid>
 			</item>
 		
 			<item>
