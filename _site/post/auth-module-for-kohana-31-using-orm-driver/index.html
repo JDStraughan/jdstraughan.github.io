@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Blog of San Antonio Web Developer, Rubyist, and Entrepreneur Jason D. Straughan">
+
+    <title>Auth module for Kohana 3.1 using ORM Driver - JDStraughan</title>
+
+    <link rel="canonical" href="http://jdstraughan.com/post/auth-module-for-kohana-31-using-orm-driver/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/clean-blog.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">JDStraughan</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/about.html">About</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <h1 class="post">Auth module for Kohana 3.1 using ORM Driver</h1>
+<p class="date_published">26 Mar 2011</p>
+<div id="post">
+	<p>One of the changes to the 3.1 release of Kohana has been the removal of the ORM driver as part of the official Auth module. &nbsp;To avoid the confusion that the Auth module required the ORM module, Auth now ships with only a file driver.</p>
+
+<p>This has left some people under the impression that in order to use the ORM, porting a driver is necessary. &nbsp;This is not the case, in fact, the ORM Auth driver is now living in the ORM module with all the database schema examples in MySQL and PostgreSQL.</p>
+
+<p>To get started, you are first going to need to have Kohana 3.1 installed with the Auth, Database, and ORM modules enabled and configured.  In your <code>APP_PATH/config</code> directory your auth.php configuration file needs to have the driver set to use the ORM, and a <code>hash_key</code> must be specified.  Here is an example of a complete <code>auth.php</code> config file:</p>
+
+<h3>Auth configuration: config/auth.php</h3>
+
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span> <span class="nb">defined</span><span class="p">(</span><span class="s1">&#39;SYSPATH&#39;</span><span class="p">)</span> <span class="k">or</span> <span class="k">die</span><span class="p">(</span><span class="s1">&#39;No direct access allowed.&#39;</span><span class="p">);</span>
+
+<span class="k">return</span> <span class="k">array</span><span class="p">(</span>
+
+	<span class="s1">&#39;driver&#39;</span>       <span class="o">=&gt;</span> <span class="s1">&#39;orm&#39;</span><span class="p">,</span>
+	<span class="s1">&#39;hash_method&#39;</span>  <span class="o">=&gt;</span> <span class="s1">&#39;sha256&#39;</span><span class="p">,</span>
+	<span class="s1">&#39;hash_key&#39;</span>     <span class="o">=&gt;</span> <span class="s1">&#39;Never gonna give you up&#39;</span><span class="p">,</span>
+	<span class="s1">&#39;lifetime&#39;</span>     <span class="o">=&gt;</span> <span class="mi">1209600</span><span class="p">,</span>
+	<span class="s1">&#39;session_key&#39;</span>  <span class="o">=&gt;</span> <span class="s1">&#39;auth_user&#39;</span>
+
+<span class="p">);</span>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
+
+<p>Once this is accomplished, you will want to add the necessary database tables to allow the ORM driver to function properly.</p>
+
+<p>Supplied in the ORM module, you will find the example database schemas, and you can view them here for <a href="">MySQL</a> and <a href="-rte-tmp-tag-">PostgreSQL</a>. These are basic, example schemas that show the core functionality, and these can be used as foundations to build your final user authentication solution.</p><p>For this tutorial, we will be using MySQL for our database. If you are using Postgres, there should not be too many differences as the ORM is database agnostic.</p>
+
+<p>The schema can be found at <a href="https://github.com/kohana/orm/blob/3.1%2Fmaster/auth-schema-mysql.sql">https://github.com/kohana/orm/blob/3.1%2Fmaster/auth-schema-mysql.sql</a> or you can copy and paste from below:</p>
+
+<div class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="o">`</span><span class="n">roles</span><span class="o">`</span> <span class="p">(</span>
+  <span class="o">`</span><span class="n">id</span><span class="o">`</span> <span class="nb">int</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span> <span class="n">UNSIGNED</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="n">AUTO_INCREMENT</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">name</span><span class="o">`</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">description</span><span class="o">`</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="k">PRIMARY</span> <span class="k">KEY</span>  <span class="p">(</span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="p">),</span>
+  <span class="k">UNIQUE</span> <span class="k">KEY</span> <span class="o">`</span><span class="n">uniq_name</span><span class="o">`</span> <span class="p">(</span><span class="o">`</span><span class="n">name</span><span class="o">`</span><span class="p">)</span>
+<span class="p">)</span> <span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span>  <span class="k">DEFAULT</span> <span class="n">CHARSET</span><span class="o">=</span><span class="n">utf8</span><span class="p">;</span>
+
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="o">`</span><span class="n">roles</span><span class="o">`</span> <span class="p">(</span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="p">,</span> <span class="o">`</span><span class="n">name</span><span class="o">`</span><span class="p">,</span> <span class="o">`</span><span class="n">description</span><span class="o">`</span><span class="p">)</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;login&#39;</span><span class="p">,</span> <span class="s1">&#39;Login privileges, granted after account confirmation&#39;</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="o">`</span><span class="n">roles</span><span class="o">`</span> <span class="p">(</span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="p">,</span> <span class="o">`</span><span class="n">name</span><span class="o">`</span><span class="p">,</span> <span class="o">`</span><span class="n">description</span><span class="o">`</span><span class="p">)</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;admin&#39;</span><span class="p">,</span> <span class="s1">&#39;Administrative user, has access to everything.&#39;</span><span class="p">);</span>
+
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="o">`</span><span class="n">roles_users</span><span class="o">`</span> <span class="p">(</span>
+  <span class="o">`</span><span class="n">user_id</span><span class="o">`</span> <span class="nb">int</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="n">UNSIGNED</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">role_id</span><span class="o">`</span> <span class="nb">int</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="n">UNSIGNED</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="k">PRIMARY</span> <span class="k">KEY</span>  <span class="p">(</span><span class="o">`</span><span class="n">user_id</span><span class="o">`</span><span class="p">,</span><span class="o">`</span><span class="n">role_id</span><span class="o">`</span><span class="p">),</span>
+  <span class="k">KEY</span> <span class="o">`</span><span class="n">fk_role_id</span><span class="o">`</span> <span class="p">(</span><span class="o">`</span><span class="n">role_id</span><span class="o">`</span><span class="p">)</span>
+<span class="p">)</span> <span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span> <span class="k">DEFAULT</span> <span class="n">CHARSET</span><span class="o">=</span><span class="n">utf8</span><span class="p">;</span>
+
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="o">`</span><span class="n">users</span><span class="o">`</span> <span class="p">(</span>
+  <span class="o">`</span><span class="n">id</span><span class="o">`</span> <span class="nb">int</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span> <span class="n">UNSIGNED</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="n">AUTO_INCREMENT</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">email</span><span class="o">`</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">127</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">username</span><span class="o">`</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">DEFAULT</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">password</span><span class="o">`</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">64</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">logins</span><span class="o">`</span> <span class="nb">int</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="n">UNSIGNED</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">DEFAULT</span> <span class="s1">&#39;0&#39;</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">last_login</span><span class="o">`</span> <span class="nb">int</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="n">UNSIGNED</span><span class="p">,</span>
+  <span class="k">PRIMARY</span> <span class="k">KEY</span>  <span class="p">(</span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="p">),</span>
+  <span class="k">UNIQUE</span> <span class="k">KEY</span> <span class="o">`</span><span class="n">uniq_username</span><span class="o">`</span> <span class="p">(</span><span class="o">`</span><span class="n">username</span><span class="o">`</span><span class="p">),</span>
+  <span class="k">UNIQUE</span> <span class="k">KEY</span> <span class="o">`</span><span class="n">uniq_email</span><span class="o">`</span> <span class="p">(</span><span class="o">`</span><span class="n">email</span><span class="o">`</span><span class="p">)</span>
+<span class="p">)</span> <span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span>  <span class="k">DEFAULT</span> <span class="n">CHARSET</span><span class="o">=</span><span class="n">utf8</span><span class="p">;</span>
+
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="o">`</span><span class="n">user_tokens</span><span class="o">`</span> <span class="p">(</span>
+  <span class="o">`</span><span class="n">id</span><span class="o">`</span> <span class="nb">int</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span> <span class="n">UNSIGNED</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="n">AUTO_INCREMENT</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">user_id</span><span class="o">`</span> <span class="nb">int</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span> <span class="n">UNSIGNED</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">user_agent</span><span class="o">`</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">token</span><span class="o">`</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="k">type</span><span class="o">`</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">created</span><span class="o">`</span> <span class="nb">int</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="n">UNSIGNED</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">expires</span><span class="o">`</span> <span class="nb">int</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="n">UNSIGNED</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="k">PRIMARY</span> <span class="k">KEY</span>  <span class="p">(</span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="p">),</span>
+  <span class="k">UNIQUE</span> <span class="k">KEY</span> <span class="o">`</span><span class="n">uniq_token</span><span class="o">`</span> <span class="p">(</span><span class="o">`</span><span class="n">token</span><span class="o">`</span><span class="p">),</span>
+  <span class="k">KEY</span> <span class="o">`</span><span class="n">fk_user_id</span><span class="o">`</span> <span class="p">(</span><span class="o">`</span><span class="n">user_id</span><span class="o">`</span><span class="p">)</span>
+<span class="p">)</span> <span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span>  <span class="k">DEFAULT</span> <span class="n">CHARSET</span><span class="o">=</span><span class="n">utf8</span><span class="p">;</span>
+
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="o">`</span><span class="n">roles_users</span><span class="o">`</span>
+  <span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="o">`</span><span class="n">roles_users_ibfk_1</span><span class="o">`</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="o">`</span><span class="n">user_id</span><span class="o">`</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="o">`</span><span class="n">users</span><span class="o">`</span> <span class="p">(</span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="p">)</span> <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">CASCADE</span><span class="p">,</span>
+  <span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="o">`</span><span class="n">roles_users_ibfk_2</span><span class="o">`</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="o">`</span><span class="n">role_id</span><span class="o">`</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="o">`</span><span class="n">roles</span><span class="o">`</span> <span class="p">(</span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="p">)</span> <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">CASCADE</span><span class="p">;</span>
+
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="o">`</span><span class="n">user_tokens</span><span class="o">`</span>
+  <span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="o">`</span><span class="n">user_tokens_ibfk_1</span><span class="o">`</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="o">`</span><span class="n">user_id</span><span class="o">`</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="o">`</span><span class="n">users</span><span class="o">`</span> <span class="p">(</span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="p">)</span> <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">CASCADE</span><span class="p">;</span></code></pre></div>
+
+<p>Looking over the public methods for the <code>Kohana_Auth_ORM</code> class let's us see the basic functionality that is included in the driver:</p>
+<ul>
+	<li><strong>logged_in</strong> - checks if a user is currently logged in, and optionally checks against a role or set of roles.</li>
+	<li><strong>force_login</strong> - logs in a user without a password</li>
+	<li><strong>auto_login</strong> - logs a user in based on cookie settings, great for "remember me" functionality</li>
+	<li><strong>get_user</strong> - returns the currently logged in user, automatically logging them in if necessary.  Returns FALSE if no user is logged in.</li>
+	<li><strong>logout</strong> - logs the user out and can optionally remove any auto-logins for that user</li>
+	<li><strong>password</strong> - gets the password for the user</li>
+	<li><strong>check_password</strong> - compares a password with the stored hashed password for the user</li>
+</ul>
+
+<p>These methods cover all of the necessary functionality to get user authentication up and running in an application.  For this tutorial, we will construct a controller with a basic set of actions and views to allow the creation, login, logout, password reset, and logout actions for a user.  A quick glance at the <code>Model_Auth_User</code> class supplied with the ORM reveals that most of the heavy lifting has been done for us.</p>
+
+<p>We can begin by creating a new controller where we can create actions to demonstrate how to use the module in real code. For this example, we will create a User controller with actions for creating an account, logging in and out, and viewing user info when logged in.  This example does support the "remember me" functionality.</p>
+
+<h3>User Controller: classes/controller/user.php</h3>
+
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span> <span class="nb">defined</span><span class="p">(</span><span class="s1">&#39;SYSPATH&#39;</span><span class="p">)</span> <span class="k">or</span> <span class="k">die</span><span class="p">(</span><span class="s1">&#39;No direct script access.&#39;</span><span class="p">);</span>
+
+<span class="k">class</span> <span class="nc">Controller_User</span> <span class="k">extends</span> <span class="nx">Controller_Template</span> <span class="p">{</span>
+
+	<span class="k">public</span> <span class="k">function</span> <span class="nf">action_index</span><span class="p">()</span>
+	<span class="p">{</span>
+		<span class="nv">$this</span><span class="o">-&gt;</span><span class="na">template</span><span class="o">-&gt;</span><span class="na">content</span> <span class="o">=</span> <span class="nx">View</span><span class="o">::</span><span class="na">factory</span><span class="p">(</span><span class="s1">&#39;user/info&#39;</span><span class="p">)</span>
+			<span class="o">-&gt;</span><span class="na">bind</span><span class="p">(</span><span class="s1">&#39;user&#39;</span><span class="p">,</span> <span class="nv">$user</span><span class="p">);</span>
+		
+		<span class="c1">// Load the user information</span>
+		<span class="nv">$user</span> <span class="o">=</span> <span class="nx">Auth</span><span class="o">::</span><span class="na">instance</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">get_user</span><span class="p">();</span>
+		
+		<span class="c1">// if a user is not logged in, redirect to login page</span>
+		<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$user</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="nx">Request</span><span class="o">::</span><span class="na">current</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">redirect</span><span class="p">(</span><span class="s1">&#39;user/login&#39;</span><span class="p">);</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+
+	<span class="k">public</span> <span class="k">function</span> <span class="nf">action_create</span><span class="p">()</span> 
+	<span class="p">{</span>
+		<span class="nv">$this</span><span class="o">-&gt;</span><span class="na">template</span><span class="o">-&gt;</span><span class="na">content</span> <span class="o">=</span> <span class="nx">View</span><span class="o">::</span><span class="na">factory</span><span class="p">(</span><span class="s1">&#39;user/create&#39;</span><span class="p">)</span>
+			<span class="o">-&gt;</span><span class="na">bind</span><span class="p">(</span><span class="s1">&#39;errors&#39;</span><span class="p">,</span> <span class="nv">$errors</span><span class="p">)</span>
+			<span class="o">-&gt;</span><span class="na">bind</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">,</span> <span class="nv">$message</span><span class="p">);</span>
+			
+		<span class="k">if</span> <span class="p">(</span><span class="nx">HTTP_Request</span><span class="o">::</span><span class="na">POST</span> <span class="o">==</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">request</span><span class="o">-&gt;</span><span class="na">method</span><span class="p">())</span> 
+		<span class="p">{</span>			
+			<span class="k">try</span> <span class="p">{</span>
+		
+				<span class="c1">// Create the user using form values</span>
+				<span class="nv">$user</span> <span class="o">=</span> <span class="nx">ORM</span><span class="o">::</span><span class="na">factory</span><span class="p">(</span><span class="s1">&#39;user&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">create_user</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">request</span><span class="o">-&gt;</span><span class="na">post</span><span class="p">(),</span> <span class="k">array</span><span class="p">(</span>
+					<span class="s1">&#39;username&#39;</span><span class="p">,</span>
+					<span class="s1">&#39;password&#39;</span><span class="p">,</span>
+					<span class="s1">&#39;email&#39;</span>				
+				<span class="p">));</span>
+				
+				<span class="c1">// Grant user login role</span>
+				<span class="nv">$user</span><span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;roles&#39;</span><span class="p">,</span> <span class="nx">ORM</span><span class="o">::</span><span class="na">factory</span><span class="p">(</span><span class="s1">&#39;role&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;login&#39;</span><span class="p">)));</span>
+				
+				<span class="c1">// Reset values so form is not sticky</span>
+				<span class="nv">$_POST</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
+				
+				<span class="c1">// Set success message</span>
+				<span class="nv">$message</span> <span class="o">=</span> <span class="s2">&quot;You have added user &#39;</span><span class="si">{</span><span class="nv">$user</span><span class="o">-&gt;</span><span class="na">username</span><span class="si">}</span><span class="s2">&#39; to the database&quot;</span><span class="p">;</span>
+				
+			<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">ORM_Validation_Exception</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+				
+				<span class="c1">// Set failure message</span>
+				<span class="nv">$message</span> <span class="o">=</span> <span class="s1">&#39;There were errors, please see form below.&#39;</span><span class="p">;</span>
+				
+				<span class="c1">// Set errors using custom messages</span>
+				<span class="nv">$errors</span> <span class="o">=</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">errors</span><span class="p">(</span><span class="s1">&#39;models&#39;</span><span class="p">);</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+	
+	<span class="k">public</span> <span class="k">function</span> <span class="nf">action_login</span><span class="p">()</span> 
+	<span class="p">{</span>
+		<span class="nv">$this</span><span class="o">-&gt;</span><span class="na">template</span><span class="o">-&gt;</span><span class="na">content</span> <span class="o">=</span> <span class="nx">View</span><span class="o">::</span><span class="na">factory</span><span class="p">(</span><span class="s1">&#39;user/login&#39;</span><span class="p">)</span>
+			<span class="o">-&gt;</span><span class="na">bind</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">,</span> <span class="nv">$message</span><span class="p">);</span>
+			
+		<span class="k">if</span> <span class="p">(</span><span class="nx">HTTP_Request</span><span class="o">::</span><span class="na">POST</span> <span class="o">==</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">request</span><span class="o">-&gt;</span><span class="na">method</span><span class="p">())</span> 
+		<span class="p">{</span>
+			<span class="c1">// Attempt to login user</span>
+			<span class="nv">$remember</span> <span class="o">=</span> <span class="nb">array_key_exists</span><span class="p">(</span><span class="s1">&#39;remember&#39;</span><span class="p">,</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">request</span><span class="o">-&gt;</span><span class="na">post</span><span class="p">())</span> <span class="o">?</span> <span class="p">(</span><span class="nx">bool</span><span class="p">)</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">request</span><span class="o">-&gt;</span><span class="na">post</span><span class="p">(</span><span class="s1">&#39;remember&#39;</span><span class="p">)</span> <span class="o">:</span> <span class="k">FALSE</span><span class="p">;</span>
+			<span class="nv">$user</span> <span class="o">=</span> <span class="nx">Auth</span><span class="o">::</span><span class="na">instance</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">login</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">request</span><span class="o">-&gt;</span><span class="na">post</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">),</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">request</span><span class="o">-&gt;</span><span class="na">post</span><span class="p">(</span><span class="s1">&#39;password&#39;</span><span class="p">),</span> <span class="nv">$remember</span><span class="p">);</span>
+			
+			<span class="c1">// If successful, redirect user</span>
+			<span class="k">if</span> <span class="p">(</span><span class="nv">$user</span><span class="p">)</span> 
+			<span class="p">{</span>
+				<span class="nx">Request</span><span class="o">::</span><span class="na">current</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">redirect</span><span class="p">(</span><span class="s1">&#39;user/index&#39;</span><span class="p">);</span>
+			<span class="p">}</span> 
+			<span class="k">else</span> 
+			<span class="p">{</span>
+				<span class="nv">$message</span> <span class="o">=</span> <span class="s1">&#39;Login failed&#39;</span><span class="p">;</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+	
+	<span class="k">public</span> <span class="k">function</span> <span class="nf">action_logout</span><span class="p">()</span> 
+	<span class="p">{</span>
+		<span class="c1">// Log user out</span>
+		<span class="nx">Auth</span><span class="o">::</span><span class="na">instance</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">logout</span><span class="p">();</span>
+		
+		<span class="c1">// Redirect to login page</span>
+		<span class="nx">Request</span><span class="o">::</span><span class="na">current</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">redirect</span><span class="p">(</span><span class="s1">&#39;user/login&#39;</span><span class="p">);</span>
+	<span class="p">}</span>
+
+<span class="p">}</span>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
+
+<p>As you see here, we are using the Template controller to make it simple to display our views.  This is an example template that is included in the source files for this tutorial:</p>
+
+<h3>Template: views/template.php</h3>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot;</span>
+<span class="cp">	&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</span> 
+<span class="nt">&lt;html</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/1999/xhtml&quot;</span> <span class="na">xml:lang=</span><span class="s">&quot;en&quot;</span> <span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span> 
+<span class="nt">&lt;head&gt;</span> 
+<span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">&quot;Content-Type&quot;</span> <span class="na">content=</span><span class="s">&quot;text/html;charset=utf-8&quot;</span> <span class="nt">/&gt;</span> 
+<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;description&quot;</span> <span class="na">content=</span><span class="s">&quot;Example Auth with ORM for Kohana 3.1&quot;</span> <span class="nt">/&gt;</span> 
+<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;author&quot;</span> <span class="na">content=</span><span class="s">&quot;JDStraughan&quot;</span> <span class="nt">/&gt;</span> 
+<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;copyright&quot;</span> <span class="na">content=</span><span class="s">&quot;Copyright 2011. JDStraughan.com&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;language&quot;</span> <span class="na">content=</span><span class="s">&quot;en-us&quot;</span> <span class="nt">/&gt;</span> 
+<span class="nt">&lt;title&gt;</span>Auth with ORM tutorial for Kohana 3.1<span class="nt">&lt;/title&gt;</span> 
+<span class="nt">&lt;style </span><span class="na">type=</span><span class="s">&quot;text/css&quot;</span><span class="nt">&gt;</span>
+<span class="nc">.error</span> <span class="p">{</span>
+	<span class="k">color</span><span class="o">:</span> <span class="nb">red</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.message</span> <span class="p">{</span>
+	<span class="k">padding</span><span class="o">:</span> <span class="m">10px</span><span class="p">;</span>
+	<span class="k">background-color</span><span class="o">:</span> <span class="nb">yellow</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;/head&gt;</span> 
+<span class="nt">&lt;body&gt;</span>
+	<span class="nt">&lt;h1&gt;</span>Auth module using the ORM driver for Kohana 3.1<span class="nt">&lt;/h1&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;content&quot;</span><span class="nt">&gt;</span>
+		<span class="cp">&lt;?= $content; ?&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre></div>
+
+<p>Now we can create simple view scripts and display them inside our template.  This will make the rest of the views small, and simple to read.  In the controller we are loading the <code>user/create</code> view into the <code>$content</code> view variable, so let's create a new folder in our view directory named <code>users</code> and add the following views:</p>
+
+<h3>User signup view: create.php</h3>
+
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">&lt;h2&gt;Create a New User&lt;/h2&gt;</span>
+<span class="cp">&lt;?</span> <span class="k">if</span> <span class="p">(</span><span class="nv">$message</span><span class="p">)</span> <span class="o">:</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">	&lt;h3 class=&quot;message&quot;&gt;</span>
+<span class="x">		</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$message</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">	&lt;/h3&gt;</span>
+<span class="cp">&lt;?</span> <span class="k">endif</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x"></span>
+
+<span class="cp">&lt;?</span><span class="o">=</span> <span class="nx">Form</span><span class="o">::</span><span class="na">open</span><span class="p">(</span><span class="s1">&#39;user/create&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
+
+<span class="cp">&lt;?</span><span class="o">=</span> <span class="nx">Form</span><span class="o">::</span><span class="na">label</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="s1">&#39;Username&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="cp">&lt;?</span><span class="o">=</span> <span class="nx">Form</span><span class="o">::</span><span class="na">input</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="nx">HTML</span><span class="o">::</span><span class="na">chars</span><span class="p">(</span><span class="nx">Arr</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">,</span> <span class="s1">&#39;username&#39;</span><span class="p">)));</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">&lt;div class=&quot;error&quot;&gt;</span>
+<span class="x">	</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nx">Arr</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="nv">$errors</span><span class="p">,</span> <span class="s1">&#39;username&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">&lt;/div&gt;</span>
+
+<span class="cp">&lt;?</span><span class="o">=</span> <span class="nx">Form</span><span class="o">::</span><span class="na">label</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">,</span> <span class="s1">&#39;Email Address&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="cp">&lt;?</span><span class="o">=</span> <span class="nx">Form</span><span class="o">::</span><span class="na">input</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">,</span> <span class="nx">HTML</span><span class="o">::</span><span class="na">chars</span><span class="p">(</span><span class="nx">Arr</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">,</span> <span class="s1">&#39;email&#39;</span><span class="p">)));</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">&lt;div class=&quot;error&quot;&gt;</span>
+<span class="x">	</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nx">Arr</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="nv">$errors</span><span class="p">,</span> <span class="s1">&#39;email&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">&lt;/div&gt;</span>
+
+<span class="cp">&lt;?</span><span class="o">=</span> <span class="nx">Form</span><span class="o">::</span><span class="na">label</span><span class="p">(</span><span class="s1">&#39;password&#39;</span><span class="p">,</span> <span class="s1">&#39;Password&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="cp">&lt;?</span><span class="o">=</span> <span class="nx">Form</span><span class="o">::</span><span class="na">password</span><span class="p">(</span><span class="s1">&#39;password&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">&lt;div class=&quot;error&quot;&gt;</span>
+<span class="x">	</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nx">Arr</span><span class="o">::</span><span class="na">path</span><span class="p">(</span><span class="nv">$errors</span><span class="p">,</span> <span class="s1">&#39;_external.password&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">&lt;/div&gt;</span>
+
+<span class="cp">&lt;?</span><span class="o">=</span> <span class="nx">Form</span><span class="o">::</span><span class="na">label</span><span class="p">(</span><span class="s1">&#39;password_confirm&#39;</span><span class="p">,</span> <span class="s1">&#39;Confirm Password&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="cp">&lt;?</span><span class="o">=</span> <span class="nx">Form</span><span class="o">::</span><span class="na">password</span><span class="p">(</span><span class="s1">&#39;password_confirm&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">&lt;div class=&quot;error&quot;&gt;</span>
+<span class="x">	</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nx">Arr</span><span class="o">::</span><span class="na">path</span><span class="p">(</span><span class="nv">$errors</span><span class="p">,</span> <span class="s1">&#39;_external.password_confirm&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">&lt;/div&gt;</span>
+
+<span class="cp">&lt;?</span><span class="o">=</span> <span class="nx">Form</span><span class="o">::</span><span class="na">submit</span><span class="p">(</span><span class="s1">&#39;create&#39;</span><span class="p">,</span> <span class="s1">&#39;Create User&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="cp">&lt;?</span><span class="o">=</span> <span class="nx">Form</span><span class="o">::</span><span class="na">close</span><span class="p">();</span> <span class="cp">?&gt;</span><span class="x"></span>
+
+<span class="x">&lt;p&gt;Or </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nx">HTML</span><span class="o">::</span><span class="na">anchor</span><span class="p">(</span><span class="s1">&#39;user/login&#39;</span><span class="p">,</span> <span class="s1">&#39;login&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"> if you have an account already.&lt;/p&gt;</span></code></pre></div>
+
+<h3>Login view: login.php</h3>
+
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">&lt;h2&gt;Login&lt;/h2&gt;</span>
+<span class="cp">&lt;?</span> <span class="k">if</span> <span class="p">(</span><span class="nv">$message</span><span class="p">)</span> <span class="o">:</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">	&lt;h3 class=&quot;message&quot;&gt;</span>
+<span class="x">		</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$message</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">	&lt;/h3&gt;</span>
+<span class="cp">&lt;?</span> <span class="k">endif</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x"></span>
+
+<span class="cp">&lt;?</span><span class="o">=</span> <span class="nx">Form</span><span class="o">::</span><span class="na">open</span><span class="p">(</span><span class="s1">&#39;user/login&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
+
+<span class="cp">&lt;?</span><span class="o">=</span> <span class="nx">Form</span><span class="o">::</span><span class="na">label</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="s1">&#39;Username&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="cp">&lt;?</span><span class="o">=</span> <span class="nx">Form</span><span class="o">::</span><span class="na">input</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="nx">HTML</span><span class="o">::</span><span class="na">chars</span><span class="p">(</span><span class="nx">Arr</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">,</span> <span class="s1">&#39;username&#39;</span><span class="p">)));</span> <span class="cp">?&gt;</span><span class="x"></span>
+
+<span class="cp">&lt;?</span><span class="o">=</span> <span class="nx">Form</span><span class="o">::</span><span class="na">label</span><span class="p">(</span><span class="s1">&#39;password&#39;</span><span class="p">,</span> <span class="s1">&#39;Password&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="cp">&lt;?</span><span class="o">=</span> <span class="nx">Form</span><span class="o">::</span><span class="na">password</span><span class="p">(</span><span class="s1">&#39;password&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
+
+<span class="cp">&lt;?</span><span class="o">=</span> <span class="nx">Form</span><span class="o">::</span><span class="na">label</span><span class="p">(</span><span class="s1">&#39;remember&#39;</span><span class="p">,</span> <span class="s1">&#39;Remember Me&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="cp">&lt;?</span><span class="o">=</span> <span class="nx">Form</span><span class="o">::</span><span class="na">checkbox</span><span class="p">(</span><span class="s1">&#39;remember&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
+
+<span class="x">&lt;p&gt;(Remember Me keeps you logged in for 2 weeks)&lt;/p&gt;</span>
+
+<span class="cp">&lt;?</span><span class="o">=</span> <span class="nx">Form</span><span class="o">::</span><span class="na">submit</span><span class="p">(</span><span class="s1">&#39;login&#39;</span><span class="p">,</span> <span class="s1">&#39;Login&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="cp">&lt;?</span><span class="o">=</span> <span class="nx">Form</span><span class="o">::</span><span class="na">close</span><span class="p">();</span> <span class="cp">?&gt;</span><span class="x"></span>
+
+<span class="x">&lt;p&gt;Or </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nx">HTML</span><span class="o">::</span><span class="na">anchor</span><span class="p">(</span><span class="s1">&#39;user/create&#39;</span><span class="p">,</span> <span class="s1">&#39;create a new account&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x">&lt;/p&gt;</span></code></pre></div>
+
+<h3>User info view: info.php</h3>
+
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">&lt;h2&gt;Info for  user &quot;</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">username</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x">&quot;&lt;/h2&gt;</span>
+
+<span class="x">&lt;ul&gt;</span>
+<span class="x">	&lt;li&gt;Email: </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">email</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x">&lt;/li&gt;</span>
+<span class="x">	&lt;li&gt;Number of logins: </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">logins</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x">&lt;/li&gt;</span>
+<span class="x">	&lt;li&gt;Last Login: </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nx">Date</span><span class="o">::</span><span class="na">fuzzy_span</span><span class="p">(</span><span class="nv">$user</span><span class="o">-&gt;</span><span class="na">last_login</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x">&lt;/li&gt;</span>
+<span class="x">&lt;/ul&gt;</span>
+
+<span class="cp">&lt;?</span><span class="o">=</span> <span class="nx">HTML</span><span class="o">::</span><span class="na">anchor</span><span class="p">(</span><span class="s1">&#39;user/logout&#39;</span><span class="p">,</span> <span class="s1">&#39;Logout&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
+
+<p>Here we have a basic form, with an area to display a success or failure message, sticky form fields, and error messages displayed for each user.  We are almost ready to begin creating users, right after we complete the custom messages for validation failures.  In the controller actions we specified the location of our messages in the <code>models</code> directory, so you will need to create a new directory named <code>models</code> in your <code>messages</code> directory inside your <code>APP_PATH</code> and add a file named <code>user.php</code> with the following contents:</p>
+
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+
+<span class="k">return</span> <span class="k">array</span><span class="p">(</span>
+	<span class="s1">&#39;username&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;not_empty&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;You must provide a username.&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;min_length&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;The username must be at least :param2 characters long.&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;max_length&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;The username must be less than :param2 characters long.&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;username_available&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;This username is already in use.&#39;</span><span class="p">,</span>
+    <span class="p">),</span>
+	<span class="s1">&#39;email&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+		<span class="s1">&#39;not_empty&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;You must enter an email address&#39;</span><span class="p">,</span>
+		<span class="s1">&#39;min_length&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;This email is too short, it must be at least :param2 characters long&#39;</span><span class="p">,</span>
+		<span class="s1">&#39;max_length&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;This email is too long, it cannot exceed :param2 characters&#39;</span><span class="p">,</span>
+		<span class="s1">&#39;email&#39;</span> <span class="o">=&gt;</span>	<span class="s1">&#39;Please enter valid email address&#39;</span><span class="p">,</span>
+		<span class="s1">&#39;email_available&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;This email address is already in use.&#39;</span><span class="p">,</span>
+	<span class="p">)</span>
+<span class="p">);</span>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
+
+<p>This covers almost all the messages for validators in the <code>Model_Auth_User</code> class, but there still is the <code>_external</code> validator for password confirmation. To provide a custom message for that also, you will need to crete a new directory named <code>user</code> inside <code>messages/models</code> (so the path is <code>APP_PATH/messages/models/user</code>), and add a file named <code>_external.php</code> with the following contents:</p>
+
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+
+<span class="k">return</span> <span class="k">array</span><span class="p">(</span>
+	<span class="s1">&#39;password&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+		<span class="s1">&#39;not_empty&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Please choose a password&#39;</span><span class="p">,</span>
+	<span class="p">),</span>
+    <span class="s1">&#39;password_confirm&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;matches&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;The password fields did not match.&#39;</span><span class="p">,</span>
+    <span class="p">),</span>
+<span class="p">);</span></code></pre></div>
+
+<p>You are now ready to begin adding users to this example application, complete with remember me functionality.  Adding additional features like updating user information, changing passwords, or adding more user information should all be relatively simple.</p>
+
+<p>The source code for this tutorial can be downloaded <a href="/media/files/auth-orm-k31.zip">here</a>.  Please feel free to use the comment section below to post any questions or concerns.</p></div>
+<div id="comments" class="clearfix">
+		
+		<div id="comment_header">
+			<h3>Comments (30) <br> These comments are frozen, as they are archived from my previous blog.</h3>
+		</div>
+		
+				<div class="comment clearfix ">
+			<p class="span2">
+								<img src="http://www.gravatar.com/avatar/d18a15f26e28d37e54a54e44b792b946" alt="gravatar" />
+				<br /> 
+									david								<br /> 
+				<span class="date_created">
+					about a year ago				</span>
+			</p>
+			<p class="span10 pull-right">
+				You made a little mistake. array_key_exists already returns a boolean so there is no need for a ternary operator.<br />
+<br />
+Otherwise a great article!			</p>
+			
+		</div>
+				<div class="comment clearfix author-comment">
+			<p class="span2">
+								<img src="http://www.gravatar.com/avatar/159950296dc98fc2efde54faa38e04f8" alt="gravatar" />
+				<br /> 
+				 
+					<a href="http://JDStraughan.com">JDStraughan</a>								<br /> 
+				<span class="date_created">
+					about a year ago				</span>
+			</p>
+			<p class="span10 pull-right">
+				@david: Thanks!  I have made the correction.			</p>
+			
+		</div>
+				<div class="comment clearfix ">
+			<p class="span2">
+								<img src="http://www.gravatar.com/avatar/24627a92a6102373824712144151e840" alt="gravatar" />
+				<br /> 
+									Lee								<br /> 
+				<span class="date_created">
+					about a year ago				</span>
+			</p>
+			<p class="span10 pull-right">
+				Thanks for the guide... One issue: At least some of the error comments don't show up on the template. <br />
+<br />
+For example, if the user enters too short of a password... I can access that using the following: <br />
+<br />
+<br />
+<br />
+But I'm unsure of Kohana's message routing and don't know if that's the correct way to handle it.			</p>
+			
+		</div>
+				<div class="comment clearfix ">
+			<p class="span2">
+								<img src="http://www.gravatar.com/avatar/24627a92a6102373824712144151e840" alt="gravatar" />
+				<br /> 
+									Lee								<br /> 
+				<span class="date_created">
+					about a year ago				</span>
+			</p>
+			<p class="span10 pull-right">
+				Not sure if previous comment made it through.<br />
+<br />
+In the registration action, if you enter too-short of a password, there is no error displayed... I can access it in '_external', like this: <br />
+<br />
+Arr::get($errors['_external'], 'password');<br />
+<br />
+But I'm unclear if that's an acceptable Kohana way of doing it.			</p>
+			
+		</div>
+				<div class="comment clearfix ">
+			<p class="span2">
+								<img src="http://www.gravatar.com/avatar/f3e9eccc245a8c900bb1f2dd999e6187" alt="gravatar" />
+				<br /> 
+				 
+					<a href="http://www.comstarsupply.com">Adam</a>								<br /> 
+				<span class="date_created">
+					about a year ago				</span>
+			</p>
+			<p class="span10 pull-right">
+				Great Article! and thanks for the Rick Roll on line 7 of auth.php   Got a good laugh out of that.			</p>
+			
+		</div>
+				<div class="comment clearfix ">
+			<p class="span2">
+								<img src="http://www.gravatar.com/avatar/00256473e84b9b670ed81d003f621d83" alt="gravatar" />
+				<br /> 
+									Alonso								<br /> 
+				<span class="date_created">
+					about a year ago				</span>
+			</p>
+			<p class="span10 pull-right">
+				Hi, it's been quite difficult migrate to 3.1<br />
+<br />
+I tried this example but i can't login and want to create a new user have this message: <br />
+<br />
+---<br />
+ORM_Validation_Exception [ 0 ]: Failed to validate array<br />
+--<br />
+MODPATH/orm/classes/kohana/orm.php [ 1233 ]<br />
+<br />
+thanks for sharing this, greetings!			</p>
+			
+		</div>
+				<div class="comment clearfix author-comment">
+			<p class="span2">
+								<img src="http://www.gravatar.com/avatar/159950296dc98fc2efde54faa38e04f8" alt="gravatar" />
+				<br /> 
+				 
+					<a href="http://jdstraughan.com">JDStraughan</a>								<br /> 
+				<span class="date_created">
+					about a year ago				</span>
+			</p>
+			<p class="span10 pull-right">
+				@Alonso:  I cannot reproduce this locally, are you sure you have the framework setup correctly?  You are welcome to contact me directly using the contact form, and I will be happy to help in any way I can.<br />
+<br />
+Thanks!			</p>
+			
+		</div>
+				<div class="comment clearfix ">
+			<p class="span2">
+								<img src="http://www.gravatar.com/avatar/eebf44d007d0b040de3a4b765b1b530d" alt="gravatar" />
+				<br /> 
+				 
+					<a href="http://textu.org/">Cesar Gonzalez</a>								<br /> 
+				<span class="date_created">
+					about a year ago				</span>
+			</p>
+			<p class="span10 pull-right">
+				Hey Jason, thank you for sharing this and for the thoroughly written tutorial!  I was able to get it working without any problems.<br />
+<br />
+Now I need to extend the user to include some personal information (first / last name, short bio) and some account information ( # of credits).  I'm at a loss for how / where I would do this.  Do I create another database table and model?  Do I extend the existing model and add a few fields to the users table?  In each case, where exactly are the relevant files I should work on?<br />
+<br />
+I know my way around PHP / MySQL but I'm new to Kohana and ORM.  I'm hoping that you can point me in the right direction and give me some idea of where to start tackling this?  Thanks again!			</p>
+			
+		</div>
+				<div class="comment clearfix ">
+			<p class="span2">
+								<img src="http://www.gravatar.com/avatar/5b7f8a6af7d63c962386d5f1c6ce9e0f" alt="gravatar" />
+				<br /> 
+				 
+					<a href="http://coolnamehere.com">Brian Wisti</a>								<br /> 
+				<span class="date_created">
+					about a year ago				</span>
+			</p>
+			<p class="span10 pull-right">
+				Well you're my new favorite Kohana blogger ^_^ This is the first auth tutorial I've come across that actually lets me create user and log in and out as the user with 3.1. Thanks very much!<br />
+<br />
+I did come across the same issues that Lee mentioned, though. Both `password` and `password_confirm` were stored in `_external`. `_external` error messages had to be accessed via `Arr::get($errors['_external'], $field)`. Also, the message overrides in `application/messages/user/_external.php` didn't appear to take. It used the default messages for those.<br />
+<br />
+Mind you, I am _not_ complaining. After struggling a day or so with other resources, yours got me a new user within 30 minutes. Thanks again!			</p>
+			
+		</div>
+				<div class="comment clearfix ">
+			<p class="span2">
+								<img src="http://www.gravatar.com/avatar/318393a40c7d7c262faca6b47335708e" alt="gravatar" />
+				<br /> 
+									Fredrik								<br /> 
+				<span class="date_created">
+					about a year ago				</span>
+			</p>
+			<p class="span10 pull-right">
+				Fantastic! I'm definitely buying your book once its published :c)			</p>
+			
+		</div>
+				<div class="comment clearfix ">
+			<p class="span2">
+								<img src="http://www.gravatar.com/avatar/32e0c91634a2923f00844f5b66dfc79c" alt="gravatar" />
+				<br /> 
+									Peter Weil								<br /> 
+				<span class="date_created">
+					about a year ago				</span>
+			</p>
+			<p class="span10 pull-right">
+				Thank you *so much* for this, Jason - this sort of thing is so badly needed. Perhaps I messed something up, but after I successfully created a new user, I cannot log in (and there is no error message). It just keeps returning me to the login page. However, the log says "ERROR: Error reading session data: " Do you have any ideas as to what's wrong?<br />
+<br />
+(looking forward to your Kohana book!)			</p>
+			
+		</div>
+				<div class="comment clearfix ">
+			<p class="span2">
+								<img src="http://www.gravatar.com/avatar/32e0c91634a2923f00844f5b66dfc79c" alt="gravatar" />
+				<br /> 
+									Peter Weil								<br /> 
+				<span class="date_created">
+					about a year ago				</span>
+			</p>
+			<p class="span10 pull-right">
+				Please ignore my last message. The problem was that I had to set a custom read/write-privileged MySQL config to *all* of the models being used by auth, and not just the User model. Sorry to bug you, and thanks again for this tutorial. Kohana is a wonderful framework, but sometimes the lack of good, up-to-date "how-tos" drives me up a wall.			</p>
+			
+		</div>
+				<div class="comment clearfix ">
+			<p class="span2">
+								<img src="http://www.gravatar.com/avatar/c08a75c24d64dfa0ab38d3055359353c" alt="gravatar" />
+				<br /> 
+									youngpac								<br /> 
+				<span class="date_created">
+					about a year ago				</span>
+			</p>
+			<p class="span10 pull-right">
+				thanks a bunch for this <br />
+its one of the best tutorials i have seen yet...			</p>
+			
+		</div>
+				<div class="comment clearfix author-comment">
+			<p class="span2">
+								<img src="http://www.gravatar.com/avatar/159950296dc98fc2efde54faa38e04f8" alt="gravatar" />
+				<br /> 
+				 
+					<a href="http://jdstraughan.com">JDStraughan</a>								<br /> 
+				<span class="date_created">
+					about a year ago				</span>
+			</p>
+			<p class="span10 pull-right">
+				@Brian, Lee: Sorry for the late reply. I have fixed the password error message, and now show how to properly override and retrieve the error message for this field. <br />
+<br />
+You may want to look at the Arr::path() method as well as Arr::get(), and do note I have included both in the above examples.<br />
+<br />
+@Cesar: I hope you got my email and I hope it answered your questions.  I may do a post on ORM relationships in the near future.<br />
+<br />
+@All: Thanks for the kind words, and please continue to ask questions and point out my bugs ;)			</p>
+			
+		</div>
+				<div class="comment clearfix ">
+			<p class="span2">
+								<img src="http://www.gravatar.com/avatar/657f852b325ae6c18d08f97798e19497" alt="gravatar" />
+				<br /> 
+				 
+					<a href="http://www.kiteanimation.com">Yann</a>								<br /> 
+				<span class="date_created">
+					about a year ago				</span>
+			</p>
+			<p class="span10 pull-right">
+				Hi !<br />
+<br />
+Thanks for this post, help me a lot. <br />
+<br />
+I'm trying to extends a lot user class of Auth and creating some new ones for adding capabilities like Wordpress ones. But like Cesar, I'm a little lost so can you help me understand how to extends or create new class who can interact with the Auth class ?! <br />
+<br />
+Thank you very much in advance,<br />
+<br />
+Yann			</p>
+			
+		</div>
+				<div class="comment clearfix ">
+			<p class="span2">
+								<img src="http://www.gravatar.com/avatar/657f852b325ae6c18d08f97798e19497" alt="gravatar" />
+				<br /> 
+				 
+					<a href="http://www.kiteanimation.com">Yann</a>								<br /> 
+				<span class="date_created">
+					about a year ago				</span>
+			</p>
+			<p class="span10 pull-right">
+				Hi again, <br />
+<br />
+I saw something wrong in a sentence you made "To provide a custom message for that also, you will need to create a new directory named user inside messages/user, and add a file named _external.php"<br />
+<br />
+Your _external.php file must be in messages/models/user/ because you choose to use "models" and not in messages/user/ like you wrote. I think you made a typo.<br />
+<br />
+Hope this help some others ^^<br />
+<br />
+Yann			</p>
+			
+		</div>
+				<div class="comment clearfix ">
+			<p class="span2">
+								<img src="http://www.gravatar.com/avatar/c08a75c24d64dfa0ab38d3055359353c" alt="gravatar" />
+				<br /> 
+									youngpac								<br /> 
+				<span class="date_created">
+					about a year ago				</span>
+			</p>
+			<p class="span10 pull-right">
+				hi, am trying to move the code from the use class to my index controller so that the auth can check on login on to the website but whnever i hit the submit button it takes me to user/login while i have remove the class for user any help?<br />
+<br />
+thanks in advance.			</p>
+			
+		</div>
+				<div class="comment clearfix ">
+			<p class="span2">
+								<img src="http://www.gravatar.com/avatar/32e0c91634a2923f00844f5b66dfc79c" alt="gravatar" />
+				<br /> 
+									Peter Weil								<br /> 
+				<span class="date_created">
+					about a year ago				</span>
+			</p>
+			<p class="span10 pull-right">
+				Thanks also for the examples using the Arr helper methods. I never realized how useful these are.<br />
+<br />
+If you want to display all of the errors together; e.g., above the form, you can run a check on $errors['_external']['password'] and add it to the $errors array.<br />
+<br />
+if ( ! empty($errors['_external']['password']))<br />
+{<br />
+    $errors[] = $errors['_external']['password'];<br />
+}<br />
+<br />
+And then just loop through $errors to display them, e.g.,<br />
+<br />
+if( ! empty($errors)) : ?>			</p>
+			
+		</div>
+				<div class="comment clearfix author-comment">
+			<p class="span2">
+								<img src="http://www.gravatar.com/avatar/159950296dc98fc2efde54faa38e04f8" alt="gravatar" />
+				<br /> 
+				 
+					<a href="http://jdstraughan.com">JDStraughan</a>								<br /> 
+				<span class="date_created">
+					about a year ago				</span>
+			</p>
+			<p class="span10 pull-right">
+				@youngpac, @Yann: You can add to the user table and model, extend the model, or add to the controller.  I am not really sure what you need.<br />
+<br />
+@Yann: I made the change, thanks for pointing that out!<br />
+<br />
+@Peter: Glad to see you making good use of the tutorial!			</p>
+			
+		</div>
+				<div class="comment clearfix ">
+			<p class="span2">
+								<img src="http://www.gravatar.com/avatar/657f852b325ae6c18d08f97798e19497" alt="gravatar" />
+				<br /> 
+				 
+					<a href="http://www.kiteanimation.com">Yann</a>								<br /> 
+				<span class="date_created">
+					about a year ago				</span>
+			</p>
+			<p class="span10 pull-right">
+				Yep, it's works great.<br />
+<br />
+I actually made a lots of changes into that but override some function like the _login() one.<br />
+And i was able to add an activation email instead of adding the login role directly.<br />
+<br />
+Just one info if someone need, if you want to load your module extending the Auth module, you have to load it in the bootstrap.php BEFORE the Auth module ! (take me a few hours to understand my mistake was there lol)<br />
+<br />
+Thanks for all JDStraughan, can't wait to see your book !			</p>
+			
+		</div>
+				<div class="comment clearfix ">
+			<p class="span2">
+								<img src="http://www.gravatar.com/avatar/2bf59b2d0f124157cc12d48f6993f5db" alt="gravatar" />
+				<br /> 
+									Ryan								<br /> 
+				<span class="date_created">
+					about a year ago				</span>
+			</p>
+			<p class="span10 pull-right">
+				Finally someone explains this stuff in a clear and concise manner.  I was pulling hair I don't even have out!  Works like a charm now. I look forward to the book, how about you send me an email when it comes out? ;)			</p>
+			
+		</div>
+				<div class="comment clearfix ">
+			<p class="span2">
+								<img src="http://www.gravatar.com/avatar/c08a75c24d64dfa0ab38d3055359353c" alt="gravatar" />
+				<br /> 
+									youngpac								<br /> 
+				<span class="date_created">
+					about a year ago				</span>
+			</p>
+			<p class="span10 pull-right">
+				thanks JDStraughan i saw ma mistake and rectified it.. your tutorial has gone a long way in helping me understand!			</p>
+			
+		</div>
+				<div class="comment clearfix ">
+			<p class="span2">
+								<img src="http://www.gravatar.com/avatar/e36b74a72ed3be1b94d58ca2758dfe89" alt="gravatar" />
+				<br /> 
+				 
+					<a href="http://psy.amu.gov.ua">Alex</a>								<br /> 
+				<span class="date_created">
+					about a year ago				</span>
+			</p>
+			<p class="span10 pull-right">
+				Great example! Thanks alot!			</p>
+			
+		</div>
+				<div class="comment clearfix ">
+			<p class="span2">
+								<img src="http://www.gravatar.com/avatar/a2b080621e961b275a388c8cff7ad37c" alt="gravatar" />
+				<br /> 
+									skyman								<br /> 
+				<span class="date_created">
+					about a year ago				</span>
+			</p>
+			<p class="span10 pull-right">
+				Great article man!<br />
+<br />
+P.s. You should mention about Cookie::$salt beacuse it's important too :)			</p>
+			
+		</div>
+				<div class="comment clearfix ">
+			<p class="span2">
+								<img src="http://www.gravatar.com/avatar/33fbe23557383a62097ff987057b0880" alt="gravatar" />
+				<br /> 
+									Sune								<br /> 
+				<span class="date_created">
+					about a year ago				</span>
+			</p>
+			<p class="span10 pull-right">
+				Hello Straughan and other readers.<br />
+<br />
+Nice blog you have here.<br />
+<br />
+I am new to Kohana and followed your tutorial to create the login functionality.<br />
+<br />
+However I can not figure out how to change the password requirements other than changing /modules/orm/classes/model/auth/user.php<br />
+<br />
+Do I really have to change this file? I find that the Kohana style is overriding the default behavior with custom behavior, so I would find it odd having to change the ORM module files directly.<br />
+<br />
+Thanks.			</p>
+			
+		</div>
+				<div class="comment clearfix ">
+			<p class="span2">
+								<img src="http://www.gravatar.com/avatar/519413792f05c554384b6da3829a5d6b" alt="gravatar" />
+				<br /> 
+				 
+					<a href="http://zetell.blogspot.com">Zetell</a>								<br /> 
+				<span class="date_created">
+					about a year ago				</span>
+			</p>
+			<p class="span10 pull-right">
+				Thank you very much for this guide! It helped me upgade my Kohana-based project from 3.0.x branch to 3.1.			</p>
+			
+		</div>
+				<div class="comment clearfix ">
+			<p class="span2">
+								<img src="http://www.gravatar.com/avatar/d89505b9e27eda4bd40a2a62a6edac2e" alt="gravatar" />
+				<br /> 
+				 
+					<a href="http://parkour.tyt.kz/">Arthur</a>								<br /> 
+				<span class="date_created">
+					about a year ago				</span>
+			</p>
+			<p class="span10 pull-right">
+				Thank you very much, for this article! Best Auth guide for kohana.			</p>
+			
+		</div>
+				<div class="comment clearfix ">
+			<p class="span2">
+								<img src="http://www.gravatar.com/avatar/98211ed3df0c3f3b68730ea0ec6f35f1" alt="gravatar" />
+				<br /> 
+									Mondongo								<br /> 
+				<span class="date_created">
+					less than a year ago				</span>
+			</p>
+			<p class="span10 pull-right">
+				Thanks for doing this!<br />
+<br />
+Just got your book in Kindle edition, it's what I was looking for!			</p>
+			
+		</div>
+				<div class="comment clearfix ">
+			<p class="span2">
+								<img src="http://www.gravatar.com/avatar/8545d108a7c0f82fed0fe51e0594c35b" alt="gravatar" />
+				<br /> 
+									Scott								<br /> 
+				<span class="date_created">
+					less than a year ago				</span>
+			</p>
+			<p class="span10 pull-right">
+				Thank you for an amazing tutorial! This was my introduction to Kohana and it went swimmingly ;)			</p>
+			
+		</div>
+				<div class="comment clearfix ">
+			<p class="span2">
+								<img src="http://www.gravatar.com/avatar/402227c600407fc42713ec294efbf9d2" alt="gravatar" />
+				<br /> 
+									jorie								<br /> 
+				<span class="date_created">
+					a couple of months ago				</span>
+			</p>
+			<p class="span10 pull-right">
+				Very nice tutorial! the only problem is that I'm stuck with an error after following it:<br />
+<br />
+ErrorException [ Warning ]: array_fill(): Number of elements must be positive<br />
+<br />
+can't really find anything about it on google, any ideas?			</p>
+			
+		</div>
+		
+		
+</div>
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="https://www.linkedin.com/in/JDStraughan">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://github.com/JDStraughan">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li>
+                        <a href="https://www.facebook.com/JDStraughan">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; JDStraughan 2014</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/clean-blog.min.js "></script>
+
+
+</body>
+
+</html>
