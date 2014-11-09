@@ -3,9 +3,10 @@ title: JDStraughan
 email: jdstraughan@gmail.com
 description: "Blog of San Antonio Web Developer, Rubyist, and Entrepreneur Jason D. Straughan"
 url: "http://jdstraughan.com"
-twitter_username: JDStraughan
+# twitter_username: JDStraughan
 github_username:  JDStraughan
 facebook_username:  JDStraughan
+linkedin_username:  JDStraughan
 
 # Build settings
 markdown: kramdown
