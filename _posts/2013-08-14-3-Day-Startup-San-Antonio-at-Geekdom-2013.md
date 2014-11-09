@@ -25,7 +25,7 @@ Much like performing experiments in a chemistry lab to determined the plausibili
 
 ### Example Lean Canvas
 
-![Lean Canvas Example](/img/POST/cornholio_lean_canvas_example.png)
+![Lean Canvas Example](/img/post/cornholio_lean_canvas_example.png)
 
 This lean canvas for a fictitious startup, [cornhol.io](http://cornhol.io), was created using the [Lean Canvas Google Docs Template](https://drive.google.com/previewtemplate?id=16uOd158UzJM9oqGWgJOtbppzGNPmZ4fWMSV6_xBz3Z8&mode=public&pli=1#) by [Lucas Rodriguez Cervera](https://drive.google.com/templates?view=public&authorId=11994523493363598636).
 
