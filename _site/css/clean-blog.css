@@ -40,7 +40,10 @@ hr.small {
   border-width: 4px;
   border-color: white;
 }
-.navbar-custom {
+.navbar-header {
+  float: left;
+}
+.navbar-default {
   background: white;
   position: absolute;
   top: 0;
@@ -50,83 +53,43 @@ hr.small {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-shadow: 1px 1px 4px #111;
 }
-.navbar-custom .navbar-brand {
+.navbar-right {
+  float: right!important;
+  margin-right: 12px;
+}
+.navbar-nav>li {
+  float: left;
+}
+.navbar-default .navbar-brand {
   font-weight: 800;
 }
-.navbar-custom .nav li a {
+.navbar-default .nav li a {
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 800;
   letter-spacing: 1px;
 }
-@media only screen and (min-width: 768px) {
-  .navbar-custom {
+  .navbar-default {
     background: transparent;
     border-bottom: 1px solid transparent;
   }
-  .navbar-custom .navbar-brand {
+  .navbar-default .navbar-brand {
     color: white;
     padding: 20px;
   }
-  .navbar-custom .navbar-brand:hover,
-  .navbar-custom .navbar-brand:focus {
+  .navbar-default .navbar-brand:hover,
+  .navbar-default .navbar-brand:focus {
     color: rgba(255, 255, 255, 0.8);
   }
-  .navbar-custom .nav li a {
+  .navbar-default .nav li a {
     color: white;
     padding: 20px;
   }
-  .navbar-custom .nav li a:hover,
-  .navbar-custom .nav li a:focus {
+  .navbar-default .nav li a:hover,
+  .navbar-default .nav li a:focus {
     color: rgba(255, 255, 255, 0.8);
   }
-}
-@media only screen and (min-width: 1170px) {
-  .navbar-custom {
-    -webkit-transition: background-color 0.3s;
-    -moz-transition: background-color 0.3s;
-    transition: background-color 0.3s;
-    /* Force Hardware Acceleration in WebKit */
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    -o-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-  .navbar-custom.is-fixed {
-    /* when the user scrolls down, we hide the header right above the viewport */
-    position: fixed;
-    top: -61px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-bottom: 1px solid #f2f2f2;
-    -webkit-transition: -webkit-transform 0.3s;
-    -moz-transition: -moz-transform 0.3s;
-    transition: transform 0.3s;
-  }
-  .navbar-custom.is-fixed .navbar-brand {
-    color: #404040;
-  }
-  .navbar-custom.is-fixed .navbar-brand:hover,
-  .navbar-custom.is-fixed .navbar-brand:focus {
-    color: #0085a1;
-  }
-  .navbar-custom.is-fixed .nav li a {
-    color: #404040;
-  }
-  .navbar-custom.is-fixed .nav li a:hover,
-  .navbar-custom.is-fixed .nav li a:focus {
-    color: #0085a1;
-  }
-  .navbar-custom.is-visible {
-    /* if the user changes the scrolling direction, we show the header */
-    -webkit-transform: translate3d(0, 100%, 0);
-    -moz-transform: translate3d(0, 100%, 0);
-    -ms-transform: translate3d(0, 100%, 0);
-    -o-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
-  }
-}
+
 .intro-header {
   background-color: #808080;
   background: no-repeat center center;
@@ -141,41 +104,12 @@ hr.small {
 .intro-header .site-heading,
 .intro-header .post-heading,
 .intro-header .page-heading {
-  padding: 100px 0 50px;
+  text-align: center;
+  padding: 175px 0 135px;
   color: white;
   text-shadow: 2px 2px 12px #000;
 }
-@media only screen and (min-width: 768px) {
-  .intro-header .site-heading,
-  .intro-header .post-heading,
-  .intro-header .page-heading {
-    padding: 150px 0;
-  }
-}
-.intro-header .site-heading,
-.intro-header .page-heading {
-  text-align: center;
-}
-.intro-header .site-heading h1,
-.intro-header .page-heading h1 {
-  margin-top: 0;
-  font-size: 50px;
-}
-.intro-header .site-heading .subheading,
-.intro-header .page-heading .subheading {
-  font-size: 24px;
-  line-height: 1.1,
-			display: block;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  margin: 10px 0 0;
-}
-@media only screen and (min-width: 768px) {
-  .intro-header .site-heading h1,
-  .intro-header .page-heading h1 {
-    font-size: 80px;
-  }
-}
+
 .intro-header .post-heading h1 {
   font-size: 35px;
 }
@@ -207,14 +141,6 @@ hr.small {
 }
 .intro-header .post-heading .image-credit a {
   color: white;
-}
-@media only screen and (min-width: 768px) {
-  .intro-header .post-heading h1 {
-    font-size: 55px;
-  }
-  .intro-header .post-heading .subheading {
-    font-size: 30px;
-  }
 }
 .post-preview > a {
   color: #404040;
@@ -248,11 +174,6 @@ hr.small {
 .post-preview > .post-meta > a:focus {
   color: #0085a1;
   text-decoration: underline;
-}
-@media only screen and (min-width: 768px) {
-  .post-preview > a > .post-title {
-    font-size: 36px;
-  }
 }
 .section-heading {
   font-size: 36px;
@@ -363,13 +284,6 @@ form .row:first-child .floating-label-form-group {
   padding: 10px 5px;
   background-color: white;
   border-radius: 0;
-}
-@media only screen and (min-width: 768px) {
-  .pager li > a,
-  .pager li > span {
-    font-size: 14px;
-    padding: 15px 25px;
-  }
 }
 .pager li > a:hover,
 .pager li > a:focus {
