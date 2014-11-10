@@ -3,7 +3,6 @@ layout: post
 published: true
 author: Jason Straughan
 title: "3 Day Startup San Antonio at Geekdom (Summer 2013)"
-tags: ["3DS", "3 Day Startup", "Geekdom"]
 excerpt: "This past weekend I was fortunate enough to participate in the 3 Day Startup | San Antonio event at Geekdom as a mentor. The program embraces the lean startup methodology to engage customers along the product development lifecycle to properly align the company's offerings with the customer's needs."
 header-img: "img/header/geekdom-ping-pong.jpg"
 image-credit: <a href="http://tech.co/author/kira-newman">Kira M. Newman</a> via <a href="http://tech.co/geekdom-san-antonio-2013-06/geekdom-ping-pong">Tech Cocktail</a>
