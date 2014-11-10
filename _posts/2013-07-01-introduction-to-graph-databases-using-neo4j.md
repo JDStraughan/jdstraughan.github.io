@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 title: Introduction to Graph Databases using Neo4j
 subtitle: or how I learned to stop worrying and love the graph
 tags: ["neo4j", "database", "graph"]

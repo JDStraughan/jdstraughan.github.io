@@ -1,11 +1,13 @@
 ---
 layout: post
-published: false
-title: Neo4j - or how I learned to stop worrying and love the graph
+published: true
+title: Introduction to Graph Databases using Neo4j
+subtitle: or how I learned to stop worrying and love the graph
 tags: ["neo4j", "database", "graph"]
 excerpt: "At just that moment when I was convinced the social networking revolution was no more enlightening than reality television, I began to realize that there was one great and powerful idea that needed this exact environment to gestate: the graph database."
+header-img: "img/header/Internet_map_1024.jpg"
+image-credit: The Opte Project [<a href="http://creativecommons.org/licenses/by/2.5/deed.en">CC Attribution 2.5 Generic</a>], <a href="http://en.wikipedia.org/wiki/File:Internet_map_1024.jpg">from Wikimedia</a>
 ---
-
 At just that moment when I was convinced the social networking revolution was no more enlightening than reality television, I began to realize that there was one great and powerful idea that needed this exact environment to gestate: the graph database. From Facebook's Graph Search, to LinkedIn's connection recommendations, graph databases are shaping the world around us.  Although graph theory has been around for centuries, its penchant for highly-related datasets makes it an attractive alternative to traditional RDBMS solutions in some situations.
 
 ###What is a graph database?
@@ -143,6 +145,12 @@ Which returns:
 While these examples are fairly simple, the larger the dataset becomes, the more complex queries you can make.  There are also methods to help you find things like the shortest path between nodes, etc.
 
 You can [try cypher live on real data](http://www.neo4j.org/learn/try) via the neo4j website.  The web interface is very nice for playing with existing datasets, or creating your own.
+
+###Beyond Bob and Alice
+
+Looking at social graphs with Bob and Alice is fun and all, but the real world is a bit more interesting that 2 folks and a chess club.  To really our hands dirty using graphs, lets explore something a bit more real.
+
+
 
 ###Conclusion
 
