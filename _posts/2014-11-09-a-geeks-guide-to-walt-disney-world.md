@@ -19,7 +19,7 @@ This is the most often asked question from folks when they find out about our ob
 >
 > Walt Disney
 
-Each of the parks offer many parks and attractions geared towards adults, with fun for the kids at every corner; The Magic Kingdom brings Disney classics to life, Hollywood Studios personifies the golden age of movies (and has a few roller coaters), Animal Kingdom brings the zoo into the 21st century, and EPCOT is the adult paradise of tomorrow.
+Each of the parks offer many attractions geared towards adults, with fun for the kids at every corner; The Magic Kingdom brings Disney classics to life, Hollywood Studios personifies the golden age of movies (and has a few roller coaters), Animal Kingdom brings the zoo into the 21st century, and EPCOT is the adult paradise of tomorrow.
 
 ### Magic Kingdom
 
@@ -63,9 +63,11 @@ The shows are amazing, Indiana Jones brings The Lost Ark to life, with audience 
 
 The Great Movie Ride is reportedly scheduled for closure, and if you are visiting while it is still rolling, be sure to take the time to ride it. A trip through the Hollywood greats is the perfect way to take in the original aspects of this park.
 
-If you only have time to ride one thing in this park, it must be Toy Story Midway Mania. This ride is epic, bringing 3D gaming to a new level. The queuing line is fun, but a fastpass makes this ride so much better.
+If you only have time to ride one thing in this park, it must be Toy Story Midway Mania. This ride is epic, bringing 3D gaming to a new level. The queuing area is fun, but a fastpass makes this ride so much better.
 
-Fantasmic is the Hollywood Studios closing show, and my son thinks it is the best thing in all Disney. When he first saw the show he was six years old and it was days after Christmas. He turned to me at the end of Fantasmic and said "Mickey Mouse has more magic than Santa Claus". If you are going to eat at the park, be sure to get a Fantasmic Dinner Package for better seats. We have sat in the first 10 rows many times, and it really makes a difference.
+Fantasmic is the Hollywood Studios closing show, and my son thinks it is the best thing in all Disney. When he first saw the show he was six years old and it was days after Christmas. He turned to me at the end of Fantasmic and said "Mickey Mouse has more magic than Santa Claus". To this day it is his favorite show.
+
+If you are going to eat at the park, be sure to get a Fantasmic Dinner Package for better seats. We have had incredible seats many times, and it really makes a difference to have the dining package in my opinion.
 
 ### Animal Kingdom
 
@@ -127,19 +129,33 @@ The Transportation and Ticket Center, Animal Kingdom and Epcot always have plent
 
 ### Resort Delivery
 
-This really is a major perk of staying on property - if you purchase most merchandise from anywhere in the parks, you can have it shipped to your resort instead of carrying it around all day long.
+This really is a major perk of staying on property - if you purchase most merchandise from anywhere in the parks, you can have it shipped to your resort instead of carrying it around all day long. This does not work on your last day in the resort as all deliveries arrive around 3PM the following day. We take advantage of resort delivery with the majority of our purchases.
+
+Other options available to all guests are delivery to the front of the park (usually takes a few hours) where they will hold your bags for pickup, or the lesser known home delivery. When we purchase large or fragile items, we fill out a form and ship our items home, where they usually arrive in 1 - 2 weeks.
 
 ### Extra Magic Hours
 
+All resort guests enjoy the benefit of Extra Magic Hours. Every day one park will either open early or stay open late for resort guests only. These times have less crowds, and are a great way to enjoy some of the rides and attractions that may be hard to manage during regular park hours. We plan which park we visit each day on several factors, and Extra Magic Hours plays a big part in that decision making process.
+
 ### Magic Bands
+
+Each resort guest is now issued a _magic band_ &mdash; a "smart" wristband that can perform many tasks including
+- Admission to parks (with linked passes)
+- PhotoPass or MemoryMaker card replacement
+- Room key (the band unlocks your room door!)
+- Dining plan "card"
+- Room charges when you have a credit card on file
+- Fastpass+ admission
+
+We've experienced the parks both with and without the MagicBands. We were lucky enough to "test" them at a resort early in their existence, and they are quite cool. Added features now include videos on several rides included in your MemoryMaker, and all ride photos magically appear in your MemoryMaker when you wear your magic band on the ride.
 
 ### Disney Service
 
+An important reason we stay on property is the legendary Disney service. Our vacation dollar is well spent when we compare the service we receive from Disney compared to other vacation experiences, dollar for dollar, and this certainly extends to their resorts and hotels. We have stayed at value properties, moderate resorts, and are now DVC members with our home resort at Saratoga Springs. I can say that the level of Disney service is stellar, no matter where you stay on site.
+
 ### Special Offers and Add-ons
 
-- Special vacation package offers
-- Disney Dining Package
-- MemoryMaker
+The Disney Travel Company offers several vacation package offers throughout the year that can make a sizable difference in the cost of a Disney vacation, especially if you can travel during the slower seasons. Other add-ons include the ability to participate in the dining plans, and memory maker programs.
 
 ## Where do you book your trips?
 
@@ -153,7 +169,7 @@ It is easier to answer which time of year to avoid: summer, Christmas, and New Y
 
 ## What is Downtown Disney?
 
-A waste of time.
+Downtown Disney is a fairly large area of shops and restaurants ranging from Disney merchandise to the Lego store. Some of the restaurants participate in the Disney dining plan, and many of the shops offer hard to find merchandise. Buses and water taxis provide transpiration to and from Disney resort hotels, making this shopping wonderland easy to experience. We've found this destination to be a better experience for adults, especially those that enjoy the shopping experience. We are not frequent visitors to this area.
 
 ## Do you use the Disney Dining Plan?
 
