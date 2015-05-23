@@ -7,9 +7,13 @@ header-img: "img/header/geekdom-ping-pong.jpg"
 image-credit:
 ---
 
-My family and I just returned from our fifth trip to see The Mouse in the last 3 years, for a total of 45 days in the park, not including trips as a kid.  We have 3 more trips planned in the next 12 months. I also spent one day at Disney Paris last August, unfortunately I was there without my family. We are now annual pass-holders, members of the Disney Vacation Club (DVC), and the de-facto Disney experts of our friends and family. We even bought some Disney stock.
+My family and I are Disney fanatics, as all our close friend and family already know. Interventions are futile, we have consumed the Mouse's Kool-Aid, and we are not turning back.
 
-There are plenty of folks that have spent way more time at Disney, and these answers are based on my experiences at the parks with my family. Below are the questions most frequently asked of me by friends and family that are planning a trip to Walt Disney World in Orlando, Florida.
+We are annual pass-holders, members of the Disney Vacation Club (DVC), and the de-facto Disney experts of our social group. We even bought some Disney stock.
+
+There are plenty of folks that have spent way more time at Disney Parks, and these answers are based on my experiences at the parks with my family. We spend the majority of our vacation time at Walt Disney World in Orlando, Florida, however, I have also visited Disneyland and Disney Paris.
+
+Below are the questions most frequently asked of me by friends and family that are planning a trip to Walt Disney World.
 
 ## Why do you keep going to Walt Disney World?
 
@@ -63,7 +67,7 @@ The shows are amazing, Indiana Jones brings The Lost Ark to life, with audience 
 
 The Great Movie Ride is reportedly scheduled for closure, and if you are visiting while it is still rolling, be sure to take the time to ride it. A trip through the Hollywood greats is the perfect way to take in the original aspects of this park.
 
-If you only have time to ride one thing in this park, it must be Toy Story Midway Mania. This ride is epic, bringing 3D gaming to a new level. The queuing area is fun, but a fastpass makes this ride so much better.
+If you only have time to ride one thing in this park, it must be Toy Story Midway Mania. This ride is epic, bringing 3D gaming to a new level. The queuing area is fun, but a Fastpass makes this ride so much better.
 
 Fantasmic is the Hollywood Studios closing show, and my son thinks it is the best thing in all Disney. When he first saw the show he was six years old and it was days after Christmas. He turned to me at the end of Fantasmic and said "Mickey Mouse has more magic than Santa Claus". To this day it is his favorite show.
 
@@ -71,9 +75,9 @@ If you are going to eat at the park, be sure to get a Fantasmic Dinner Package f
 
 ### Animal Kingdom
 
-In all fairness, Animal Kingdom is my least favorite park. This being said, it is far better than any zoo I've ever visited, in terms of interaction especially. The opportunities for education are everywhere, with conservation and awareness in the forefront.
+In all fairness, Animal Kingdom is my least favorite park. This being said, it is far better than any zoo I've ever visited, in terms of interaction with the world around you, it especially magnificent. The opportunities for education are everywhere, with conservation and awareness in the forefront of every attraction.
 
-The Kilimanjaro Safari is a great ride to hit first thing. We usually get a fastpass for the first hour, and when the park opens, we go straight to the standby line, ride it, then use our fastpass to ride it a second time. Once the morning is over, the animals are harder to see, and the experience is not as nice, so the earlier the better in our experience.
+The Kilimanjaro Safari is a great ride to hit first thing in the morning. We usually get a Fastpass for the first hour, and when the park opens, we go straight to the standby line, ride it, then use our Fastpass to ride it a second time. Once the morning is over, the animals are harder to see, and the experience is not as nice, so the earlier the better in our experience.
 
 We enjoy eating at Tusker House, grabbing one of the better buffets in Walt Disney World. It is a character dining experience, with Mickey, Minnie, Donald, and Goofy. If you are on the dining plan, this is a good value if your children enjoy the character experience. The food ranges from traditional Disney buffet options to unique African offerings.
 
@@ -96,7 +100,7 @@ We do not rent a car when we travel to Walt Disney World. Months before we leave
 Our typical travel day is pretty simple. We try to catch the flight that will get us to Orlando the earliest. We tag our bags with the yellow luggage tags they sent, and check them at the airport. We check as many bags as we can, depending on the airline we are flying.
 
 When we arrive at Orlando International Airport, we simply go down to the Disney Magical Express counter, skipping baggage claim. We board a bus to our resort, and watch classic Disney cartoons while enjoying the view of central Florida.
-
+    
 When we arrive at our resort, we quickly check-in using the express on-line check-in line, and then go to our room to drop off our personal items, and relax for a bit. Then we are free to go to the park of our choice, or enjoy some of the resort amenities. Our bags will all arrive in our room in 4-5 hours, whether we are there or not.
 
 Disney's Magical Express is free both to and from the airport. Also, on park resorts offer airline check-in, including baggage services. On the morning we leave, we simply check our bags, get our boarding passes, and then enjoy our day until the time for our bus to take us to the airport. Because the resort will also hold any personal items, we usually can squeeze in a brunch at one of the parks on our final day.
