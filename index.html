@@ -2,7 +2,7 @@
 layout: page
 title:
 description: "Blog of Web Developer, Rubyist, &amp; Entrepreneur Jason D. Straughan"
-header-img: "img/header/MK_BUZZLIGHTYEARRIDE_7080743091.jpeg"
+header-img: "img/header/2015-world-showcase-france-epcot.jpeg"
 ---
 
 {% for post in paginator.posts %}
@@ -15,6 +15,11 @@ header-img: "img/header/MK_BUZZLIGHTYEARRIDE_7080743091.jpeg"
         <h3 class="post-subtitle">
             {{ post.subtitle }}
         </h3>
+        {% endif %}
+        {% if post.description %}
+        <p>
+            {{ post.description }}
+        </p>
         {% endif %}
     </a>
     <p class="post-meta">Posted on {{ post.date | date: "%B %-d, %Y" }}</p>
