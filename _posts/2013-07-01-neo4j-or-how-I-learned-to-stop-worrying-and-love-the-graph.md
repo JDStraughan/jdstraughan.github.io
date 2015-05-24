@@ -4,7 +4,7 @@ published: true
 title: Introduction to Graph Databases using Neo4j
 subtitle: or how I learned to stop worrying and love the graph
 tags: ["neo4j", "database", "graph"]
-excerpt: "At just that moment when I was convinced the social networking revolution was no more enlightening than reality television, I began to realize that there was one great and powerful idea that needed this exact environment to gestate: the graph database."
+description: "For those that are unfamiliar with graph databases, they do not store graphs in the chart sense, but rather graph structures."
 header-img: "img/header/Internet_map_1024.jpg"
 image-credit: The Opte Project [<a href="http://creativecommons.org/licenses/by/2.5/deed.en">CC Attribution 2.5 Generic</a>], <a href="http://en.wikipedia.org/wiki/File:Internet_map_1024.jpg">from Wikimedia</a>
 ---

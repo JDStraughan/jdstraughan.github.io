@@ -2,7 +2,7 @@
 layout: post
 published: false
 title: "Our Walt Disney World Frequently Asked Questions"
-excerpt: ""
+description: ""
 header-img: "img/header/geekdom-ping-pong.jpg"
 image-credit:
 ---

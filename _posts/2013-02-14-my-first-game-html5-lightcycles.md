@@ -3,7 +3,7 @@ layout: post
 published: true
 title: My first game - HTML5 lightcycles
 tags: ["html5", "javascript", "game development"]
-excerpt: "For the past few months I have been playing with the HTML5 canvas element off and on.  In recent years it has been the subject of much excitement in the web development community, and as matured rapidly in modern browsers.  Now there are a wide variety of games and activities that utilize this relatively new element. For whatever reasons, I just assumed manipulating the canvas would be a pain in the ass, so I avoided it, until now."
+description: "For the past few months I have been playing with the HTML5 canvas element off and on, eventually building TRON, my first canvas game."
 header-img: "img/header/tron.jpg"
 image-credit: Pacifier (Own work) [<a href="http://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA-3.0</a>], <a href="http://commons.wikimedia.org/wiki/File%3ATron_bryce.jpg">via Wikimedia Commons</a>
 ---

@@ -3,7 +3,7 @@ layout: post
 published: true
 title: HTML5 Snake source code walkthrough
 tags: ["html5", "javascript", "game development"]
-excerpt: "Last month I made my first game: html5-lightcycles.  It is a Tron inspired lightcycle game, a humble recreation of the 1980s arcade classic.  The whole truth behind the lightcycle game includes the tidbit that when I first started playing around with the creating that game, snake was my original intention.  "
+description: "Learn how to make a version of the popular snake game using the HTML canvas element and javascript. Fun for all ages, and easy to code."
 header-img: 'img/header/lightcycles.png'
 ---
 

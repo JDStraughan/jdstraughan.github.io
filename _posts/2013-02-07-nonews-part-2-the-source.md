@@ -3,7 +3,7 @@ layout: post
 published: true
 title: NoNews Part II - The Source
 tags: ["chrome extension", "javascript"]
-excerpt: "NoNews is a Google Chrome extension that was built to assist me (and you) avoid passively reading the news.  I wrote a blog post about why I wrote it, and explored the inspiration behind the endeavor.  In this post I'd like to walk-through the source code, explain how the extension is constructed, and talk about things that can be done to improve the extension."
+description: "In this post I'd like to walk-through the source code of the NoNews extensions and explain how it works."
 header-img: "img/header/badnews2.jpg"
 image-credit: Benjamin Vautier [Public domain], <a href="http://commons.wikimedia.org/wiki/File%3ABenjamin_Vautier_Die_Neuigkeiten.jpg">via Wikimedia Commons</a>
 ---

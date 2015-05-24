@@ -3,7 +3,7 @@ layout: post
 published: true
 title: The day the music went blind
 tags: ["general"]
-excerpt: "The soundtrack of my youth was illustrated by Storm Thorgerson.  He made music visual, and in his passing, music lost a leading member.  A tribute to Storm."
+description: "The soundtrack of my youth was illustrated by Storm Thorgerson.  He made music visual...a tribute to Storm."
 header-img: 'img/header/battersea_powerstation.jpg'
 image-credit: Albion at de.wikipedia. Later version(s) were uploaded by Wolpertinger at de.wikipedia. [<a href="http://www.gnu.org/copyleft/fdl.html">GFDL</a> or <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA-3.0</a>], <a href="http://commons.wikimedia.org/wiki/File%3ABattersea_Powerstation.jpg">from Wikimedia Commons</a>
 ---

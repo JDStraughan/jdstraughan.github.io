@@ -3,7 +3,7 @@ layout: post
 published: true
 title: Jekyll is just what the doctor ordered
 tags: ["jekyll"]
-excerpt: "New year, new blog, new blog engine.  For the last few years, my blog has successfully sat stagnant with 2 posts in it.  Despite my total lack of attention to this site, it still managed to garner a few dozen readers a day, mainly from stackoverflow and some Russian blog. For several months I have been eyeing jekyll, the blog engine from Tom Preston-Werner of GitHub fame."
+description: "New year, new blog, new blog engine: jekyll, the blog engine from Tom Preston-Werner of GitHub fame. I am excited to give this a shot."
 author:     "Jason Straughan"
 header-img: "img/header/rosetta.jpg"
 image-credit: <a href="http://commons.wikimedia.org/wiki/User:Chris_73">Chris_73</a> [<a href="http://creativecommons.org/licenses/by-sa/3.0">CC-BY-SA-3.0</a>], <a href="http://commons.wikimedia.org/wiki/File:DemoticScriptsRosettaStoneReplica.jpg">via Wikimedia Commons</a>

@@ -3,7 +3,7 @@ layout: post
 published: true
 title: Darth Vader Dreams of Electric Sheep
 tags: ["general"]
-excerpt: "Flip phones are \"old-timey\"? I'm not yet forty years old, and a once coveted piece of advanced cellular technology is now considered old-timey. My kid has never heard a busy signal, and I doubt he'd recognize a dial-tone. In my lifetime, the flip phone represented everything cool about electronics, and for many years elevated the social status of the owner.  Until it was  unseated by the smartphone, the flip-phone was king.  Now, it is old-timey.  The world has moved on."
+description: "My kid has never heard a busy signal, and I doubt he'd recognize a dial-tone. In his world view, flip phones are the technology of the ancients."
 header-img: 'img/post/futuristic-panel.jpg'
 image-credit: Public Domain <a href="http://commons.wikimedia.org/wiki/File:Selfridge_Exterior2.jpg">via Wikimedia Commons</a>
 ---

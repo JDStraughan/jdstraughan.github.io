@@ -3,7 +3,7 @@ layout: post
 published: true
 title: NoNews (is Good News!)
 tags: ["chrome extension", "javascript"]
-excerpt: No news, as the title and aphorism declare, is often good news.  Like many internet users, reading the news online has become a passive activity for me. I find myself checking news sites when I have 30 seconds to kill, for no reason in particular.  When the actual news airs on television, on the few occasions when I happen to catch it, I find myself secretly enjoying that I am so "plugged in" the news is ancient history by the time the TV gets ahold of it. An essay by Aaron Swartz made me rethink my constant news exposure, and drove me so far I created a browser extension to aid me in changing my ways.
+description: "NoNews is a Google Chrome extension that was built to assist me (and you) in avoiding passively reading the news. Face it, the news is depressing."
 header-img: "img/header/badnews.jpg"
 image-credit: János Kugler (fl. c. 1850-1870, Hungary) via Nagel Auktionen [Public domain], <a href="http://commons.wikimedia.org/wiki/File%3AJanos_Kugler_(attr)_Schlechte_Nachrichten.jpg">via Wikimedia Commons</a>
 ---

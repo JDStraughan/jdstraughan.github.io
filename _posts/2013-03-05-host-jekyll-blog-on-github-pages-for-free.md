@@ -3,7 +3,7 @@ layout: post
 published: false
 title: Host your blog on GitHub Pages (for free!)
 tags: ["jekyll", "blogging", "github"]
-excerpt: ""
+description: "Learn how to host your blog or site using the Jekyll blogging engine and GitHub pages for (free) hosting."
 ---
 
 This blog, like many others, is created using [jekyll](http://jekyllrb.com/), and hosted on [GitHub Pages, for free](http://pages.github.com/).

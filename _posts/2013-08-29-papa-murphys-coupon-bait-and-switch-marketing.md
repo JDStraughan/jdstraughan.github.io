@@ -3,7 +3,7 @@ layout: post
 published: false
 title: "Papa Murphy's Coupon Bait and Switch Marketing"
 tags: ["marketing", "pizza"]
-excerpt: "If you want to know how to punish your customers and make them not want to do business with you, then Papa Murphy is ready to teach you the old school bait-and-switch marketing technique."
+description: "If you want to know how to punish your customers and make them not want to do business with you, then Papa Murphy is ready to teach you the old school bait-and-switch marketing technique."
 ---
 <blockquote>
 If you want to know how to punish your customers and make them not want to do business with you, then Papa Murphy is ready to teach you the old school bait-and-switch marketing technique.
