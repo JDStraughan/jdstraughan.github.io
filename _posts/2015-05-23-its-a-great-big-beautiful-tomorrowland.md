@@ -10,7 +10,7 @@ image-credit: Eric Polk [<a href="http://creativecommons.org/licenses/by/2.5/dee
 
 > THIS POST DISCUSSES THE NEW MOVIE BUT TRIES TO AVOID SPOILERS. There is mention of scenes, but nothing that cannot be recognized from the trailer or in the opening credits.
 
-Everyone that knows me knows I am a [Disneyphile](http://www.urbandictionary.com/define.php?term=disneyphile). Specifically, I am in love with the Disney Parks experience. My family makes an average of two treks per year to a Disney property, mainly Walt Disney World in Orland, Florida. It should come as no surprise that we were excited to view the new Disney motion picture _Tomorrowland_.
+Everyone that knows me knows I am a [Disneyphile](http://www.urbandictionary.com/define.php?term=disneyphile). Specifically, I am in love with the Disney Parks experience. My family makes an average of two treks per year to a Disney property, mainly Walt Disney World in Orlando, Florida. It should come as no surprise that we were excited to view the new Disney motion picture _Tomorrowland_.
 
 For the uninitiated, [Tomorrowland](http://en.wikipedia.org/wiki/Tomorrowland) is the name for one of the themed lands in each of the Disney Parks that showcases futuristic attractions, most notably  [Space Mountain](http://en.wikipedia.org/wiki/Space_Mountain). (In Disneyland Paris it is called [Discoveryland](http://disney.wikia.com/wiki/Discoveryland), with a Jules Verne steam-punk influence, and in Shanghai there is not a Space Mountain, rather an indoor TRON roller-coaster.)
 
