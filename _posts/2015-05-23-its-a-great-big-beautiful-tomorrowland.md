@@ -28,7 +28,7 @@ I will be very surprised if there are not other hidden treasures common to Disne
 
 My favorite part of the movie is the optimism of a brighter future. On every visit to Walt Disney World there are two attractions I must ride: _The Carousel of Progress_ and [_Spaceship Earth_](http://en.wikipedia.org/wiki/Spaceship_Earth_(Epcot)). Both of these rides leave me feeling with unbelievable optimism in my fellow man, and the wonderments that our progress has created.
 
-Like those rides, this movie leaves dystopia behind and greets us with the warm embrace of the feature. Don't get left behind, they saved a seat just for you.
+Like those rides, this movie leaves dystopia behind and greets us with the warm embrace of the future. Don't get left behind, they saved a seat just for you.
 
 
 
