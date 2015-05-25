@@ -1,13 +1,13 @@
 ---
 layout: post
-published: true
+published: false
 title: "Our Walt Disney World Frequently Asked Questions"
 description: ""
 header-img: "img/header/geekdom-ping-pong.jpg"
 image-credit:
 ---
 
-My family and I are Disney fanatics, Earheads, Disneyphiles, whatever you wish to call us. Our close friend and family already know. Interventions are futile, we have consumed the Mouse's Kool-Aid, and we are not turning back.
+My family and I are Disney fanatics, Earheads, Disneyphiles, whatever you wish to call us. Our close friend and family already know interventions are futile; we have consumed the Mouse's Kool-Aid and we are not turning back.
 
 We are annual pass-holders, members of the Disney Vacation Club (DVC), and the de-facto Disney experts of our social group. We even bought some Disney stock.
 
@@ -171,7 +171,15 @@ The advantages to using this service are ease of use, discounts, and My Disney E
 
 ## What time of year should you go?
 
-It is easier to answer which time of year to avoid: summer, Christmas, and New Years.
+It is easier to answer which time of year to avoid: summer. Summer may be your only option, but if it is not, I would highly recommend exploring the off-season. Holidays like Christmas and New Years bring the crowds, but the decorations and cooler weather seem to make up the difference. 
+
+If you are able to travel during either the _International Flower and Garden Festival_, usually in March, April, and early May or the _International Food and Wine Festival_ in late September through mid-November, then you're chances of seeing us will greatly increase. We love both of these times, the weather is better than normal, the crowds are lower than summer, and Epcot comes alive with beautiful topiaries and fresh foods in the Spring, and exotic and exciting food and wine offerings in the Fall. On a good year, we'll hit both of these festivals.
+
+Our favorite week is the last week of October. We all dress up for Mickey's Not So Scary Halloween Party where we trick-or-treat, dance with the characters, watch the Villans show, and see one of the best fireworks presentations ever.
+
+Christmas is also a special time at Disney. The decorations are magnificent, with every park, resort, shop, and cast-member in full celebration mode. Mickey's Very Merry Christmas Party mixes hot chocolate with Christmas cheer. The crowds are certainly higher than usual, but the experience is well worth the extra time in line.
+
+New Year's Eve can be a very busy day at the parks. Our last New Years at Walt Disney World was met with Magic Kingdom and Epcot both halting admissions early in the day as the parks both reached capacity before lunch. We spent the day at Epcot, where each country celebrated the New Year based on their homeland's timezone. We found the adventure to be a lot of fun, but the crowds and large number of inebriated groups made New Year's Eve something we are not interested in doing at the parks again.
 
 ## What is Downtown Disney?
 
@@ -205,11 +213,15 @@ The Magic Kingdom offers a variety of dining atmospheres, with themes ranging fr
 
 If you want to enjoy one of the table service restaurants at the Magic Kingdom than reservations are advised, especially for dinner service. Each trip we make, we watch dozens of people be politely turned away from restaurants while we wait to be seated. Tens of thousands of people visit the Magic Kingdom every day, and there are limited seats at their seven table service restaurants.
 
-The Crystal Palace features Winnie the Pooh and friends with a large buffet and dining area. This one of our favorite table service restaurants in the Kingdom, and is a great place to start or end a day at the park. They are open for breakfast, lunch, and dinner.
+The Crystal Palace allows you to meet Winnie the Pooh and friends while enjoying a large buffet and dining area. This one of our favorite table service restaurants in the Kingdom, and is a great place to start or end a day at the park. They are open for breakfast, lunch, and dinner and will have something for everyone.
 
-We love to eat at Be Our Guest, enjoying one of the three spectacular dining rooms. The Grand Ballroom offers fantastic Gothic architecture, the West Wing allows dining next to the Beast's enchanted rose, and Belle's library has a relaxing mood. The food is great, and of course, they have the gray stuff. Like Cinderella's Royal Table, this restaurant will book up 6 months out.
+We love to eat at Be Our Guest, enjoying one of the three spectacular dining rooms themed after _Beauty and the Beast_. The Grand Ballroom offers fantastic Gothic architecture, the West Wing allows dining next to the Beast's enchanted rose, and Belle's library has a relaxing mood. The food is great, and of course, they have the gray stuff. Like Cinderella's Royal Table, this restaurant will book up 6 months out so get your reservations early.
 
-Tony's Town Square is themed from the movie where the most famous kiss in animated storytelling happened, Lady and the Tramp. In the back corner of the restaurant, you can look out the window and see Tramp dining with his Lady, enjoying some pasta for two. The menu offers Italian favorites, and on an nice evening, an outdoor table is a great way to soak in Main Street.
+Tony's Town Square is themed from the movie where the most famous kiss in animated storytelling happened, Lady and the Tramp. In the back corner of the restaurant, you can look out the window and see Tramp dining with his Lady, enjoying some pasta for two. The menu offers Italian favorites, and on an nice evening, an outdoor table is a great way to soak in Main Street. We can be found at Tony's almost every trip we make to see The Mouse.
+
+#### Quick Service
+
+
 
 ### Epcot
 
