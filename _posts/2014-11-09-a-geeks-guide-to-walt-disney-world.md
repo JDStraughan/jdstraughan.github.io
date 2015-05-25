@@ -2,18 +2,16 @@
 layout: post
 published: false
 title: "Our Walt Disney World Frequently Asked Questions"
-description: ""
-header-img: "img/header/geekdom-ping-pong.jpg"
+description: "My family and I are Disney fanatics. These are the questions most often asked by friends traveling to Walt Disney World."
+header-img: "img/header/EPCOT_BACKGROUND.jpg"
 image-credit:
 ---
 
-My family and I are Disney fanatics, Earheads, Disneyphiles, whatever you wish to call us. Our close friend and family already know interventions are futile; we have consumed the Mouse's Kool-Aid and we are not turning back.
+My family and I are Disney fanatics, Earheads, Disneyphiles, whatever you wish to call us. Our close friend and family already know interventions are futile; we have consumed The Mouse's Kool-Aid and we are not turning back.
 
 We are annual pass-holders, members of the Disney Vacation Club (DVC), and the de-facto Disney experts of our social group. We even bought some Disney stock.
 
 There are plenty of folks that have spent way more time at Disney Parks than we have, and these answers are based on my experiences at the parks with my family. We spend the majority of our vacation time at Walt Disney World in Orlando, Florida, however, I have also visited Disneyland in California and Disney Paris.
-
-Our dream is a round-the-world trip to all 5 Disney Parks in one trip. We'll see if that ever happens.
 
 Below are the questions most frequently asked of me by friends and family that are planning a trip to Walt Disney World.
 
@@ -25,11 +23,25 @@ This is the most often asked question from folks when they find out about our ob
 >
 > Walt Disney
 
-Each of the parks offer many attractions geared towards adults, with fun for the kids at every corner; The Magic Kingdom brings Disney classics to life, Hollywood Studios personifies the golden age of movies (and has a few roller coaters), Animal Kingdom brings the zoo into the 21st century, and EPCOT is the adult paradise of tomorrow.
+Each of the parks offer many attractions geared towards adults, with fun for the kids at every corner; The Magic Kingdom brings the Disney classics to life, Hollywood Studios personifies the golden age of movies (and has a few roller coaters), Animal Kingdom brings the zoo into the 21st century, and EPCOT is a paradise of innovation, imagination, and culture.
 
 ### Magic Kingdom
 
-Undoubtedly, the best way to visit Magic Kingdom is with, or as, a kid. Fantasyland makes classic Disney tangible with rides like Peter Pan and the Seven Dwarf's Mine Train. Tomorrowland is best at night, with the futuristic neon lighting the way to Carousel of Progress, The Monsters Inc Laugh Floor, and Buzz Lightyear's Space Ranger Spin. Adventureland's Pirates of the Caribbean is a family favorite, and a Dole Whip is welcome in any weather. If you have younger kiddos with you, The Jungle Cruise is a fun treat. Frontierland has two great rides, Big Thunder Mountain Railroad and Splash Mountain, and Tom Sawyer Island makes for a good wind-down spot. Don't forget to watch the classic Country Bear Jamboree.
+Undoubtedly, the best way to visit Magic Kingdom is with, or as, a kid. Fantasyland makes classic Disney tangible with rides like Peter Pan and the Seven Dwarf's Mine Train. 
+
+Tomorrowland is best at night, with the futuristic neon lighting the way to Carousel of Progress, The Monsters Inc Laugh Floor, and Buzz Lightyear's Space Ranger Spin. 
+
+![Perfect Score on Buzz Lightyear's Spaceranger Spin](/img/post/disney-world-faq/perfect-score-buzz-lightyear-spin.jpg)
+*With a bit of practice and luck, you can achieve Galactic Hero status on Buzz Lightyear's Spaceranger Spin, like my wife and I did simultaneously on our last trip.*
+
+Adventureland's Pirates of the Caribbean is a family favorite, and a Dole Whip is welcome any time of year. If you have younger children with you The Jungle Cruise is a fun treat. 
+
+![Jack Sparrow's crew](/img/post/disney-world-faq/hanging-with-capt-jack-sparrow.jpg)
+*After a ride on Pirates of the Caribbean ye be ready to join Capt. Jack's crew.*
+
+Frontierland has two great rides, Big Thunder Mountain Railroad and Splash Mountain, and Tom Sawyer Island makes for a good wind-down spot. Don't forget to watch the classic Country Bear Jamboree. 
+
+There are too many great attractions to list, but a first trips should include a flight with Dumbo, a spin in a teacup, a trip to the TikiTikiTiki Room, and a lesson from the Presidents of the United States.
 
 If you can get a spot for lunch or dinner, use the Fastpass+ or a dining reservation for Be Our Guest. If you have children with you, especially young princesses, this restaurant is a must see.
 
@@ -55,6 +67,9 @@ Imagination pavilion has our family's favorite character, Figment. This ride has
 
 Lastly, Innoventions is a great place to escape the weather and see presentations and interactive exhibits from various sponsors. The Sum of all Thrills is a personal favorite, allowing you to build your own roller coaster and then ride it in a virtual simulation.
 
+![Sum of all Thrills](/img/post/disney-world-faq/sum-of-all-thrills.jpg)
+*Build and ride your own custom roller-coaster at the Sum of all Thrills in Epcot's Innoventions.*
+
 #### World Showcase
 
 The eleven countries represented at EPCOT's world showcase each offer shopping, entertainment, food and drinks from their homeland. Enjoying some unique refreshments while strolling around World Showcase Lagoon keeps the adults happy and Kidcot allows kids to create personalized souvenirs at each country. There is also an interactive game, [Agent P's World Showcase Adventure](https://disneyworld.disney.go.com/attractions/epcot/agent-p-world-showcase-adventure/) to keep the young detectives busy while exploring the shops and themed areas of each country.
@@ -64,6 +79,9 @@ The eleven countries represented at EPCOT's world showcase each offer shopping, 
 I was fortunate to visit Hollywood Studios the year it opened, when it was still called _MGM Studios_, and will always remember being an extra in the _Indiana Jones Stunt Show_. It was especially fun to watch my son, and then my wife and sister all participate in this same show experience decades later.
 
 Set in Hollywood's golden age, this park brings Star Wars, Indiana Jones, The Muppet's, Pixar's Toy Story, and Hollywood's great movies all together. Star Tours is a must ride for any Star Wars fan, and kids under 14 can train as a padawan in the Jedi Training Academy.
+
+![Jedi Training Academy](/img/post/disney-world-faq/jedi-training.jpg)
+*Kids can learn to use the force and challenge Darth Vadar at the JEDI Training Academy at Disney's Hollywood Studios.*
 
 The shows are amazing, Indiana Jones brings _The Raiders of the Lost Ark_ to life, with audience participation included. The Lights, Motor, Action stunt show is fun every time, and Beauty and the Beast is a favorite for my family.
 
@@ -81,7 +99,13 @@ Animal Kingdom is far better than any zoo I have ever visited in terms of intera
 
 The Kilimanjaro Safari is a great ride to hit first thing in the morning. We usually get a Fastpass for the first hour, and when the park opens, we go straight to the standby line, ride it, then use our Fastpass to ride it a second time. Once the morning is over, the animals are harder to see, and the experience is not as nice, so the earlier the better in our experience.
 
+![A ride on Kilimanjaro Safaris to see elephants](/img/post/disney-world-faq/elephants-on-safari.jpg)
+*Keep your cameras ready on The Kilimanjaro Safari for some great shots of African wildlife.*
+
 We enjoy eating at Tusker House, grabbing one of the better buffets in Walt Disney World. It is a character dining experience, with Mickey, Minnie, Donald, and Goofy. If you are on the dining plan, this is a good value if your children enjoy the character experience. The food ranges from traditional Disney buffet options to unique African offerings.
+
+![Meeting Mickey at Tusker House in Disney's Animal Kingdom](/img/post/disney-world-faq/tusker-house-mickey.jpg)
+*Meet Mickey and the gang on safari at Tusker House in Disney's Animal Kingdom.*
 
 The Maharajah Jungle Trek is a great way to get see some tigers and other wild animals. It requires a bit of walking, but it is worth every step and is very well shaded. The best part is you can enjoy it at whatever pace you choose. We also like the Flights of Wonder bird show, where a variety of birds are presented by knowledgeable keepers and researchers.
 
@@ -175,7 +199,10 @@ It is easier to answer which time of year to avoid: summer. Summer may be your o
 
 If you are able to travel during either the _International Flower and Garden Festival_, usually in March, April, and early May or the _International Food and Wine Festival_ in late September through mid-November, then you're chances of seeing us will greatly increase. We love both of these times, the weather is better than normal, the crowds are lower than summer, and Epcot comes alive with beautiful topiaries and fresh foods in the Spring, and exotic and exciting food and wine offerings in the Fall. On a good year, we'll hit both of these festivals.
 
-Our favorite week is the last week of October. We all dress up for Mickey's Not So Scary Halloween Party where we trick-or-treat, dance with the characters, watch the Villans show, and see one of the best fireworks presentations ever.
+![Tow Mater at the International Flower and Garden Festival](/img/post/disney-world-faq/flower-and-garden-festival-mater.jpg)
+*Disney characters come to life as topiaries at the International Flower and Garden Festival.*
+
+Our favorite week is the last week of October. We all dress up for Mickey's Not So Scary Halloween Party where we trick-or-treat, dance with the characters, watch the Villains show, and see one of the best fireworks presentations ever.
 
 Christmas is also a special time at Disney. The decorations are magnificent, with every park, resort, shop, and cast-member in full celebration mode. Mickey's Very Merry Christmas Party mixes hot chocolate with Christmas cheer. The crowds are certainly higher than usual, but the experience is well worth the extra time in line.
 
@@ -221,7 +248,10 @@ Tony's Town Square is themed from the movie where the most famous kiss in animat
 
 #### Quick Service
 
+#### Snacks and Treats
 
+![Big Top Souvenirs in New Fantasyland has incredible treats and a friendly staff](/img/post/disney-world-faq/dumbos-big-top.jpg)
+*Big Top Souvenirs in New Fantasyland has incredible treats and a friendly staff.*
 
 ### Epcot
 
@@ -263,7 +293,7 @@ Every Disney vacation starts with a budget. To help us maximize our dollar, we o
 
 ### Book a Cheap Flight
 
-Using travel sites or airline miles, we always go for the cheapest flight we can find, since the shortest amount of our vacation time will be spent on the plane. Because of where we live, we typically fly Southwest. This allows us to check two bags each, and the non-stop flights to Orlando are usually the cheapest.
+Using travel sites or airline miles, we always go for the cheapest flight we can find, since the shortest amount of our vacation time will be spent on the plane. Because of where we live, we typically fly Southwest. This allows us to check two bags each, and for non-stop flights to Orlando they are usually the cheapest.
 
 ### Grocery Delivery
 
