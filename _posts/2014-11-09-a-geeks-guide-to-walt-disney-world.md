@@ -7,7 +7,7 @@ header-img: "img/header/EPCOT_BACKGROUND.jpg"
 image-credit:
 ---
 
-My family and I are Disney fanatics, Earheads, Disneyphiles, whatever you wish to call us. Our close friend and family already know interventions are futile; we have consumed The Mouse's Kool-Aid and we are not turning back.
+My family and I are Disney fanatics, Earheads, Disneyphiles, whatever you wish to call us. Our close friends and family already know interventions are futile; we have consumed The Mouse's Kool-Aid and we are not turning back.
 
 We are annual pass-holders, members of the Disney Vacation Club (DVC), and the de-facto Disney experts of our social group. We even bought some Disney stock.
 
@@ -41,7 +41,15 @@ Adventureland's Pirates of the Caribbean is a family favorite, and a Dole Whip i
 
 Frontierland has two great rides, Big Thunder Mountain Railroad and Splash Mountain, and Tom Sawyer Island makes for a good wind-down spot. Don't forget to watch the classic Country Bear Jamboree. 
 
-There are too many great attractions to list, but a first trips should include a flight with Dumbo, a spin in a teacup, a trip to the TikiTikiTiki Room, and a lesson from the Presidents of the United States.
+Haunted Mansion
+
+![Ghost Lady Renata at The Haunted Mansion during Mickey's Not So Scary Halloween Party](/img/post/disney-world-faq/ghost-lady-renata.jpg)
+*Ghost Lady Renata entertains the living at The Haunted Mansion during Mickey's Not So Scary Halloween Party.*
+
+There are too many great attractions to list, but a first trips should include a flight with Dumbo, a spin in a teacup, a trip to the TikiTikiTiki Room, and a lesson from the Presidents of the United States. Don't forget to ride Prince Charming Carousel and attempt to pull the sword from the stone.
+
+![Attempting to pull the sword from the stone](/img/post/disney-world-faq/the-sword-in-the-stone.jpg)
+*Sometimes they make a big deal when you try to pull the sword from the stone in front of Prince Charming's Carousel.*
 
 If you can get a spot for lunch or dinner, use the Fastpass+ or a dining reservation for Be Our Guest. If you have children with you, especially young princesses, this restaurant is a must see.
 
@@ -78,6 +86,9 @@ The eleven countries represented at EPCOT's world showcase each offer shopping, 
 
 I was fortunate to visit Hollywood Studios the year it opened, when it was still called _MGM Studios_, and will always remember being an extra in the _Indiana Jones Stunt Show_. It was especially fun to watch my son, and then my wife and sister all participate in this same show experience decades later.
 
+![Audience participation is encouraged in the Indiana Jones Stunt Show](/img/post/disney-world-faq/indiana-jones-stunt-show.jpg)
+*Audience participation is encouraged in the Indiana Jones Stunt Show at Disney's Hollywood Studios.*
+
 Set in Hollywood's golden age, this park brings Star Wars, Indiana Jones, The Muppet's, Pixar's Toy Story, and Hollywood's great movies all together. Star Tours is a must ride for any Star Wars fan, and kids under 14 can train as a padawan in the Jedi Training Academy.
 
 ![Jedi Training Academy](/img/post/disney-world-faq/jedi-training.jpg)
@@ -88,6 +99,15 @@ The shows are amazing, Indiana Jones brings _The Raiders of the Lost Ark_ to lif
 Be sure to take the time to enjoy The Great Movie Ride. A trip through the Hollywood greats is the perfect way to set the stage for a great day in movie-land.
 
 If you only have time to ride one thing in this park, it must be Toy Story Midway Mania. This ride is epic, bringing 3D gaming to a new level. The queuing area is fun, but a Fastpass makes this ride so much better.
+
+![Toy Story Midway Mania Hidden Mickey](/img/post/disney-world-faq/toy-story-mania-hidden-mickey.jpg)
+*The entrance to Toy Story Midway Mania features a Hidden Mickey. Do you see it?*
+
+Walt Disney Walkthrough 
+Drawing Classes
+
+![Take a drawing class at Disney's Hollywood Studios](/img/post/disney-world-faq/drawing-class.jpg)
+*Take a drawing class from actual animators at Disney's Hollywood Studios.*
 
 Fantasmic is the Hollywood Studios closing show, and my son thinks it is the best thing in all Disney. When he first saw the show he was six years old and it was days after Christmas. He turned to me at the end of Fantasmic and said "Mickey Mouse has more magic than Santa Claus". To this day it is his favorite show.
 
@@ -117,7 +137,7 @@ At the time of this writing, there is not a closing show at this park. It is rum
 
 ## Should we stay on property?
 
-There are several benefits from staying at a Walt Disney World resort.
+There are several benefits from staying at a Walt Disney World resort. They certainly make it convenient and pleasurable to stay on property, with transportation, food, shopping, and entertainment available at every turn.
 
 ### Disney Magical Express
 
@@ -169,7 +189,8 @@ All resort guests enjoy the benefit of Extra Magic Hours. Every day one park wil
 
 ### Magic Bands
 
-Each resort guest is now issued a _magic band_ &mdash; a "smart" wristband that can perform many tasks including
+Each resort guest is now issued a _magic band_ &mdash; a "smart" wristband that can perform many tasks including:
+
 - Admission to parks (with linked passes)
 - PhotoPass or MemoryMaker card replacement
 - Room key (the band unlocks your room door!)
@@ -197,9 +218,12 @@ The advantages to using this service are ease of use, discounts, and My Disney E
 
 It is easier to answer which time of year to avoid: summer. Summer may be your only option, but if it is not, I would highly recommend exploring the off-season. Holidays like Christmas and New Years bring the crowds, but the decorations and cooler weather seem to make up the difference. 
 
+![](/img/post/disney-world-faq/)
+**
+
 If you are able to travel during either the _International Flower and Garden Festival_, usually in March, April, and early May or the _International Food and Wine Festival_ in late September through mid-November, then you're chances of seeing us will greatly increase. We love both of these times, the weather is better than normal, the crowds are lower than summer, and Epcot comes alive with beautiful topiaries and fresh foods in the Spring, and exotic and exciting food and wine offerings in the Fall. On a good year, we'll hit both of these festivals.
 
-![Tow Mater at the International Flower and Garden Festival](/img/post/disney-world-faq/flower-and-garden-festival-mater.jpg)
+![Beauty and the Beast at the International Flower and Garden Festival](/img/post/disney-world-faq/flower-and-garden-festival-beauty-and-beast.jpg)
 *Disney characters come to life as topiaries at the International Flower and Garden Festival.*
 
 Our favorite week is the last week of October. We all dress up for Mickey's Not So Scary Halloween Party where we trick-or-treat, dance with the characters, watch the Villains show, and see one of the best fireworks presentations ever.
@@ -216,7 +240,7 @@ Downtown Disney is a fairly large area of shops and restaurants ranging from Dis
 
 We have, but it is not for everyone. To qualify for the plan, you must be staying at a resort on property.
 
-The dining plan can be advantageous if your family like to eat a lot, and you use the plan wisely. Our main reason for using it is it allows us to prepay for most of our food, reducing the stress of keeping up with finances during the vacation. To get the most "bang for the buck" we usually order the more expensive menu options for each meal when we are on a dining plan. 
+The dining plan can be advantageous if your family likes to eat a lot, and you use the plan wisely. Our main reason for using it is it allows us to prepay for most of our food, reducing the stress of keeping up with finances during the vacation. To get the most "bang for the buck" we usually order the more expensive menu options for each meal when we are on a dining plan. 
 
 If you go during the _International Food and Wine Festival_ or _Flower and Garden Festival_, the food kiosks accept snack credits for many of the food offerings. We have found this is a great way to use our snack credits, especially if we order bottled waters and food from the Garden Grocer (see below).
 
@@ -238,30 +262,144 @@ The Magic Kingdom offers a variety of dining atmospheres, with themes ranging fr
 
 #### Table Service
 
-If you want to enjoy one of the table service restaurants at the Magic Kingdom than reservations are advised, especially for dinner service. Each trip we make, we watch dozens of people be politely turned away from restaurants while we wait to be seated. Tens of thousands of people visit the Magic Kingdom every day, and there are limited seats at their seven table service restaurants.
+If you want to enjoy one of the table service restaurants at the Magic Kingdom then reservations are advised, especially for dinner service. Each trip we make, we watch dozens of people be politely turned away from restaurants while we wait to be seated. Tens of thousands of people visit the Magic Kingdom every day, and there are limited seats at their seven table service restaurants.
 
 The Crystal Palace allows you to meet Winnie the Pooh and friends while enjoying a large buffet and dining area. This one of our favorite table service restaurants in the Kingdom, and is a great place to start or end a day at the park. They are open for breakfast, lunch, and dinner and will have something for everyone.
 
-We love to eat at Be Our Guest, enjoying one of the three spectacular dining rooms themed after _Beauty and the Beast_. The Grand Ballroom offers fantastic Gothic architecture, the West Wing allows dining next to the Beast's enchanted rose, and Belle's library has a relaxing mood. The food is great, and of course, they have the gray stuff. Like Cinderella's Royal Table, this restaurant will book up 6 months out so get your reservations early.
+![Meet Winnie the Pooh and Friends at the Crystal Palace](/img/post/disney-world-faq/crystal-palace-pooh.jpg)
+*Meet Winnie the Pooh and Friends at the Crystal Palace while enjoying an outstanding buffet.*
 
 Tony's Town Square is themed from the movie where the most famous kiss in animated storytelling happened, Lady and the Tramp. In the back corner of the restaurant, you can look out the window and see Tramp dining with his Lady, enjoying some pasta for two. The menu offers Italian favorites, and on an nice evening, an outdoor table is a great way to soak in Main Street. We can be found at Tony's almost every trip we make to see The Mouse.
 
+We love to eat at Be Our Guest, enjoying one of the three spectacular dining rooms themed after _Beauty and the Beast_. The Grand Ballroom offers fantastic Gothic architecture, the West Wing allows dining next to the Beast's enchanted rose, and Belle's library has a relaxing mood. The food is great, and of course, they have the gray stuff. Like Cinderella's Royal Table, this restaurant will book up 6 months out so get your reservations early. Dinner at Be Our Guest is a table service, however, they do offer quick service dining for lunch.
+
+<img src="/img/post/disney-world-faq/enchanted-rose.jpg" alt="enchanted rose at Be Our Guest" style="display: block; margin-left: auto; margin-right: auto"/>
+*You can view the enchanted rose in the West Wing of The Beast's Castle at New Fantasyland's Be Our Guest restaurant.*
+
 #### Quick Service
 
-#### Snacks and Treats
+Casey's Corner is the place to get a hot dog in the Kingdom. The seating offers great views of Mail Street, Cinderella's Castle, and the Crystal Palace. A family favorite for lunch, you can't go wrong with some nachos and a chili dog.
+
+If you are craving some Italian food, Pinocchio Village Haus has great flat-bread pizzas and meatball subs. Some of the tables overlook the entrance to It's a Small World, with boats full of people passing by below.
+
+The cinnamon rolls at Gaston's Tavern bring us back every trip. The Nutella and fruit covered waffles at Sleepy Hollow are a must have, with a photo perfect view of the Castle as a background. The silhouette and portrait artists can be found across the street, and the Christmas shop is a great place to go look around while finishing your coffee.
+
+![Meet Gaston outside of his Tavern](/img/post/disney-world-faq/gastons-tavern.jpg)
+*Meet Gaston outside of his Tavern after a glass of LeFou's Brew.*
+
+Another addition New Fantasyland brought was Big Top Souvenirs, which does indeed have a good selection of merchandise, but the real treat lies inside. Big Top Treats offers circus themed snacks from popcorn and peanuts to exquisite candied apples.
 
 ![Big Top Souvenirs in New Fantasyland has incredible treats and a friendly staff](/img/post/disney-world-faq/dumbos-big-top.jpg)
 *Big Top Souvenirs in New Fantasyland has incredible treats and a friendly staff.*
 
+After a ride on Pirates of the Caribbean, a taco salad from Tortuga Tavern is a great choice. The taco salad is served in a fried tortilla bowl, and the salad bar is available to add lettuce, tomato, salsa, and other toppings. This can be a great value and the restaurant has plenty of good seating.
+
+While in Adventureland, we always grab a Dole Whip from Aloha Isle. These are a rare treat, and if you have never tried this famous pineapple soft serve, then hop in line and order two. After you eat the first one, you'll thank me.
+
+The hamburgers and hot dogs sold all over Disney properties are usually the same, but when you find a spot with a full condiments bar including hot cheese sauce, you've got a winner. Several of these exist on property, but our personal favorite is Cosmic Ray's Starlight Café. A seat in the lounge will feature animatronic entertainment from your host, Sonny Eclipse.
+
+There are other great dining opportunities around the Magic Kingdom, with too many to list. Every place we have tried we would visit over and over again.
+
 ### Epcot
+
+There is no way to do justice to the culinary wonderland put on display at Epcot, especially not in a subsection of a blog post. Any restaurant you get a reservation for will surely delight.
 
 #### Future World
 
+While Future World is known for the rides and attractions, there are some very good food options available.
+
+#### Quick Service
+
+My wife loves Starbucks, but there is one Starbucks on Earth that stand above all others. While the rest of us visit Epcot for the trilling rides Test Track and Sorin, or the inspiration of Innoventions and Spaceship Earth, my wife makes the journey to visit The Fountain View, Future World's own Starbucks, complete with custom designed cups. I will admit, enjoying a hot coffee and pastry while watching the Fountain of Nations is a great way to start the day.
+
+A hamburger or meatball sub from the Electric Umbrella makes is a lunchtime staple, and offers generous amounts of seating. The location is great, easily accessible in the center of Future World.
+
+Our favorite quick service is in Future World, specifically in side The Land pavilion. The Sunshine Seasons offers a fresh take on quick service from Ahi Tuna and Salmon to fantastic sandwiches. This food court is one of the largest on property, and has something for everyone.
+
+#### Table Service
+
+A ride on Living with the Land will reveal the how interns and scientists at Disney work with agriculture. Fresh fruits, vegetables, and fish are harvested from this attraction, and served all over Disney properties. Overlooking the ride is the ever rotating Garden Grill. Family style and fun, this restaurant is a perfect place to end a night in Future World. Chip and Dale bring their friends to dinner, and on a good night The Mouse will drop by for autographs.
+
+We always enjoy walking around the aquarium after a ride on Finding Nemo. This aquarium is so large, the entire sphere of Spaceship Earth can fit inside. After a stroll through the aquarium and visit with Crush, we love to grab a meal at The Coral Reef. A beautiful restaurant with a wide variety of seafood dishes, this is an all time family favorite.
+
 #### World Showcase
+
+Epcot's World Showcase is a foodie's dream. Culinary creations from all over the world await the adventurous palate. Beer, wine, and spirits represent their homeland and are served by their countrymen. White tablecloths and street food are steps apart from one another. Mixed between the restaurants and kiosks are shops, attractions, and picturesque views.
+
+The grand pyramid in Mexico may look like a simple marketplace at first glance, but inside you will find a boat ride, restaurant, and tequila bar. La Hacienda de San Angel is one of my favorite places to enjoy a margarita, and if you watch the volcano eruptions you may spot a hidden mickey. If you are in the mood to try some authentic tequila, La Cava del Tequila can have a long line, but it does boast a nice selection of tequila and tapas.
+
+![Mexico Pavilion at EPCOT](/img/post/disney-world-faq/mexico-pavilion.jpg)
+*The pyramid at the Mexico Pavilion houses more than just a marketplace. Inside there is also a restaurant, Tequila bar, and boat ride.*
+
+To my family, there is no better place to eat breakfast that Norway's Akershus. A character dining experience with the Disney Princesses, this restaurant offers breakfast, lunch, and dinner. The family style meets buffet, with Norwegian flair packs a hearty punch, and never ceases to amaze. I highly recommend this dining experience.
+
+Germany's Biergarten is a great place to drink beer, enjoy a buffet, meet new people, and watch a show all in one stop. Unless you are a party of eight, expect to make new friends as every table seats, well, eight people. They do have beer in boots, and a buffet that represents Germany very well, with sausage, schnitzel, sauerkraut, and other favorites.
+
+We cannot pass Italy without making a pit stop at the wine cart in the square. They serve cold beverages, with a Moscato that keeps us coming back. Tutto Italia Ristorante has the best Italian cuisine at the parks, and a late lunch starting with antipasto and a bottle of wine is never a bad idea.
+
+If you prefer a pizza made in a wood fire oven, then Via Napoli is for you. Watch your food cook while enjoying imported Italian beers or cocktails. Lunch or dinner, this restaurant offers a great menu and atmosphere.
+
+Disney trips establish traditions and one of ours lies in Japan. Every trip includes the purchase of an oyster inside the Mikimoto shop, where it is opened and a pearl is revealed. They will mount the newborn pearl to jewelry or give it to you bare, but the experience is one of my wife an son's favorite things. 
+
+After getting our pearl, we are torn between two great Japanese restaurants. Teppan Edo offers [teppanyaki](http://en.wikipedia.org/wiki/Teppanyaki) style with entertaining chefs and great food. For sushi and other authentic Japanese dishes, Tokyo Dining combines food and atmosphere with the perfect touch. Either of these restaurants are a good selection; we love them both.
+
+The France Pavilion warrants a post to itself. Pastries, wine, street artists, shops, and a cinema &mdash; this pavilion has it all. If you don't have time for a full meal in France, at least drop by Les Halles Boulangerie Patisserie
+and grab a treat. If you are looking for a great view and French cuisine Les Chefs de France has both. This is a great restaurant for either lunch or dinner.
+
+The other table service restaurant in the France Pavilion is one of our favorite places to dine. Monsieur Paul boasts elegance, a stunning wine list, and gourmet food. From the entrance to the restaurant through the desert, Monsieur Paul never fails to exceed expectations.
+
+![Monsieur Paul wedding anniversary dinner](/img/post/disney-world-faq/monsieur-paul.jpg)
+*We love this restaurant so much, we made a special trip on our wedding anniversary for one night at Epcot, just to visit Monsieur Paul.*
+
+No trip to England is complete without a round at the pub. The England Pavilion's Rose and Crown Pub is a must stop for a pint, and the dining room offers table service seating with a full menu. This is a great spot to grab an appetizer and round of beers in the evening, often with live piano and lots of laughter filling the air.
+
+![The Rose and Crown Pub](/img/post/disney-world-faq/rose-and-crown-pub.jpg)
+*The Rose and Crown Pub in the England Pavilion.*
+
+Our friend from England, Margaret, swears the only good fish and chips in this country is at the Yorkshire County Fish Shop at Epcot. On beautiful days, it is hard to beat a cold beer and pile of fish outside, overlooking the World Showcase lagoon.
+
+When we are able to get a reservation, we love to end an evening at World Showcase with a meal at Le Cellier. Canada Pavilion's prime steakhouse, this is one of the best restaurants in Disney's portfolio. The pretzel bread is incredible, the steaks are perfect, but the thing that brings us back is the best bowl of cheddar cheese soup ever made. Before the reservation, be sure to watch Martin Short in Circle-Vision 360.
+
+#### The Festivals
+
+EPCOT hosts two annual festivals that bring dozens of additional options to their already stunning year-round collection of food wonderments. The International Food and Wine Festival in the fall is known for its display of annual treats, world-class chefs, cooking classes, and specialty dining. The lesser known Flower and Garden Festival is a springtime cornucopia of fresh food and drinks, served on a background of colorful topiaries and some of the best weather Florida has to offer.
+
+![Ghost Pepper Tilapia](/img/post/disney-world-faq/ghost-pepper-tilapia.jpg)
+*Ghost pepper tilapia with melon slaw from the Urban Farm Eats kiosk at the  Flower and Garden Festival 2014.*
+
+We make every effort to attend one, if not both, of these festivals every year. If you have a chance, be sure to check these out. 
 
 ### Hollywood Studios
 
+Paying homage to Hollywood's golden era, Disney's Hollywood Studios brings the movies to life with a side of some great food. The uniquely themed restaurants at this park are like none other, and have some amazing eats.
+
+When the park first opened as MGM Studios, I was lucky enough to visit as a child. The memory that stuck with me though the years was the peanut butter and jelly milkshake from the 50's Prime Time Café. Here mom is ready to make you a plate of your favorite home cooked meal while you watch your favorite shows, all set in the 1950s. Uniquely themed with comfort food galore, this place is a must. And that peanut butter and jelly milkshake may sound questionable, but it really is out of this world.
+
+![50 Prime-Time Cafe](/img/post/disney-world-faq/50-prime-time-cafe.jpg)
+*The 50's Prime Time Café at Christmas.*
+
+For another far out 50s experience, we love to have lunch at the Sci-Fi Dine-In Theater. Sitting in a replica of a 1950s car, you order classic comfort foods while watching the Sci Fi favorites of the fifties. We love the fried pickles, and their milkshakes give the Prime Time Café a run for their money. 
+
+![sci-fi-drive-in](/img/post/disney-world-faq/sci-fi-drive-in.jpg)
+*Your carhop will deliver comfort foods while you watch classic sci-fi reels.*
+
+The Writer's Shop shares an "alleyway" with the Drive-In, and it is a great place to grab a coffee, book, and a snack. We love to drop in for a rest on every trip and there is almost never a crowd in this shop.
+
+#### Fantasmic! Dinner Package
+
+The buffet at Hollywood and Vine has the standard Disney buffet items, but adds a custom pasta station. Mama Melrose has great Italian food and a great atmosphere, and the Brown Derby is themed after the Hollywood legend, and is amongst the top tier of Disney's dining park-wide.
+
+All three of these restaurants participate in the Fantasmic! Dinner Package, where you receive premium seating passes to the Hollywood Studios night-time spectacular. We have been able to snag very good seats using the passes, and all three of these restaurants are worth visiting.
+
 ### Animal Kingdom
+
+Greeting you at the entrance to Animal Kingom is the Rainforest Cafe. We have not eaten here as we have this restaurant chain in our hometown, but I assume it offers the atmosphere and food that the chain is known for.
+
+Inside the park, our favorite is Tusker House with a combination of unique buffet options and character dining with Mickey, Donald, Daisy, and Goofy. They serve breakfast, lunch, and dinner. The breakfast buffet is one of our favorites, and their African margarita is a personal favorite.
+
+Nothing beats Kusafiri Coffee Shop &amp; Bakery after a morning ride on Kilimanjaro Safaris. The pastries are family sized, and a warm cup of coffee is always welcome. For Napal inspired Asian fare, the Yak & Yeti Restaurant is a fun place, and their lunch and dinner menus have a lot to offer.
+
+Animal Kingdom is packed with quick service locations including pizza, barbecue, mixed drinks, and ice cream. 
 
 ## When should we book our reservations?
 
@@ -271,7 +409,7 @@ Like all things Disney, the more you plan ahead, the easier your vacation will b
 
 If you are booking online, the website does restrict how far out you can book your trip, so you may have to check back often to see when the next year's pricing is released. Generally this is each summer, so 2016 trips will not become available until sometime in summer of 2015. You can call for booking a trip up to 500 days in advance, but we usually just use the website and have not had any problems. Our rooms are usually booked 7-11 months in advance.
 
-If you are traveling during the off-season, there may be special offers for free dining, upgraded resorts, or other perks. We usually book ahead of the specials, then call in when the specials are announced to receive a refund or upgrade.
+If you are traveling during the off-season, there may be special offers for free dining, upgraded resorts, or other perks. We usually book ahead of the specials, then call in when the specials are announced to receive a refund or upgrade. This has worked for ourselves and several family members on multiple occasions, including for our trip this coming October.
 
 #### Dining Reservations
 
@@ -289,7 +427,7 @@ This really depends on your family, what all you wish to see in Orlando, and you
 
 ## Any money saving tips?
 
-Every Disney vacation starts with a budget. To help us maximize our dollar, we opt to save where we can so we have more to spend while in the parks.
+Every Disney vacation starts with a budget. To help us maximize our dollar, we opt to save where it is easiest and has the most value.
 
 ### Book a Cheap Flight
 
@@ -299,6 +437,12 @@ Using travel sites or airline miles, we always go for the cheapest flight we can
 
 Bottled water, granola bars, fresh fruit, and other snacks and refreshments are more expensive on property than most convenience stores. To save money, we usually order these items from [GardenGrocer.com](https://www.gardengrocer.com/) and have them delivered to our resort. Using the in room refrigerator we have a constant supply of cold water, fruit, and snacks. This small trick saves us time and money every year.
 
+### Don't rent a car
+
+If you plan on staying on property, and are spending your entire trip at Disney, then there is no reason to rent a car. As noted above, the transportation provided by Disney to its resort guests is quite extensive, and we have never had a problem getting around without a car.
+
+If you are traveling to other Orlando area theme parks or attractions, then Orlando does have some of the cheapest rental rates in the country. 
+
 ### Quick Service to the Airport
 
 Since we usually try to get an afternoon flight home, allowing us a breakfast or brunch in the park prior to returning home, we like to have our final Disney meal at the airport. It may be debatable if this is a money saving tip, however, we tend to save a quick service meal credit from our dining plan and make our final order at the resort's quick service counter prior to boarding the bus. They will gladly pack up the meals to go, with plates and cutlery, bagged up and ready for your trip home.
@@ -307,3 +451,5 @@ Since we usually try to get an afternoon flight home, allowing us a breakfast or
 
 Be nice - use good manners
 
+![](/img/post/disney-world-faq/.jpg)
+**
