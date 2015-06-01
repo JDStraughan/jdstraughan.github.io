@@ -15,6 +15,21 @@ There are plenty of folks that have spent way more time at Disney Parks than we 
 
 Below are the questions most frequently asked of me by friends and family that are planning a trip to Walt Disney World.
 
+#### Table of Contents
+
+- [Why do you keep going to Walt Disney World?](#why-do-you-keep-going-to-walt-disney-world)
+- [What should we do at each park?](#)
+- [Should we stay on property?](#)
+- [What time of year should we go?](#)
+- [Where do you book your trips?](#)
+- [What is Downtown Disney?](#)
+- [Do you use the Disney Dining Plan?](#)
+- [Which restaurants should we eat at?](#)
+- [When should we book our reservations?](#)
+- [How long should we stay?](#)
+- [Any money saving tips?](#)
+- [Any other things worth passing on?](#)
+
 ## Why do you keep going to Walt Disney World?
 
 This is the most often asked question from folks when they find out about our obsession. The answer is simple: _it is a great place for both kids and adults_.
@@ -23,30 +38,48 @@ This is the most often asked question from folks when they find out about our ob
 >
 > Walt Disney
 
-Each of the parks offer many attractions geared towards adults, with fun for the kids at every corner; The Magic Kingdom brings the Disney classics to life, Hollywood Studios personifies the golden age of movies (and has a few roller coaters), Animal Kingdom brings the zoo into the 21st century, and EPCOT is a paradise of innovation, imagination, and culture.
+Each of the parks offer many attractions geared towards adults, with fun for the kids at every corner; The Magic Kingdom brings the Disney classics to life, Hollywood Studios personifies the golden age of movies (and has a few roller coaters), Animal Kingdom upgrades the zoo into the 21st century, and EPCOT is a paradise of innovation, imagination, and culture.
+
+## What should we do at each park?
+
+Throughout our many trips to the parks, we still have not visited every possible attraction, seen every show, eaten at every restaurant, or even come close to exhausting the possibilities of things to do. There are things we miss on some trips and others we do over and over again.
+
+Below is an overview of each park with the main attractions our family loves.
 
 ### Magic Kingdom
 
-Undoubtedly, the best way to visit Magic Kingdom is with, or as, a kid. Fantasyland makes classic Disney tangible with rides like Peter Pan and the Seven Dwarf's Mine Train. 
+Undoubtedly, the best way to visit Magic Kingdom is with, or as, a kid.
 
-Tomorrowland is best at night, with the futuristic neon lighting the way to Carousel of Progress, The Monsters Inc Laugh Floor, and Buzz Lightyear's Space Ranger Spin. 
+The entrance never gets old, escaping the tunnel under the train station as the _opening credits_ are revealed: Main Street USA with Cinderella's Castle presiding over the background. 
+
+Fashioned after Walt's hometown and set right after the turn of the twentieth century, this area offers food, shopping, barbershop quartets and an actual barbershop. We love to sit on the deck of the train station with a hot cocoa at closing time, watching the other guests exit underneath us. This area is beautiful at night, especially during the holidays.
+
+Cinderella's Castle is the center of the park, with all the lands radiating out like a wagon wheel around this hub. The castle stage will host shows throughout the day, and the evening show _Wishes_ will turn the entire castle into a living centerpiece for the fireworks display. Including Main Street USA, the park contains a total of 6 themed lands.
+
+Fantasyland makes classic Disney tangible with rides like Peter Pan and The Many Adventures of Winnie the Pooh. The New Fantasyland expansion added many new rides including Under the Sea: Journey of the Little Mermaid and the Seven Dwarf's Mine Train, a combination of roller-coaster and dark ride. Expect long lines for the Mine Train, and if a Fastpass is available, I would advise grabbing one.
+
+Tomorrowland is best at night, with the futuristic neon lighting the way to The Monsters Inc Laugh Floor and Buzz Lightyear's Space Ranger Spin. We love to relax on the Tomorrowland Transit Authority PeopleMover after dinner, and we will never pass up an opportunity to ride Space Mountain. 
 
 ![Perfect Score on Buzz Lightyear's Spaceranger Spin](/img/post/disney-world-faq/perfect-score-buzz-lightyear-spin.jpg)
 *With a bit of practice and luck, you can achieve Galactic Hero status on Buzz Lightyear's Spaceranger Spin, like my wife and I did simultaneously on our last trip.*
 
-Adventureland's Pirates of the Caribbean is a family favorite, and a Dole Whip is welcome any time of year. If you have younger children with you The Jungle Cruise is a fun treat. 
+Tomorrowland is also the home to my personal favorite: The Carousel of Progress. This trip through the twentieth century debuted at the 1964 Word's Fair in New York. A showcase of progress, I consider this a living museum, and find it highly inspirational. If you catch my family on the ride, expect to hear us sing along as we look forward to a _Great Big Beautiful Tomorrow_.
+
+Adventureland's Pirates of the Caribbean is a family favorite, and a Dole Whip is welcome any time of year. If you have younger children with you The Jungle Cruise is a fun treat. A walk though the Swiss Family Treehouse offers great views and is a lot of fun, especially on a beautiful day.
 
 ![Jack Sparrow's crew](/img/post/disney-world-faq/hanging-with-capt-jack-sparrow.jpg)
 *After a ride on Pirates of the Caribbean ye be ready to join Capt. Jack's crew.*
 
-Frontierland has two great rides, Big Thunder Mountain Railroad and Splash Mountain, and Tom Sawyer Island makes for a good wind-down spot. Don't forget to watch the classic Country Bear Jamboree. 
+Frontierland has two great rides, Big Thunder Mountain Railroad and Splash Mountain. Tom Sawyer Island makes for a good wind-down spot, as does a ride on the Mark Twain Riverboat. Don't forget to watch the classic Country Bear Jamboree before leaving Frontierland. 
 
-Haunted Mansion
+Set in the early America colony theme, Liberty Square exemplifies Disney's attention to detail. The area has no public restrooms and a brown stone walkway winds through the center of the area, you can guess what it represents from colonial times. A trained eye can spot Paul Revere's message, and a replica of the Liberty Bell is front and center.
+
+We love to visit Ye Olde Christmas Shoppe any time of year, but especially during the holidays when there are artists customizing the ornaments. The Hall of Presidents is a historic and popular attraction that is worth seeing over and over again. The most popular ride in Liberty Square is the famous Haunted Mansion, with an updated queue area, this attraction only gets better with time.
 
 ![Ghost Lady Renata at The Haunted Mansion during Mickey's Not So Scary Halloween Party](/img/post/disney-world-faq/ghost-lady-renata.jpg)
 *Ghost Lady Renata entertains the living at The Haunted Mansion during Mickey's Not So Scary Halloween Party.*
 
-There are too many great attractions to list, but a first trips should include a flight with Dumbo, a spin in a teacup, a trip to the TikiTikiTiki Room, and a lesson from the Presidents of the United States. Don't forget to ride Prince Charming Carousel and attempt to pull the sword from the stone.
+There are too many great attractions at the Kingdom to list, but a first trips should include a flight with Dumbo, a spin in a teacup, a trip to the Enchanted Tiki Room, and a lesson from the Presidents of the United States. Don't forget to ride Prince Charming's Carousel and attempt to pull the sword from the stone.
 
 ![Attempting to pull the sword from the stone](/img/post/disney-world-faq/the-sword-in-the-stone.jpg)
 *Sometimes they make a big deal when you try to pull the sword from the stone in front of Prince Charming's Carousel.*
@@ -59,19 +92,19 @@ There are other night shows at Walt Disney World, but the best fireworks are cer
 
 Epcot, originally EPCOT Center, stands for the Experimental Prototype Community of Tomorrow. It began as Walt's dream of a futuristic city, and has become a perpetual world's fair for the last 30 plus years.
 
-I visited Epcot shortly after its debut as a child, and it was love at first sight. The future, the world, innovation and technology presented in an interactive way I had never experienced before. I visited again as a young man, and now, as an adult, it still astonishes me on every visit.
+I visited Epcot shortly after its debut as a child, and it was love at first sight. The future of the world, innovation, and technology presented in an interactive way I had never experienced before. I visited again as a young man, and now, as an adult, it still astonishes me on every visit.
 
 Over twice the size of Magic Kingdom, Epcot is broken into two sections: Future World and World Showcase.
 
 #### Future World
 
-Future World is broken into sections, and has changed dramatically since I was a child. Like a living expo, you can expect to see new technologies on display every few years. Many of the attractions have been updated or replaced as new innovations and sponsorships have emerged.
+Future World has changed dramatically since I was a child. Like a living expo, you can expect to see new technologies on display every few years. Many of the attractions have been updated or replaced as new innovations and sponsorships have emerged.
 
-Spaceship Earth is the "big sphere" that stands as the iconic symbol for the park. Inside is a ride that restores faith in human beings while reminding riders of our achievements over the past several thousand years. It is a must ride for me every visit, sometimes it is my first and last ride of the day.
+Spaceship Earth is the "big sphere" that stands as the iconic symbol for the park. Inside is a ride that inspires faith in humanity by reminding us of our achievements over the past several thousand years. It is a must ride for me every visit, sometimes it is my first and last ride of the day.
 
-Rides like Mission: SPACE, Test Track, and Sorin offer bigger kids and adults more thrilling experience while The Seas with Nemo and Friends, Universe of Energy, and The Land are slower paced, and small child friendly rides that offer educational opportunities.
+Rides like Mission: SPACE, Test Track, and Sorin offer bigger kids and adults more thrilling experience while The Seas with Nemo and Friends, Universe of Energy, and Living with the Land are slower paced, small child friendly rides that offer educational opportunities.
 
-Imagination pavilion has our family's favorite character, Figment. This ride has also changed over the years, but the message is eternal: progress is driven by imagination.
+Imagination pavilion has our family's favorite character, Figment. The ride has also changed over the years, but the message is eternal: progress is driven by imagination.
 
 Lastly, Innoventions is a great place to escape the weather and see presentations and interactive exhibits from various sponsors. The Sum of all Thrills is a personal favorite, allowing you to build your own roller coaster and then ride it in a virtual simulation.
 
@@ -80,7 +113,35 @@ Lastly, Innoventions is a great place to escape the weather and see presentation
 
 #### World Showcase
 
-The eleven countries represented at EPCOT's world showcase each offer shopping, entertainment, food and drinks from their homeland. Enjoying some unique refreshments while strolling around World Showcase Lagoon keeps the adults happy and Kidcot allows kids to create personalized souvenirs at each country. There is also an interactive game, [Agent P's World Showcase Adventure](https://disneyworld.disney.go.com/attractions/epcot/agent-p-world-showcase-adventure/) to keep the young detectives busy while exploring the shops and themed areas of each country.
+The eleven countries represented at EPCOT's world showcase each offer shopping, entertainment, food and drinks from their homeland. Enjoying some unique refreshments while strolling around World Showcase Lagoon keeps the adults happy and Kidcot allows kids to create personalized souvenirs at each country. 
+
+There is also an interactive game, [Agent P's World Showcase Adventure](https://disneyworld.disney.go.com/attractions/epcot/agent-p-world-showcase-adventure/) to keep the young detectives busy while exploring the shops and themed areas of each country. It is fun to play along, and the adventure will bring the entire family into each country's nooks and crannies.
+
+Every country is worth exploring, and all cast-members are native to the host country. Talking with shopping attendants in Norway, or portrait artists in France, for example, can be educational and rewarding.
+
+A often overlooked ride is Gran Fiesta Tour Starring The Three Caballeros inside the Mexico Pavilion. Directly inside the pyramid is the Kidcot station for Mexico, and once you enter the marketplace, head left to find a boat ride that is usually a very short short line for a dark ride at Disney. This ride is suitable for all ages, and we ride this every year.
+
+Norway's Maelstorm has been removed and is being converted to a Frozen themed ride, however this country still offers great shopping and dining. A beautiful area with quaint shops and good eats, you will not regret a stop here.
+
+China has street performances that are worth watching if you catch them on the way by. I personally find this the most disappointing of the countries, but it does have some fun shops and views.
+
+Our family loves to visit Germany, as my wife spent her childhood with her family there while her father was in the service. They swear by the authenticity of the food and beer, and our son loves to dance to the live music in the Biergarten. The shops sell seasonal German fare, with Lebkuchen being one of my wife's favorite finds during the holidays.
+
+Italy is one of our favorites, from the food and wine, live shows, and beautiful courtyard it is easy to spend a lot of time in this country. We recommend both restaurants, and the beverage cart is has many good selections.
+
+The American Pavilion goes great with a smoked turkey leg, and while it may be tempting to pass this one up, I recommend checking it out. Be sure to watch the a cappella group The Voices of Liberty perform in the rotunda before watching the animatronic show The American Adventure staring Mark Twain and Benjamin Franklin. Both of these are highly recommended.
+
+Every trip through Japan includes a stroll through the Mikimoto shops, where we usually get a pearl from a live oyster and peruse the thousands of items available for purchase. Take a few minutes to stop and look at the gardens and bonsai trees that are expertly manicured and put on display around the Japan Pavilion.
+
+The Morocco Pavilion smells of burning incense and feels like a scene from Casablanca. The marketplace is a fun place to look around, and the restaurants serve exotic options from this beautiful country. We cannot help be find ourselves donning fez hats and chasing each other through the interconnected shops.
+
+When it comes to the Epcot countries, France is our favorite. We love to get a silhouette, portrait, or caricature from one of the street artists. There is usually a photopass photographer by the fountain in the main plaza, and the "Impressions de France" film is a popular attraction. The pastry shop Boulangerie Pâtisserie has incredible macaroons and éclairs, amongst other delicacies.
+
+In the United Kingdom we like to visit the shops packed full of Beatles memorabilia and Dr Who swag. Listing to The Hat Lady at the Rose &amp; Crown Pub or British Revolution on the outdoor stage makes the perfect backdrop to a cold cider or pint of stout. Sometimes you will find Mary Poppins or Alice roaming the streets, and don't forget to take a photo in an classic red phone-booth.
+
+Like the country it models, the Canada pavilion is a vast complex with an incredible garden, world class dining at Le Cellier, and Martin Short in Circle-Vision 360. His show O Canada! is hilarious and family friendly with majestic views of our northern neighbor.
+
+Each of the countries in the showcase can take hours to truly enjoy. Every time we make our way around World Showcase, we see new things and have new experiences. The street performances and live entertainment are great to catch when making the round, and dinner reservations to one of the table service restaurants is highly advised.
 
 ### Hollywood Studios
 
@@ -96,15 +157,18 @@ Set in Hollywood's golden age, this park brings Star Wars, Indiana Jones, The Mu
 
 The shows are amazing, Indiana Jones brings _The Raiders of the Lost Ark_ to life, with audience participation included. The Lights, Motor, Action stunt show is fun every time, and Beauty and the Beast is a favorite for my family.
 
-Be sure to take the time to enjoy The Great Movie Ride. A trip through the Hollywood greats is the perfect way to set the stage for a great day in movie-land.
+Be sure to take the time to enjoy The Great Movie Ride. A trip through the Hollywood greats is the perfect way to set the stage for a day in movie-land.
+
+The love of Star Wars is strong in my family. I have it. My son has it. We can ride Star Tours over and over again. This 4D ride offers randomly mixed trips through scenarios in popular locations of the Star Wars universe. If the wait time is short we are known to take a half dozen turns, then hang out in Tatooine Traders browsing all the unique Star Wars merchandise.
 
 If you only have time to ride one thing in this park, it must be Toy Story Midway Mania. This ride is epic, bringing 3D gaming to a new level. The queuing area is fun, but a Fastpass makes this ride so much better.
 
 ![Toy Story Midway Mania Hidden Mickey](/img/post/disney-world-faq/toy-story-mania-hidden-mickey.jpg)
 *The entrance to Toy Story Midway Mania features a Hidden Mickey. Do you see it?*
 
-Walt Disney Walkthrough 
-Drawing Classes
+I really enjoy walking though One Man's Dream, a tribute to Walt Disney. This mini-museum displays the history of Walt Disney and his Studios. With replicas of early creations and ideas, we can see the evolution of the man and his creations. There is a short movie at the end of the walking area that I can watch every visit.
+
+My wife and our family loves to attend the drawing classes in the The Magic of Disney Animation building. A Disney artist leads the class and shows how to draw a classic Disney character. You get to draw on a professional light table and take home your final product. We have prints from each trip &mdash this is a fun experience and comes with a free souvenir.
 
 ![Take a drawing class at Disney's Hollywood Studios](/img/post/disney-world-faq/drawing-class.jpg)
 *Take a drawing class from actual animators at Disney's Hollywood Studios.*
@@ -214,12 +278,12 @@ For our first two trips we used a travel agent, but now we use the Disney Travel
 
 The advantages to using this service are ease of use, discounts, and My Disney Experience.
 
-## What time of year should you go?
+## What time of year should we go?
 
 It is easier to answer which time of year to avoid: summer. Summer may be your only option, but if it is not, I would highly recommend exploring the off-season. Holidays like Christmas and New Years bring the crowds, but the decorations and cooler weather seem to make up the difference. 
 
-![](/img/post/disney-world-faq/)
-**
+![The Magic Kingdom at Christmas](/img/post/disney-world-faq/magic-kingdom-at-christmas.jpg)
+*The Magic Kingdom at Christmas is decorated beautifully.*
 
 If you are able to travel during either the _International Flower and Garden Festival_, usually in March, April, and early May or the _International Food and Wine Festival_ in late September through mid-November, then you're chances of seeing us will greatly increase. We love both of these times, the weather is better than normal, the crowds are lower than summer, and Epcot comes alive with beautiful topiaries and fresh foods in the Spring, and exotic and exciting food and wine offerings in the Fall. On a good year, we'll hit both of these festivals.
 
@@ -449,7 +513,8 @@ Since we usually try to get an afternoon flight home, allowing us a breakfast or
 
 ## Any other things worth passing on?
 
-Be nice - use good manners
+The parks are huge, and the entire Walt Disney World complex is roughly the size of San Francisco, so be prepared to walk a lot. We usually buy a new pair of tennis shoes a week or two before the trip and break them in. You will be thankful you got new shoes for the trip, and try to get something that is light and comfortable.
 
-![](/img/post/disney-world-faq/.jpg)
-**
+Next, I would say check the cynicism at the airport and just enjoy the experience. Be a kid and see the parks as the wonderland they are. This is a place that is meant to inspire hope and bring happiness to people; try to enjoy that while you are on vacation. I know this seems out of place, but it really is important. If you are spending your vacation time and dollar on a trip to Walt Disney World, then go ahead and don a pair of Mickey ears and have a magical time.
+
+Lastly, I would say that Disney cast-members are known to reward polite children. We have witnessed dozens of occasions where a child was rewarded for a simple _please_, _thank you_, or other kind words. This has been in the form of stickers, special treatment from characters, and even some truly magical surprises. These cast-members interact with thousands of people a day, usually with a smile and sincere desire to make our stay as perfect as possible. Treating them with respect and dignity is not only the right thing to do, when our children do it they notice.
