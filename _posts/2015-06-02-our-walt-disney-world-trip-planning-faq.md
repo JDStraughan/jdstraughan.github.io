@@ -432,11 +432,11 @@ The grand pyramid in Mexico may look like a simple marketplace at first glance, 
 
 To my family, there is no better place to eat breakfast than Norway's [Akershus Royal Banquet Hall](https://disneyworld.disney.go.com/dining/epcot/akershus-royal-banquet-hall/). A character dining experience with the Disney Princesses, this restaurant offers breakfast, lunch, and dinner. Here family style meets buffet, and Norwegian flair packs a hearty punch. I highly recommend this dining experience, it never ceases to amaze our family. We usually end every trip with a meal at Akershus.
 
-Bakery
+While in Norway, eat like a Viking in the [Kringla Bakeri Og Kafe](https://disneyworld.disney.go.com/dining/epcot/kringla-bakeri-og-kafe/). Pretzels and beer, or coffee and salmon, this place is hard to pass up. When we are not dining at Akershus, we are likely to be found having a coffee or pastry in this Norwegian bakery.
 
 Germany's [Biergarten](https://disneyworld.disney.go.com/dining/epcot/biergarten-restaurant/) is a great place to drink beer, enjoy a buffet, meet new people, and watch a show all in one stop. Unless you are a party of eight, expect to make new friends as every table seats, well, eight people. They do have beer in boots and a buffet that represents Germany very well, with sausage, schnitzel, sauerkraut, and other favorites.
 
-Quick Service + Caramel Shop
+If you do not have time for a table service meal in Germany, the quick service restaurant [Sommerfest](https://disneyworld.disney.go.com/dining/epcot/sommerfest/) offers beer, brats, sauerkraut, schnapps, strudel, and, well, just about everything. [Karamell-Küche](http://disneyparks.disney.go.com/blog/2013/10/ten-delicious-reasons-to-visit-karamell-kuche-this-october-in-germany-pavilion-at-epcot/) (the Caramel Kitchen) has some of the best treats in Disney, with brownies, tarts, and other caramel creations that are not only fun to look at, but they taste great too.
 
 We cannot pass Italy without making a pit stop at the wine cart in the square. They serve cold beverages, with a Moscato that keeps us coming back. [Tutto Italia Ristorante](https://disneyworld.disney.go.com/dining/epcot/tutto-italia-ristorante/) has the best Italian cuisine at the parks, and a late lunch starting with antipasto and a bottle of wine is never a bad idea.
 
