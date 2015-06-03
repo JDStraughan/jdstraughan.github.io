@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 title: "Our Walt Disney World Trip Planning Frequently Asked Questions"
 description: "My family and I are Disney fanatics. These are the questions most often asked by friends traveling to Walt Disney World."
 header-img: "img/header/EPCOT_BACKGROUND.jpg"
@@ -223,6 +223,8 @@ The [Maharajah Jungle Trek](https://disneyworld.disney.go.com/attractions/animal
 
 [DinoLand USA](http://en.wikipedia.org/wiki/DinoLand_U.S.A.) is a fun carnival like experience set in prehistoric times. A midday viewing of [Finding Nemo – The Musical](https://disneyworld.disney.go.com/entertainment/animal-kingdom/finding-nemo-the-musical/) is perfect to start an afternoon in this area. My son can ride the [Primeval Whirl](https://disneyworld.disney.go.com/attractions/animal-kingdom/primeval-whirl/) countless times, and the area offers other rides, games, and shops for kids of all ages.
 
+Bugs Life
+
 At the time of this writing, there is not a closing show at this park but it is rumored that one is coming soon.
 
 ## Should we stay on property?
@@ -365,6 +367,10 @@ We love to eat at [Be Our Guest](https://disneyworld.disney.go.com/dining/magic-
 
 <img src="/img/post/disney-world-faq/enchanted-rose.jpg" alt="enchanted rose at [Be Our Guest](https://disneyworld.disney.go.com/dining/magic-kingdom/be-our-guest-restaurant/)" style="display: block; margin-left: auto; margin-right: auto"/>
 *You can view the enchanted rose in the West Wing of The Beast's Castle at New Fantasyland's [Be Our Guest](https://disneyworld.disney.go.com/dining/magic-kingdom/be-our-guest-restaurant/) restaurant.*
+
+Fireworks Show
+
+Private Boat
 
 #### Quick Service
 
