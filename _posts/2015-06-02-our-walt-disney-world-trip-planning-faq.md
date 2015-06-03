@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 title: "Our Walt Disney World Trip Planning Frequently Asked Questions"
 description: "My family and I are Disney fanatics. These are the questions most often asked by friends traveling to Walt Disney World."
 header-img: "img/header/EPCOT_BACKGROUND.jpg"
@@ -504,7 +504,7 @@ Inside the park, our favorite is [Tusker House](https://disneyworld.disney.go.co
 
 Nothing beats [Kusafiri Coffee Shop &amp; Bakery](https://disneyworld.disney.go.com/dining/animal-kingdom/kusafiri-coffee-shop-and-bakery/) after a morning ride on [Kilimanjaro Safaris](https://disneyworld.disney.go.com/attractions/animal-kingdom/kilimanjaro-safaris/). The pastries are family sized, and a warm cup of coffee is always welcome. For Napal inspired Asian fare, the [Yak &amp; Yeti Restaurant](https://disneyworld.disney.go.com/dining/animal-kingdom/yak-and-yeti-restaurant/) is a fun place, and their lunch and dinner menus have a lot to offer.
 
-BBQ - Good QuickService value - outdoor seating - ducks and wildlife
+TODO: BBQ - Good QuickService value - outdoor seating - ducks and wildlife
 
 Animal Kingdom is packed with quick service locations including pizza, barbecue, mixed drinks, and ice cream. 
 
