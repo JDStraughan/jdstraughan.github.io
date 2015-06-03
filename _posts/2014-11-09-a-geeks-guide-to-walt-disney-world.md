@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-title: "Our Walt Disney World Frequently Asked Questions"
+title: "Our Walt Disney World Trip Planning Frequently Asked Questions"
 description: "My family and I are Disney fanatics. These are the questions most often asked by friends traveling to Walt Disney World."
 header-img: "img/header/EPCOT_BACKGROUND.jpg"
 image-credit:
