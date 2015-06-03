@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: "Our Walt Disney World Trip Planning Frequently Asked Questions"
 description: "My family and I are Disney fanatics. These are the questions most often asked by friends traveling to Walt Disney World."
 header-img: "img/header/EPCOT_BACKGROUND.jpg"
@@ -223,7 +223,7 @@ The [Maharajah Jungle Trek](https://disneyworld.disney.go.com/attractions/animal
 
 [DinoLand USA](http://en.wikipedia.org/wiki/DinoLand_U.S.A.) is a fun carnival like experience set in prehistoric times. A midday viewing of [Finding Nemo – The Musical](https://disneyworld.disney.go.com/entertainment/animal-kingdom/finding-nemo-the-musical/) is perfect to start an afternoon in this area. My son can ride the [Primeval Whirl](https://disneyworld.disney.go.com/attractions/animal-kingdom/primeval-whirl/) countless times, and the area offers other rides, games, and shops for kids of all ages.
 
-Bugs Life
+Underneath the Animal Kingdom's [Tree of Life](https://disneyworld.disney.go.com/attractions/animal-kingdom/tree-of-life/) is a 3D feature [It's Tough to be a Bug!](https://disneyworld.disney.go.com/attractions/animal-kingdom/its-tough-to-be-a-bug/). My family looks forward to watching this show every year, and the queue area under the tree is a shady retreat.
 
 At the time of this writing, there is not a closing show at this park but it is rumored that one is coming soon.
 
@@ -368,9 +368,12 @@ We love to eat at [Be Our Guest](https://disneyworld.disney.go.com/dining/magic-
 <img src="/img/post/disney-world-faq/enchanted-rose.jpg" alt="enchanted rose at [Be Our Guest](https://disneyworld.disney.go.com/dining/magic-kingdom/be-our-guest-restaurant/)" style="display: block; margin-left: auto; margin-right: auto"/>
 *You can view the enchanted rose in the West Wing of The Beast's Castle at New Fantasyland's [Be Our Guest](https://disneyworld.disney.go.com/dining/magic-kingdom/be-our-guest-restaurant/) restaurant.*
 
-Fireworks Show
+The Tomorrowland Terrace Fireworks Dessert Party offers prime seating and a dessert buffet featuring ice cream, cakes, pies, and other treats. The area makes for fantastic viewing of the nighttime fireworks show _Wishes_. If you want to have this experience for your trip, be sure to reserve this ahead of time, it books out far in advance.
 
-Private Boat
+If you want an even more private viewing of the evening fireworks at Magic Kingdom, check out [Specialty Cruises](https://disneyworld.disney.go.com/recreation/specialty-cruises/) by Disney. While the Grand 1 Yacht is available for rent, we have opted for one of the pontoon boats for a _Celebration Cruise_. This package gives you a boat, driver, and the option of adding food, beverages, banners, and balloons. Our captain drove us out on Bay Lake and Seven Seas Lagoon, ending the night with the perfect view of the fireworks, with the music piped in to the boat. 
+
+![Celebration Cruise with Disney World Specialty Cruises](/img/post/disney-world-faq/celebration-cruise.jpg)
+*Taking a [Celebration Cruise](https://disneyworld.disney.go.com/recreation/specialty-cruises/) is a great way to enjoy the Magic Kingdom fireworks over a bottle of wine.*
 
 #### Quick Service
 
@@ -429,7 +432,11 @@ The grand pyramid in Mexico may look like a simple marketplace at first glance, 
 
 To my family, there is no better place to eat breakfast than Norway's [Akershus Royal Banquet Hall](https://disneyworld.disney.go.com/dining/epcot/akershus-royal-banquet-hall/). A character dining experience with the Disney Princesses, this restaurant offers breakfast, lunch, and dinner. Here family style meets buffet, and Norwegian flair packs a hearty punch. I highly recommend this dining experience, it never ceases to amaze our family. We usually end every trip with a meal at Akershus.
 
+Bakery
+
 Germany's [Biergarten](https://disneyworld.disney.go.com/dining/epcot/biergarten-restaurant/) is a great place to drink beer, enjoy a buffet, meet new people, and watch a show all in one stop. Unless you are a party of eight, expect to make new friends as every table seats, well, eight people. They do have beer in boots and a buffet that represents Germany very well, with sausage, schnitzel, sauerkraut, and other favorites.
+
+Quick Service + Caramel Shop
 
 We cannot pass Italy without making a pit stop at the wine cart in the square. They serve cold beverages, with a Moscato that keeps us coming back. [Tutto Italia Ristorante](https://disneyworld.disney.go.com/dining/epcot/tutto-italia-ristorante/) has the best Italian cuisine at the parks, and a late lunch starting with antipasto and a bottle of wine is never a bad idea.
 
@@ -437,7 +444,7 @@ If you prefer a pizza made in a wood fire oven, then [Via Napoli](https://disney
 
 Disney trips establish traditions and one of ours lies in Japan. Every trip includes the purchase of an oyster inside the [Mikimoto store](http://goflorida.about.com/od/epcot/fr/Epcot-Mitsukoshi-Department-Store.htm), where it is opened and a pearl is revealed. They will mount the newborn pearl to jewelry or give it to you bare, but the experience is one of my wife an son's favorite things. 
 
-After getting our pearl, we are torn between two great Japanese restaurants. [Teppan Edo](https://disneyworld.disney.go.com/dining/epcot/teppan-edo/) offers [teppanyaki](http://en.wikipedia.org/wiki/Teppanyaki) style dining with entertaining chefs and great food. For sushi and other authentic Japanese dishes, [Tokyo Dining](https://disneyworld.disney.go.com/dining/epcot/tokyo-dining/) combines food and atmosphere with the perfect touch. Either of these restaurants are a good selection; we love them both.
+After getting our pearl at the Mikimoto store, we are torn between two great Japanese restaurants. [Teppan Edo](https://disneyworld.disney.go.com/dining/epcot/teppan-edo/) offers [teppanyaki](http://en.wikipedia.org/wiki/Teppanyaki) style dining with entertaining chefs and great food. For sushi and other authentic Japanese dishes, [Tokyo Dining](https://disneyworld.disney.go.com/dining/epcot/tokyo-dining/) combines food and atmosphere with the perfect touch. Either of these restaurants are a good selection; we love them both.
 
 The France Pavilion warrants a post to itself. Pastries, wine, street artists, shops, and a cinema &mdash; this pavilion has it all. If you don't have time for a full meal in France, at least drop by [Les Halles Boulangerie Patisserie](https://disneyworld.disney.go.com/dining/epcot/les-halles-boulangerie-patisserie/) and grab a treat. If you are looking for a great view and French cuisine then [Les Chefs de France](https://disneyworld.disney.go.com/dining/epcot/chefs-de-france/) has both. This is a great restaurant for either lunch or dinner.
 
@@ -490,12 +497,14 @@ All three of these restaurants participate in the [Fantasmic](https://disneyworl
 
 Greeting you at the entrance to Animal Kingdom is the [Rainforest Cafe](https://disneyworld.disney.go.com/dining/animal-kingdom/rainforest-cafe-animal-kingdom/). We have not eaten here as we have this restaurant chain in our hometown, but I assume it offers the atmosphere and food that the chain is known for.
 
-Inside the park, our favorite is [Tusker House](https://disneyworld.disney.go.com/dining/animal-kingdom/tusker-house-restaurant/) with a combination of unique buffet options and character dining with Mickey, Donald, Daisy, and Goofy in safari gear. They serve breakfast, lunch, and dinner. The breakfast buffet is one of our favorites, and their African margarita is a personal favorite. If you are on the dining plan, this is a good value especially if your children enjoy the character dining experience. The food ranges from traditional Disney buffet options to unique African offerings.
+Inside the park, our favorite is [Tusker House](https://disneyworld.disney.go.com/dining/animal-kingdom/tusker-house-restaurant/) with a combination of unique buffet options and character dining with Mickey, Donald, Daisy, and Goofy in safari gear. They serve breakfast, lunch, and dinner. The breakfast buffet is one of our favorites, and their African margarita is a personal favorite, and my wife loves the various Bloody Marys. If you are on the dining plan, this is a good value especially if your children enjoy the character dining experience. The food ranges from traditional Disney buffet options to unique African offerings.
 
 ![Meeting Mickey at Tusker House in Disney's Animal Kingdom](/img/post/disney-world-faq/tusker-house-mickey.jpg)
 *Meet Mickey and the gang on safari at [Tusker House](https://disneyworld.disney.go.com/dining/animal-kingdom/tusker-house-restaurant/) in Disney's Animal Kingdom.*
 
 Nothing beats [Kusafiri Coffee Shop &amp; Bakery](https://disneyworld.disney.go.com/dining/animal-kingdom/kusafiri-coffee-shop-and-bakery/) after a morning ride on [Kilimanjaro Safaris](https://disneyworld.disney.go.com/attractions/animal-kingdom/kilimanjaro-safaris/). The pastries are family sized, and a warm cup of coffee is always welcome. For Napal inspired Asian fare, the [Yak &amp; Yeti Restaurant](https://disneyworld.disney.go.com/dining/animal-kingdom/yak-and-yeti-restaurant/) is a fun place, and their lunch and dinner menus have a lot to offer.
+
+BBQ - Good QuickService value - outdoor seating - ducks and wildlife
 
 Animal Kingdom is packed with quick service locations including pizza, barbecue, mixed drinks, and ice cream. 
 
