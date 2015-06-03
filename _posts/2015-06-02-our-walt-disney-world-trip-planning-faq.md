@@ -4,7 +4,7 @@ published: true
 title: "Our Walt Disney World Trip Planning Frequently Asked Questions"
 description: "My family and I are Disney fanatics. These are the questions most often asked by friends traveling to Walt Disney World."
 header-img: "img/header/EPCOT_BACKGROUND.jpg"
-image-credit:
+image-credit: "Disney Photopass Photographer"
 ---
 
 My family and I are Disney fanatics, Earheads, Disneyphiles, whatever you wish to call us. Our close friends and family already know interventions are futile; we have consumed The Mouse's Kool-Aid and we are not turning back.
