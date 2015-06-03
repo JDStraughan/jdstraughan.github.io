@@ -10,6 +10,11 @@ p {
 p a {
   text-decoration: underline;
 }
+article img {
+  max-width: 100%;
+  height: auto;
+}
+
 h1,
 h2,
 h3,
@@ -104,8 +109,8 @@ hr.small {
 .intro-header .site-heading,
 .intro-header .post-heading,
 .intro-header .page-heading {
-  text-align: center;
-  padding: 175px 0 135px;
+  text-align: left;
+  padding: 275px 0 15px;
   color: white;
   text-shadow: 2px 2px 12px #000;
 }
