@@ -134,7 +134,7 @@ A often overlooked ride is [Gran Fiesta Tour Starring The Three Caballeros](http
 
 **China**
 
-[China](http://en.wikipedia.org/wiki/China_(Epcot)) has street performances that are worth watching if you catch them on the way by. I personally find this the most disappointing of the countries, but it does have some fun shops and views.
+[China](http://en.wikipedia.org/wiki/China_(Epcot)) has street performances that are worth watching if you catch them on the way by. This country has some fun shops and views and a [Circle-Vision 360°](http://en.wikipedia.org/wiki/Circle-Vision_360%C2%B0) show [Reflections of China](http://en.wikipedia.org/wiki/Reflections_of_China).
 
 **Germany**
 
@@ -195,7 +195,7 @@ If you only have time to ride one thing in this park, it must be [Toy Story Midw
 
 I really enjoy walking though [One Man's Dream, a tribute to Walt Disney](https://disneyworld.disney.go.com/attractions/hollywood-studios/walt-disney-one-mans-dream/). This mini-museum displays the history of Walt Disney and his studios. With replicas of early creations and ideas, we can see the evolution of the man and his company grow over time. There is a short movie at the end of the walking area that I can watch every visit.
 
-My wife and our family love to attend the [drawing classes in the The Magic of Disney Animation](https://disneyworld.disney.go.com/attractions/hollywood-studios/magic-of-disney-animation/) building. A Disney artist leads the class and shows how to draw a classic Disney character. You get to draw on a professional light table and take home your final product. We have prints from each trip &mdash this is a fun experience and comes with a free souvenir.
+My wife and our family love to attend the [drawing classes in the The Magic of Disney Animation](https://disneyworld.disney.go.com/attractions/hollywood-studios/magic-of-disney-animation/) building. A Disney artist leads the class and shows how to draw a classic Disney character. You get to draw on a professional light table and take home your final product. We have prints from each trip &mdash; this is a fun experience and comes with a free souvenir.
 
 ![Take a drawing class at Disney's [Hollywood Studios](https://disneyworld.disney.go.com/destinations/hollywood-studios/)](/img/post/disney-world-faq/drawing-class.jpg)
 *Take a drawing class from actual animators at Disney's [Hollywood Studios](https://disneyworld.disney.go.com/destinations/hollywood-studios/).*
@@ -215,16 +215,13 @@ The [Kilimanjaro Safari](https://disneyworld.disney.go.com/attractions/animal-ki
 ![A ride on Kilimanjaro Safaris to see elephants](/img/post/disney-world-faq/elephants-on-safari.jpg)
 *Keep your cameras ready on [The Kilimanjaro Safari](https://disneyworld.disney.go.com/attractions/animal-kingdom/kilimanjaro-safaris/) for some great shots of African wildlife.*
 
-We enjoy eating at [Tusker House](https://disneyworld.disney.go.com/dining/animal-kingdom/tusker-house-restaurant/), grabbing one of the better buffets in Walt Disney World. It is a character dining experience with Mickey, Minnie, Donald, and Goofy in safari gear. If you are on the dining plan, this is a good value especially if your children enjoy the character dining experience. The food ranges from traditional Disney buffet options to unique African offerings.
-
-![Meeting Mickey at Tusker House in Disney's Animal Kingdom](/img/post/disney-world-faq/tusker-house-mickey.jpg)
-*Meet Mickey and the gang on safari at [Tusker House](https://disneyworld.disney.go.com/dining/animal-kingdom/tusker-house-restaurant/) in Disney's Animal Kingdom.*
-
 The [Maharajah Jungle Trek](https://disneyworld.disney.go.com/attractions/animal-kingdom/maharajah-jungle-trek/) is a great way to get see some tigers, birds, and other wild animals. It requires a bit of walking, but it is worth every step and is very well shaded. The best part is you can enjoy it at whatever pace you choose. We also like the [Flights of Wonder](https://disneyworld.disney.go.com/entertainment/animal-kingdom/flights-of-wonder/) bird show, where a variety of birds are presented by knowledgeable keepers and researchers.
 
 [Expedition Everest](https://disneyworld.disney.go.com/attractions/animal-kingdom/expedition-everest/) is a good roller coaster with a cool queue full of authentic gear from Mount Everest. It is one of the better coasters at Walt Disney World and is a replica of the same attraction from Disneyland in California.
 
 [DINOSAUR](https://disneyworld.disney.go.com/attractions/animal-kingdom/dinosaur/) is one of my son's favorite rides, where you take a time machine to prehistoric earth and bring back an Iguanodon seconds before a major extinction event. A bit bumpy at times, this ride is perfect for elementary aged kids and above. Pay close attention as this ride is full of easter eggs and fun features.
+
+[DinoLand USA](http://en.wikipedia.org/wiki/DinoLand_U.S.A.) is a fun carnival like experience set in prehistoric times. A midday viewing of [Finding Nemo – The Musical](https://disneyworld.disney.go.com/entertainment/animal-kingdom/finding-nemo-the-musical/) is perfect to start an afternoon in this area. My son can ride the [Primeval Whirl](https://disneyworld.disney.go.com/attractions/animal-kingdom/primeval-whirl/) countless times, and the area offers other rides, games, and shops for kids of all ages.
 
 At the time of this writing, there is not a closing show at this park but it is rumored that one is coming soon.
 
@@ -487,7 +484,10 @@ All three of these restaurants participate in the [Fantasmic](https://disneyworl
 
 Greeting you at the entrance to Animal Kingdom is the [Rainforest Cafe](https://disneyworld.disney.go.com/dining/animal-kingdom/rainforest-cafe-animal-kingdom/). We have not eaten here as we have this restaurant chain in our hometown, but I assume it offers the atmosphere and food that the chain is known for.
 
-Inside the park, our favorite is [Tusker House](https://disneyworld.disney.go.com/dining/animal-kingdom/tusker-house-restaurant/) with a combination of unique buffet options and character dining with Mickey, Donald, Daisy, and Goofy. They serve breakfast, lunch, and dinner. The breakfast buffet is one of our favorites, and their African margarita is a personal favorite.
+Inside the park, our favorite is [Tusker House](https://disneyworld.disney.go.com/dining/animal-kingdom/tusker-house-restaurant/) with a combination of unique buffet options and character dining with Mickey, Donald, Daisy, and Goofy in safari gear. They serve breakfast, lunch, and dinner. The breakfast buffet is one of our favorites, and their African margarita is a personal favorite. If you are on the dining plan, this is a good value especially if your children enjoy the character dining experience. The food ranges from traditional Disney buffet options to unique African offerings.
+
+![Meeting Mickey at Tusker House in Disney's Animal Kingdom](/img/post/disney-world-faq/tusker-house-mickey.jpg)
+*Meet Mickey and the gang on safari at [Tusker House](https://disneyworld.disney.go.com/dining/animal-kingdom/tusker-house-restaurant/) in Disney's Animal Kingdom.*
 
 Nothing beats [Kusafiri Coffee Shop &amp; Bakery](https://disneyworld.disney.go.com/dining/animal-kingdom/kusafiri-coffee-shop-and-bakery/) after a morning ride on [Kilimanjaro Safaris](https://disneyworld.disney.go.com/attractions/animal-kingdom/kilimanjaro-safaris/). The pastries are family sized, and a warm cup of coffee is always welcome. For Napal inspired Asian fare, the [Yak &amp; Yeti Restaurant](https://disneyworld.disney.go.com/dining/animal-kingdom/yak-and-yeti-restaurant/) is a fun place, and their lunch and dinner menus have a lot to offer.
 
