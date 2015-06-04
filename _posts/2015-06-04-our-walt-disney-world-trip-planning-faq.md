@@ -53,11 +53,11 @@ I have omitted most references to restaurants in this section. For dining inform
 
 Undoubtedly, the best way to visit [Magic Kingdom](https://disneyworld.disney.go.com/destinations/magic-kingdom/) is with, or as, a kid.
 
-The entrance never gets old, escaping the tunnel under the train station as the _opening credits_ are revealed: [Main Street USA](http://en.wikipedia.org/wiki/Main_Street,_U.S.A.) with [Cinderella's Castle](https://disneyworld.disney.go.com/attractions/magic-kingdom/cinderella-castle/) presiding over the background. 
+The entrance never gets old, escaping the tunnel under the train station as the _opening credits_ are revealed: [Main Street USA](http://en.wikipedia.org/wiki/Main_Street,_U.S.A.) with [Cinderella Castle](https://disneyworld.disney.go.com/attractions/magic-kingdom/cinderella-castle/) presiding over the background. 
 
 Fashioned after [Walt's hometown](http://en.wikipedia.org/wiki/Marceline,_Missouri) and set right after the turn of the twentieth century, this area offers food, shopping, barbershop quartets, even an [actual barbershop](https://disneyworld.disney.go.com/events-tours/magic-kingdom/harmony-barber-shop/). We love to sit on the deck of the train station with a hot cocoa at closing time, watching the other guests exit underneath us. This area is beautiful at night, especially during the holidays.
 
-Cinderella's Castle is the center of the park, with all the lands radiating out like a wagon wheel around this hub. The castle stage will host shows throughout the day, and the evening show [_Wishes_](https://disneyworld.disney.go.com/entertainment/magic-kingdom/wishes-nighttime-spectacular/) will turn the entire castle into a living centerpiece for the fireworks display. Including Main Street USA, the park contains a total of 6 themed lands.
+Cinderella Castle is the center of the park, with all the lands radiating out like a wagon wheel around this hub. The castle stage will host shows throughout the day, and the evening show [_Wishes_](https://disneyworld.disney.go.com/entertainment/magic-kingdom/wishes-nighttime-spectacular/) will turn the entire castle into a living centerpiece for the fireworks display. Including Main Street USA, the park contains a total of 6 themed lands.
 
 [Fantasyland](http://en.wikipedia.org/wiki/Fantasyland#Magic_Kingdom) makes classic Disney tangible with rides like Peter Pan and The Many Adventures of Winnie the Pooh. [The New Fantasyland expansion](https://disneyworld.disney.go.com/events-tours/magic-kingdom/new-fantasyland/) added many new rides including [Under the Sea: Journey of the Little Mermaid](https://disneyworld.disney.go.com/attractions/magic-kingdom/under-the-sea-journey-of-the-little-mermaid/) and the [Seven Dwarfs Mine Train](https://disneyworld.disney.go.com/attractions/magic-kingdom/seven-dwarfs-mine-train/), a combination of roller-coaster and dark ride. Expect long lines for the Mine Train, and if a Fastpass is available, I would advise grabbing one.
 
@@ -377,7 +377,7 @@ If you want an even more private viewing of the evening fireworks at Magic Kingd
 
 #### Quick Service
 
-[Casey's Corner](https://disneyworld.disney.go.com/dining/magic-kingdom/caseys-corner/) is the place to get a hot dog in the Kingdom. The seating offers great views of Mail Street, Cinderella's Castle, and the Crystal Palace. A family favorite for lunch, you can't go wrong with some nachos and a chili dog.
+[Casey's Corner](https://disneyworld.disney.go.com/dining/magic-kingdom/caseys-corner/) is the place to get a hot dog in the Kingdom. The seating offers great views of Mail Street, Cinderella Castle, and the Crystal Palace. A family favorite for lunch, you can't go wrong with some nachos and a chili dog.
 
 If you are craving some Italian food, [Pinocchio Village Haus](https://disneyworld.disney.go.com/dining/magic-kingdom/pinocchio-village-haus/) has great flat-bread pizzas and meatball subs. Some of the tables overlook the entrance to [It's a Small World](http://en.wikipedia.org/wiki/It%27s_a_Small_World), with boats full of people passing by below.
 
