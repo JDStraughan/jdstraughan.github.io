@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: "Our Walt Disney World Trip Planning Frequently Asked Questions"
 description: "My family and I are Disney fanatics. These are the questions most often asked by friends traveling to Walt Disney World."
 header-img: "img/header/EPCOT_BACKGROUND.jpg"
@@ -504,9 +504,9 @@ Inside the park, our favorite is [Tusker House](https://disneyworld.disney.go.co
 
 Nothing beats [Kusafiri Coffee Shop &amp; Bakery](https://disneyworld.disney.go.com/dining/animal-kingdom/kusafiri-coffee-shop-and-bakery/) after a morning ride on [Kilimanjaro Safaris](https://disneyworld.disney.go.com/attractions/animal-kingdom/kilimanjaro-safaris/). The pastries are family sized, and a warm cup of coffee is always welcome. For Napal inspired Asian fare, the [Yak &amp; Yeti Restaurant](https://disneyworld.disney.go.com/dining/animal-kingdom/yak-and-yeti-restaurant/) is a fun place, and their lunch and dinner menus have a lot to offer.
 
-TODO: BBQ - Good QuickService value - outdoor seating - ducks and wildlife
+One of our favorite quick service restaurants is [Flame Tree Barbecue](https://disneyworld.disney.go.com/dining/animal-kingdom/flame-tree-barbecue/) on [Discovery Island](http://en.wikipedia.org/wiki/Discovery_Island_%28Disney%27s_Animal_Kingdom%29). This is a great value for dining plan participants and the outdoor seating is one of the best areas in the parks. We have had ducks running under our feet with great views of wildlife and Expedition Everest in the background. Some of the tables are a bit more isolated, offering a more peaceful dining experience, except for the occasional bird attempting to steal some food.
 
-Animal Kingdom is packed with quick service locations including pizza, barbecue, mixed drinks, and ice cream. 
+Animal Kingdom is packed with other quick service and snack locations including pizza, Asian fare, mixed drinks, and ice cream. 
 
 ## When should we book our reservations?
 
