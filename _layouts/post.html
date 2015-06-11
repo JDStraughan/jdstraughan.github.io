@@ -68,7 +68,11 @@ layout: default
                     Related Posts
                     <ul class="naked">
                     {% for related in site.related_posts %}
-                    <li itemscope="" itemtype="http://schema.org/BlogPosting"><a href="{{ related.url }}" itemprop="url"><span itemprop="name">{{ related.title }}</span></a></li>
+                    <li itemscope="" itemtype="http://schema.org/BlogPosting">
+                        <a href="{{ related.url }}" itemprop="url"><span itemprop="name">{{ related.title }}</span></a>
+                        <meta itemprop="author" content="Jason Straughan" />
+                        <meta itemprop="description" content="{{ related.description }}" />
+                    </li>
                     {% endfor %}
                     </ul>
                 </div>
