@@ -22,8 +22,9 @@
     {
         "@context": "http://schema.org",
         "@type": "Blog",
-        "publisher": "jdstraughan.com",
-        "url": "{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}",
+        "author": "Jason Straughan",
+        "isFamilyFriendly": "http://schema.org/True",
+        "url": "http://jdstraughan.com",
         "description": "{% if page.description %}{{ page.description }}{% else %}{{ site.title }}{% endif %}"
     }
     </script>
