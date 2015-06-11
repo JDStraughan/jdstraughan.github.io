@@ -6,23 +6,23 @@ header-img: "img/header/2015-world-showcase-france-epcot.jpeg"
 ---
 
 {% for post in paginator.posts %}
-<div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">
+<div class="post-preview" itemprop="blogPost" itemscope="" itemtype="http://schema.org/BlogPosting">
+    <a href="{{ post.url | prepend: site.baseurl }}" itemprop="url">
+        <h2 class="post-title" itemprop="name">
             {{ post.title }}
         </h2>
         {% if post.subtitle %}
-        <h3 class="post-subtitle">
+        <h3 class="post-subtitle" itemprop="name">
             {{ post.subtitle }}
         </h3>
         {% endif %}
         {% if post.description %}
-        <p>
+        <p itemprop="description">
             {{ post.description }}
         </p>
         {% endif %}
     </a>
-    <p class="post-meta">Posted on {{ post.date | date: "%B %-d, %Y" }}</p>
+    <p class="post-meta">Posted on <span itemprop="datePublished">{{ post.date | date: "%B %-d, %Y" }}</span></p>
 </div>
 <hr>
 {% endfor %}
