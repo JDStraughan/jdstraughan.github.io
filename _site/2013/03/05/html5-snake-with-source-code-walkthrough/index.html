@@ -1,4 +1,134 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Learn how to make a version of the popular snake game using the HTML canvas element and javascript. Fun for all ages, and easy to code."><meta name="HandheldFriendly" content="True" /><meta name="MobileOptimized" content="320" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta property="og:title" content="HTML5 Snake source code walkthrough - JDStraughan" /><meta property="og:description" content="Learn how to make a version of the popular snake game using the HTML canvas element and javascript. Fun for all ages, and easy to code." /><meta property="og:url" content="http://jdstraughan.com/2013/03/05/html5-snake-with-source-code-walkthrough" /><meta name="twitter:card" content="summary" /><meta name="twitter:title" content="HTML5 Snake source code walkthrough - JDStraughan" /><meta name="twitter:description" content="Learn how to make a version of the popular snake game using the HTML canvas element and javascript. Fun for all ages, and easy to code." /><meta name="twitter:url" content="http://jdstraughan.com/2013/03/05/html5-snake-with-source-code-walkthrough" /> <script type="application/ld+json"> { "@context": "http://schema.org", "@type": "Blog", "author": "Jason Straughan", "isFamilyFriendly": "http://schema.org/True", "url": "http://jdstraughan.com", "description": "Learn how to make a version of the popular snake game using the HTML canvas element and javascript. Fun for all ages, and easy to code." } </script><title>HTML5 Snake source code walkthrough - JDStraughan</title><link rel="canonical" href="http://jdstraughan.com/2013/03/05/html5-snake-with-source-code-walkthrough"><link rel="stylesheet" href="/css/bootstrap.min.css"><link rel="stylesheet" href="/css/clean-blog.css"><link rel="stylesheet" href="/css/syntax.css"><link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"><link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'><link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'><link rel="alternate" type="application/rss+xml" title="jdstraughan.com" href="http://jdstraughan.com/feed.xml" />   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]--></head><body><nav class="navbar navbar-default" role="navigation"><div class="navbar-header"> <a class="navbar-brand" href="/">JDStraughan</a></div><div><ul class="nav navbar-nav navbar-right"><li> <a href="/">Home</a></li><li> <a href="/about.html">About</a></li></ul></div></nav><div itemscope="" itemtype="http://schema.org/BlogPosting"><meta itemprop="description" content="Learn how to make a version of the popular snake game using the HTML canvas element and javascript. Fun for all ages, and easy to code." /><meta itemprop="author" content="Jason Straughan" /><header class="intro-header" style="background-image: url('/img/header/lightcycles.png')"><div class="container"><div class="row"><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><div class="post-heading"><h1 itemprop="name">HTML5 Snake source code walkthrough</h1><span class="meta">Posted on <span itemprop="datePublished">March 5, 2013</span></span></div></div></div></div></header><article><div class="container"><div class="row"><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><div itemprop="articleBody"><blockquote><p><em>Thank you <a href="http://news.ycombinator.com/">HackerNews</a></em> for the <em>front-page</em> love!</p></blockquote><hr /><p>Last month I made my first game: <a href="https://github.com/JDStraughan/html5-lightcycles">html5-lightcycles</a>. It is a Tron inspired lightcycle game, a humble recreation of the 1980s arcade classic. I wrote a blog post about the experience, <a href="http://jdstraughan.com/2013/02/14/my-first-game-html5-lightcycles/">you can check it out here</a>. The whole truth behind the lightcycle game includes the tidbit that when I first started playing around with the creating that game, snake was my original intention.</p><p>For those that don’t know it, snake is one of the oldest video games, with origins in the 1970s. Nokia put it on cell phones in 1998, and it became a staple of cell phone gaming. The concept is simple: you control a snake that grows when it consumes food, and dies when it hits a wall or itself. Some variants include obstacles, increased speed, and other mechanisms to increase difficulty.</p><p>Moving a box across the canvas was easy, and turning off the screen reset gave me lightcycles for free. Getting the snake to turn corners was not as easy as lightcycles, so I abandoned snake and moved on, eventually creating several proof of concept game-like creations. I thought about snake again, and it hit me: the snake is an array, and shift()ing and push()ing coordinates would let it move properly, and when it got food, it could just skip the <code>shift()</code>. The rest just came together.</p><h2 id="the-game">The Game</h2><p>If you are visiting this page in an HTML5 capable browser, and are not on a mobile device, then this game should work for you.</p><iframe style="width: 100%; height: 480px" src="http://jsfiddle.net/zT7V4/13/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe><p>You can also view/play the game (in 640x480 mode) directly on <a href="http://jsfiddle.net/zT7V4/9/embedded/result/">jsfiddle</a>.</p><h2 id="the-source-code">The Source Code</h2><p>For those that are interested, here is a quick overview of the code for this game.</p><p>First, we need a basic page setup with a canvas tag.</p><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Learn how to make a version of the popular snake game using the HTML canvas element and javascript. Fun for all ages, and easy to code.">
+
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta property="og:title" content="HTML5 Snake source code walkthrough - JDStraughan" />
+    <meta property="og:description" content="Learn how to make a version of the popular snake game using the HTML canvas element and javascript. Fun for all ages, and easy to code." />
+    <meta property="og:url" content="http://jdstraughan.com/2013/03/05/html5-snake-with-source-code-walkthrough" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="HTML5 Snake source code walkthrough - JDStraughan" />
+    <meta name="twitter:description" content="Learn how to make a version of the popular snake game using the HTML canvas element and javascript. Fun for all ages, and easy to code." />
+    <meta name="twitter:url" content="http://jdstraughan.com/2013/03/05/html5-snake-with-source-code-walkthrough" />
+
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Blog",
+        "author": "Jason Straughan",
+        "isFamilyFriendly": "http://schema.org/True",
+        "url": "http://jdstraughan.com",
+        "description": "Learn how to make a version of the popular snake game using the HTML canvas element and javascript. Fun for all ages, and easy to code."
+    }
+    </script>
+
+    <title>HTML5 Snake source code walkthrough - JDStraughan</title>
+
+    <link rel="canonical" href="http://jdstraughan.com/2013/03/05/html5-snake-with-source-code-walkthrough">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/jdstraughan.min.css">
+    <!-- Custom Fonts -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- RSS/XML -->
+    <link rel="alternate" type="application/rss+xml" title="jdstraughan.com" href="http://jdstraughan.com/feed.xml" />
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-default" role="navigation">
+   <div class="navbar-header">
+      <a class="navbar-brand" href="/">JDStraughan</a>
+   </div>
+   <div>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+            <a href="/">Home</a>
+        </li>
+        <li>
+            <a href="/about.html">About</a>
+        </li>
+      </ul>
+   </div>
+</nav>
+
+
+    <div itemscope="" itemtype="http://schema.org/BlogPosting">
+    <meta itemprop="description" content="Learn how to make a version of the popular snake game using the HTML canvas element and javascript. Fun for all ages, and easy to code." />
+    <meta itemprop="author" content="Jason Straughan" />
+    <!-- Post Header -->
+    <header class="intro-header" style="background-image: url('/img/header/lightcycles.png')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1 itemprop="name">HTML5 Snake source code walkthrough</h1>
+                        
+                        <span class="meta">Posted on <span itemprop="datePublished">March 5, 2013</span></span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div itemprop="articleBody">
+        				<blockquote>
+  <p><em>Thank you <a href="http://news.ycombinator.com/">HackerNews</a></em> for the <em>front-page</em> love!</p>
+</blockquote>
+
+<hr />
+
+<p>Last month I made my first game: <a href="https://github.com/JDStraughan/html5-lightcycles">html5-lightcycles</a>.  It is a Tron inspired lightcycle game, a humble recreation of the 1980s arcade classic. I wrote a blog post about the experience, <a href="http://jdstraughan.com/2013/02/14/my-first-game-html5-lightcycles/">you can check it out here</a>.  The whole truth behind the lightcycle game includes the tidbit that when I first started playing around with the creating that game, snake was my original intention.</p>
+
+<p>For those that don’t know it, snake is one of the oldest video games, with origins in the 1970s.  Nokia put it on cell phones in 1998, and it became a staple of cell phone gaming.  The concept is simple: you control a snake that grows when it consumes food, and dies when it hits a wall or itself.  Some variants include obstacles, increased speed, and other mechanisms to increase difficulty.</p>
+
+<p>Moving a box across the canvas was easy, and turning off the screen reset gave me lightcycles for free.  Getting the snake to turn corners was not as easy as lightcycles, so I abandoned snake and moved on, eventually creating several proof of concept game-like creations.  I thought about snake again, and it hit me: the snake is an array, and shift()ing and push()ing coordinates would let it move properly, and when it got food, it could just skip the <code>shift()</code>.  The rest just came together.</p>
+
+<h2 id="the-game">The Game</h2>
+
+<p>If you are visiting this page in an HTML5 capable browser, and are not on a mobile device, then this game should work for you.</p>
+
+<iframe style="width: 100%; height: 480px" src="http://jsfiddle.net/zT7V4/13/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+<p>You can also view/play the game (in 640x480 mode) directly on <a href="http://jsfiddle.net/zT7V4/9/embedded/result/">jsfiddle</a>.</p>
+
+<h2 id="the-source-code">The Source Code</h2>
+
+<p>For those that are interested, here is a quick overview of the code for this game.</p>
+
+<p>First, we need a basic page setup with a canvas tag.</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="nt">&lt;html&gt;</span>
 <span class="nt">&lt;head&gt;</span>
 <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">&quot;utf-8&quot;</span> <span class="nt">/&gt;</span>
@@ -26,7 +156,11 @@
 <span class="nt">&lt;p&gt;</span><span class="ni">&amp;copy;</span> 2013 - <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://JDStraughan.com&quot;</span><span class="nt">&gt;</span>JDStraughan.com<span class="nt">&lt;/a&gt;</span> - <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;https://github.com/JDStraughan/html5-snake&quot;</span><span class="nt">&gt;</span>Source on GitHub<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
 <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;game.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span></code></pre></div><p>Nothing special here, just a standard page, canvas element, and some basic instructions and description of game play.</p><div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">article</span><span class="o">,</span> <span class="nt">aside</span><span class="o">,</span> <span class="nt">details</span><span class="o">,</span> <span class="nt">figcaption</span><span class="o">,</span> <span class="nt">figure</span><span class="o">,</span> <span class="nt">footer</span><span class="o">,</span> <span class="nt">header</span><span class="o">,</span>
+<span class="nt">&lt;/html&gt;</span></code></pre></div>
+
+<p>Nothing special here, just a standard page, canvas element, and some basic instructions and description of game play.</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">article</span><span class="o">,</span> <span class="nt">aside</span><span class="o">,</span> <span class="nt">details</span><span class="o">,</span> <span class="nt">figcaption</span><span class="o">,</span> <span class="nt">figure</span><span class="o">,</span> <span class="nt">footer</span><span class="o">,</span> <span class="nt">header</span><span class="o">,</span>
 <span class="nt">hgroup</span><span class="o">,</span> <span class="nt">menu</span><span class="o">,</span> <span class="nt">nav</span><span class="o">,</span> <span class="nt">section</span> <span class="p">{</span>
   <span class="k">display</span><span class="o">:</span> <span class="k">block</span><span class="p">;</span>
 <span class="p">}</span>
@@ -43,8 +177,37 @@
   <span class="k">display</span><span class="o">:</span> <span class="k">block</span><span class="p">;</span>
   <span class="k">margin</span><span class="o">:</span> <span class="m">0</span> <span class="k">auto</span><span class="p">;</span>
   <span class="k">background-color</span><span class="o">:</span> <span class="m">#666</span><span class="p">;</span>
-<span class="p">}</span></code></pre></div><p>Again, very simple. You could really skip all of this and just drop a canvas element on a page, but some basic styling and semantic markup goes a long way.</p><p>HTML5 canvas games are javascript, like Soylent Green is people.</p><p>In this game, I have one javascript file to rule them all: <code>game.js</code>.</p><p>To make the code more bearable, I have organized the file into the following groups:</p><ul><li>game (object)</li><li>snake (object)</li><li>food (object)</li><li>some helpers/service methods</li><li>an event listener</li><li>the game loop</li></ul><p>Well, before all of that, we do have to grab the canvas context like so:</p><div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">canvas</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;the-game&quot;</span><span class="p">);</span>
-<span class="kd">var</span> <span class="nx">context</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">getContext</span><span class="p">(</span><span class="s2">&quot;2d&quot;</span><span class="p">);</span></code></pre></div><p>Now that we have that out of the way, lets take a walk thru something more fun.</p><h4 id="game-object">Game Object</h4><p>The <code>game</code> object contains controls for score, game state, and some display.</p><div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">game</span> <span class="o">=</span> <span class="p">{</span>
+<span class="p">}</span></code></pre></div>
+
+<p>Again, very simple.  You could really skip all of this and just drop a canvas element on a page, but some basic styling and semantic markup goes a long way.</p>
+
+<p>HTML5 canvas games are javascript, like Soylent Green is people.</p>
+
+<p>In this game, I have one javascript file to rule them all: <code>game.js</code>.</p>
+
+<p>To make the code more bearable, I have organized the file into the following groups:</p>
+
+<ul>
+  <li>game (object)</li>
+  <li>snake (object)</li>
+  <li>food (object)</li>
+  <li>some helpers/service methods</li>
+  <li>an event listener</li>
+  <li>the game loop</li>
+</ul>
+
+<p>Well, before all of that, we do have to grab the canvas context like so:</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">canvas</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;the-game&quot;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">context</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">getContext</span><span class="p">(</span><span class="s2">&quot;2d&quot;</span><span class="p">);</span></code></pre></div>
+
+<p>Now that we have that out of the way, lets take a walk thru something more fun.</p>
+
+<h4 id="game-object">Game Object</h4>
+
+<p>The <code>game</code> object contains controls for score, game state, and some display.</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">game</span> <span class="o">=</span> <span class="p">{</span>
 
   <span class="nx">score</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
   <span class="nx">fps</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
@@ -98,7 +261,36 @@
     <span class="nx">context</span><span class="p">.</span><span class="nx">clearRect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">width</span><span class="p">,</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">height</span><span class="p">);</span>
   <span class="p">}</span>
 
-<span class="p">};</span></code></pre></div><p>Most of the property names should be self explanatory:</p><ul><li><code>game.score</code> keeps the current score of the game, initially 0</li><li><code>game.fps</code> stores the <em>frames per second</em> (fps) the game is running at. This increases with difficulty.</li><li><code>game.over</code> starts as true. It just sounds right when checking for game state.</li><li><code>game.message</code> holds any messages to display to the user, for now there is only the “game over” message.</li></ul><p>The <code>game.start()</code> method is pretty straightforward: it sets the game state via <code>game.over = false</code> and clears the <code>game.message</code> and <code>game.score</code>, resets the fps, and then runs an <code>init()</code> method on the <code>snake</code> object. We’ll see what that does in a second, but we can assume it initializes the snake “game piece”. The same goes for <code>food.set()</code>.</p><p>The <code>game.stop()</code> method sets the game state to <em>over</em> and displays a friendly message explaining how to start a new game.</p><p>The next three methods draw things for the game: a box, a score, and a message. The box method is used to draw both food and snake parts, as a snake is just a line of boxes. The <code>game.drawBox()</code> method takes an x and y coordinate, a size, and a color. With these parameters, it can go to the x,y coordinates specified, and draw a box <code>size</code> high and wide, and fill it with the <code>color</code> desired.</p><p><code>drawScore()</code> is a bit different, as it displays the score almost full hight of the canvas, with a color very close to the background color. This allows the score to be shown without having to sacrifice game board real-estate for the sole purpose of the score.</p><p>Our <code>game.drawMessage()</code> method also is nothing special, it checks if a <code>game.message</code> exists, and puts in on the canvas if so.</p><p>The last method in the <code>game</code> object is <code>resetCanvas()</code>. This clears the canvas in between draws to allow the score and messages to be displayed properly, and wiped when needed.</p><p>The <code>game</code> object sets up a lot of the underpinning for our game, but the real challenge for me, and the coolest part of this game in my opinion, is the <code>snake</code> object.</p><h4 id="snake-object">Snake Object</h4><p>While it’s no Mario, our snake is our hero.</p><div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">snake</span> <span class="o">=</span> <span class="p">{</span>
+<span class="p">};</span></code></pre></div>
+
+<p>Most of the property names should be self explanatory:</p>
+
+<ul>
+  <li><code>game.score</code> keeps the current score of the game, initially 0</li>
+  <li><code>game.fps</code> stores the <em>frames per second</em> (fps) the game is running at.  This increases with difficulty.</li>
+  <li><code>game.over</code> starts as true.  It just sounds right when checking for game state.</li>
+  <li><code>game.message</code> holds any messages to display to the user, for now there is only the “game over” message.</li>
+</ul>
+
+<p>The <code>game.start()</code> method is pretty straightforward: it sets the game state via <code>game.over = false</code> and clears the <code>game.message</code> and <code>game.score</code>, resets the fps, and then runs an <code>init()</code> method on the <code>snake</code> object.  We’ll see what that does in a second, but we can assume it initializes the snake “game piece”.  The same goes for <code>food.set()</code>.</p>
+
+<p>The <code>game.stop()</code> method sets the game state to <em>over</em> and displays a friendly message explaining how to start a new game.</p>
+
+<p>The next three methods draw things for the game: a box, a score, and a message.  The box method is used to draw both food and snake parts, as a snake is just a line of boxes.  The <code>game.drawBox()</code> method takes an x and y coordinate, a size, and a color.  With these parameters, it can go to the x,y coordinates specified, and draw a box <code>size</code> high and wide, and fill it with the <code>color</code> desired.</p>
+
+<p><code>drawScore()</code> is a bit different, as it displays the score almost full hight of the canvas, with a color very close to the background color.  This allows the score to be shown without having to sacrifice game board real-estate for the sole purpose of the score.</p>
+
+<p>Our <code>game.drawMessage()</code> method also is nothing special, it checks if a <code>game.message</code> exists, and puts in on the canvas if so.</p>
+
+<p>The last method in the <code>game</code> object is <code>resetCanvas()</code>.  This clears the canvas in between draws to allow the score and messages to be displayed properly, and wiped when needed.</p>
+
+<p>The <code>game</code> object sets up a lot of the underpinning for our game, but the real challenge for me, and the coolest part of this game in my opinion, is the <code>snake</code> object.</p>
+
+<h4 id="snake-object">Snake Object</h4>
+
+<p>While it’s no Mario, our snake is our hero.</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">snake</span> <span class="o">=</span> <span class="p">{</span>
 
   <span class="nx">size</span><span class="o">:</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">width</span> <span class="o">/</span> <span class="mi">40</span><span class="p">,</span>
   <span class="nx">x</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
@@ -175,10 +367,56 @@
     <span class="p">}</span>
   <span class="p">}</span>
 
-<span class="p">};</span></code></pre></div><p>This object is significantly larger than the last one, and has a lot more coolness, also. The first thing the class does is initiate the <code>snake.size</code> property, and we notice it is dynamic: <code>size: canvas.width / 40</code>.</p><p>This game was designed to run on either a <code>320x240</code> or <code>640x480</code> canvas. This means our <code>snake.size</code> is directly proportional to our canvas, and at our predetermined canvas sizes, we’d end up with the following section sizes:</p><blockquote><p>320 / 40 = 8</p></blockquote><blockquote><p>640 / 40 = 16</p></blockquote><p>Note that here size refers to each section of the snake, so on a <code>320x240</code> canvas, our snake will be made up of a bunch of 8x8 pixel squares. Next we initialize the x and y coordinates for the snake, and set the default starting <code>direction</code>. Lastly, and most importantly, is the <code>snake.sections</code> array.</p><p>Unlike many game pieces, our snake does not just move, it crawls. As its head moves forward, its body continues to follow the same path, and turning a corner can take several “moves”. To accomplish this, our snake is make up of an array of coordinates, and we will <code>shift()</code> and <code>push()</code> coordinates off and on to the array to update it’s position.</p><p>Creating a new snake has a few parts, so there is an <code>init()</code> method to take care of getting it constructed. This method starts by ensuring the <code>sections</code> array is cleared and the starting <code>direction</code> is reset. It then places the snake in the middle of the game board, and again avoids hard-coded positions in favor of allowing for multiple canvas sizes.</p><div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">snake</span><span class="p">.</span><span class="nx">x</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">width</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="nx">snake</span><span class="p">.</span><span class="nx">size</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
-<span class="nx">snake</span><span class="p">.</span><span class="nx">y</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">height</span> <span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="nx">snake</span><span class="p">.</span><span class="nx">size</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span></code></pre></div><p>We need to remember that when <code>game.drawBox()</code> creates each section, it begins from the x,y coordinates, then creates a box based on the height and width with the x,y in the center. This means that a box will have a center that is 1/2 the width and 1/2 the height. To abide by these conditions, our snake is positioned accordingly.</p><p>Lastly, our <code>init()</code> method builds our starting snake:</p><div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="nx">snake</span><span class="p">.</span><span class="nx">x</span> <span class="o">+</span> <span class="p">(</span><span class="mi">5</span> <span class="o">*</span> <span class="nx">snake</span><span class="p">.</span><span class="nx">size</span><span class="p">);</span> <span class="nx">i</span> <span class="o">&gt;=</span> <span class="nx">snake</span><span class="p">.</span><span class="nx">x</span><span class="p">;</span> <span class="nx">i</span><span class="o">-=</span><span class="nx">snake</span><span class="p">.</span><span class="nx">size</span><span class="p">)</span> <span class="p">{</span>
+<span class="p">};</span></code></pre></div>
+
+<p>This object is significantly larger than the last one, and has a lot more coolness, also. The first thing the class does is initiate the <code>snake.size</code> property, and we notice it is dynamic: <code>size: canvas.width / 40</code>.</p>
+
+<p>This game was designed to run on either a <code>320x240</code> or <code>640x480</code> canvas.  This means our <code>snake.size</code> is directly proportional to our canvas, and at our predetermined canvas sizes, we’d end up with the following section sizes:</p>
+
+<blockquote>
+  <p>320 / 40 = 8</p>
+</blockquote>
+
+<blockquote>
+  <p>640 / 40 = 16</p>
+</blockquote>
+
+<p>Note that here size refers to each section of the snake, so on a <code>320x240</code> canvas, our snake will be made up of a bunch of 8x8 pixel squares.  Next we initialize the x and y coordinates for the snake, and set the default starting <code>direction</code>.  Lastly, and most importantly, is the <code>snake.sections</code> array.</p>
+
+<p>Unlike many game pieces, our snake does not just move, it crawls.  As its head moves forward, its body continues to follow the same path, and turning a corner can take several “moves”.  To accomplish this, our snake is make up of an array of coordinates, and we will <code>shift()</code> and <code>push()</code> coordinates off and on to the array to update it’s position.</p>
+
+<p>Creating a new snake has a few parts, so there is an <code>init()</code> method to take care of getting it constructed. This method starts by ensuring the <code>sections</code> array is cleared and the starting <code>direction</code> is reset. It then places the snake in the middle of the game board, and again avoids hard-coded positions in favor of allowing for multiple canvas sizes.</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">snake</span><span class="p">.</span><span class="nx">x</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">width</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="nx">snake</span><span class="p">.</span><span class="nx">size</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+<span class="nx">snake</span><span class="p">.</span><span class="nx">y</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">height</span> <span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="nx">snake</span><span class="p">.</span><span class="nx">size</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span></code></pre></div>
+
+<p>We need to remember that when <code>game.drawBox()</code> creates each section, it begins from the x,y coordinates, then creates a box based on the height and width with the x,y in the center.  This means that a box will have a center that is 1/2 the width and 1/2 the height.  To abide by these conditions, our snake is positioned accordingly.</p>
+
+<p>Lastly, our <code>init()</code> method builds our starting snake:</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="nx">snake</span><span class="p">.</span><span class="nx">x</span> <span class="o">+</span> <span class="p">(</span><span class="mi">5</span> <span class="o">*</span> <span class="nx">snake</span><span class="p">.</span><span class="nx">size</span><span class="p">);</span> <span class="nx">i</span> <span class="o">&gt;=</span> <span class="nx">snake</span><span class="p">.</span><span class="nx">x</span><span class="p">;</span> <span class="nx">i</span><span class="o">-=</span><span class="nx">snake</span><span class="p">.</span><span class="nx">size</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">snake</span><span class="p">.</span><span class="nx">sections</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">i</span> <span class="o">+</span> <span class="s1">&#39;,&#39;</span> <span class="o">+</span> <span class="nx">snake</span><span class="p">.</span><span class="nx">y</span><span class="p">);</span>
-<span class="p">}</span></code></pre></div><p>This creates 5 array elements, each containing an x,y coordinate that is offset by the <code>snake.size</code>. Note that we are beginning the array with the tail, and ending it with the head. This will make <code>shift()</code> remove the tail, and we can use <code>push()</code> to advance the head position. The <code>snake.x</code> and <code>snake.y</code> coordinates always refer to the head position.</p><p>Next we have the <code>snake.move()</code> method. This checks the <code>snake.direction</code>, which is updated later in the script, and then manipulates the head of the snake accordingly. Upward movement requires, the y coordinate to decrease, down increases, left decreases the x coordinate, and inversely, right increases it. Notice the unit added or removed is <code>snake.size</code>, since the snake sections sizes are larger than 1px we need to move the head by the size of the sections.</p><p>After updating the head position, <code>snake.move()</code> then invokes <code>snake.checkCollision()</code>. We’ll cover this method in a minute, just know it determines if the head as collided with the outside of the game area, or with an existing section of the snake. Either of these results in the game being stopped.</p><p>Next our <code>move()</code> method continues on to the <code>snake.checkGrowth()</code> method, which will allow the snake to grow if it is on the same position as a piece of food. Like <code>snake.checkCollision()</code>, we’ll cover the internals of this function in more detail shortly.</p><p>The last thing <code>move()</code> does is <code>push()</code> the new <code>snake.x</code> and <code>snake.y</code> coordinates onto the <code>snake.sections</code> array.</p><p>Our next method, <code>snake.draw()</code>, iterates through the <code>snake.sections</code> array and then splits the values into arrays with the x and y coordinates, and passes them along to the next method in the class: <code>snake.drawSection()</code>.</p><p>Here we circle back to the game.drawBox() function, and pass the x, y, size, and color of our snake. In turn, each section is drawn, and our array can be represented as a series of boxes on our canvas.</p><p>Moving on through the <code>snake</code> object, we see the <code>checkCollision()</code> and <code>isCollision()</code> functions. The first, <code>checkCollision()</code>, is really just a helper that calls <code>isCollision()</code> on our snake’s coordinates, and stops the game if there are any collisions found.</p><p>Taking a look at <code>snake.isCollision()</code>, we find that determining if our snake if out of bounds or being cannibalistic is not very difficult:</p><div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">...</span>
+<span class="p">}</span></code></pre></div>
+
+<p>This creates 5 array elements, each containing an x,y coordinate that is offset by the <code>snake.size</code>.  Note that we are beginning the array with the tail, and ending it with the head. This will make <code>shift()</code> remove the tail, and we can use <code>push()</code> to advance the head position.  The <code>snake.x</code> and <code>snake.y</code> coordinates always refer to the head position.</p>
+
+<p>Next we have the <code>snake.move()</code> method. This checks the <code>snake.direction</code>, which is updated later in the script, and then manipulates the head of the snake accordingly.  Upward movement requires, the y coordinate to decrease, down increases, left decreases the x coordinate, and inversely, right increases it.  Notice the unit added or removed is <code>snake.size</code>, since the snake sections sizes are larger than 1px we need to move the head by the size of the sections.</p>
+
+<p>After updating the head position, <code>snake.move()</code> then invokes <code>snake.checkCollision()</code>.  We’ll cover this method in a minute, just know it determines if the head as collided with the outside of the game area, or with an existing section of the snake.  Either of these results in the game being stopped.</p>
+
+<p>Next our <code>move()</code> method continues on to the <code>snake.checkGrowth()</code> method, which will allow the snake to grow if it is on the same position as a piece of food. Like <code>snake.checkCollision()</code>, we’ll cover the internals of this function in more detail shortly.</p>
+
+<p>The last thing <code>move()</code> does is <code>push()</code> the new <code>snake.x</code> and <code>snake.y</code> coordinates onto the <code>snake.sections</code> array.</p>
+
+<p>Our next method, <code>snake.draw()</code>, iterates through the <code>snake.sections</code> array and then splits the values into arrays with the x and y coordinates, and passes them along to the next method in the class: <code>snake.drawSection()</code>.</p>
+
+<p>Here we circle back to the game.drawBox() function, and pass the x, y, size, and color of our snake.  In turn, each section is drawn, and our array can be represented as a series of boxes on our canvas.</p>
+
+<p>Moving on through the <code>snake</code> object, we see the <code>checkCollision()</code> and <code>isCollision()</code> functions.  The first, <code>checkCollision()</code>, is really just a helper that calls <code>isCollision()</code> on our snake’s coordinates, and stops the game if there are any collisions found.</p>
+
+<p>Taking a look at <code>snake.isCollision()</code>, we find that determining if our snake if out of bounds or being cannibalistic is not very difficult:</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">...</span>
   <span class="nx">isCollision</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="nx">x</span> <span class="o">&lt;</span> <span class="nx">snake</span><span class="p">.</span><span class="nx">size</span><span class="o">/</span><span class="mi">2</span> <span class="o">||</span>
         <span class="nx">x</span> <span class="o">&gt;</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">width</span> <span class="o">||</span>
@@ -188,7 +426,13 @@
       <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
     <span class="p">}</span>
   <span class="p">},</span>
-  <span class="p">...</span></code></pre></div><p>The first four tests determine if the head of our snake has moved to a position that is outside the boundaries of our canvas. Again we are reminded to check for half of the size of the snake when looking for boundaries. If all those checks pass, we then see if the snake has attempted to eat itself by seeing if the coordinates exist in the <code>snake.sections</code> array.</p><p>The last method in our <code>snake</code> class is there to see if our snake needs to grow.</p><div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">...</span>
+  <span class="p">...</span></code></pre></div>
+
+<p>The first four tests determine if the head of our snake has moved to a position that is outside the boundaries of our canvas. Again we are reminded to check for half of the size of the snake when looking for boundaries.  If all those checks pass, we then see if the snake has attempted to eat itself by seeing if the coordinates exist in the <code>snake.sections</code> array.</p>
+
+<p>The last method in our <code>snake</code> class is there to see if our snake needs to grow.</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">...</span>
   <span class="nx">checkGrowth</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="nx">snake</span><span class="p">.</span><span class="nx">x</span> <span class="o">==</span> <span class="nx">food</span><span class="p">.</span><span class="nx">x</span> <span class="o">&amp;&amp;</span> <span class="nx">snake</span><span class="p">.</span><span class="nx">y</span> <span class="o">==</span> <span class="nx">food</span><span class="p">.</span><span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
       <span class="nx">game</span><span class="p">.</span><span class="nx">score</span><span class="o">++</span><span class="p">;</span>
@@ -200,7 +444,15 @@
       <span class="nx">snake</span><span class="p">.</span><span class="nx">sections</span><span class="p">.</span><span class="nx">shift</span><span class="p">();</span>
     <span class="p">}</span>
   <span class="p">}</span>
-  <span class="p">...</span></code></pre></div><p>I could have probably named this method better, and future versions may see this refactored out into some more granular functions for readability and maintainability. For now, we’ll dissect it as it is. The method starts off by determining if the head position of the snake is the same as the position of the food, the proverbial mushroom for our hero snake. If the head is on a food piece the function increases the <code>game.score</code>, calls <code>food.set</code>, and if the score is divisible by 5 it increases the the game speed by 1 FPS. If the snake is not on a food piece, then it <code>shifts()</code> off the tail section. Notice if the snake eats food, the <code>shift()</code> never happens. This is how our snake grows.</p><h4 id="food-object">Food object</h4><p>Our food object is short and sweet.</p><div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">food</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="p">...</span></code></pre></div>
+
+<p>I could have probably named this method better, and future versions may see this refactored out into some more granular functions for readability and maintainability.  For now, we’ll dissect it as it is.  The method starts off by determining if the head position of the snake is the same as the position of the food, the proverbial mushroom for our hero snake.  If the head is on a food piece the function increases the <code>game.score</code>, calls <code>food.set</code>, and if the score is divisible by 5 it increases the the game speed by 1 FPS.  If the snake is not on a food piece, then it <code>shifts()</code> off the tail section.  Notice if the snake eats food, the <code>shift()</code> never happens. This is how our snake grows.</p>
+
+<h4 id="food-object">Food object</h4>
+
+<p>Our food object is short and sweet.</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">food</span> <span class="o">=</span> <span class="p">{</span>
 
   <span class="nx">size</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
   <span class="nx">x</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
@@ -217,8 +469,24 @@
     <span class="nx">game</span><span class="p">.</span><span class="nx">drawBox</span><span class="p">(</span><span class="nx">food</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="nx">food</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span> <span class="nx">food</span><span class="p">.</span><span class="nx">size</span><span class="p">,</span> <span class="nx">food</span><span class="p">.</span><span class="nx">color</span><span class="p">);</span>
   <span class="p">}</span>
 
-<span class="p">};</span></code></pre></div><p>Like the snake object, <code>food</code> must have a <code>size</code>, <code>x</code>, <code>y</code>, and <code>color</code>. The real magic in this object is in the <code>set</code> method.</p><p>When <code>food.set</code> is called, the first thing that happens is the size of the food is set to match the size of the snake. Next, we set this x and y coordinates for randomized food placement. Because our snake really moves around in a grid that is determined by the width of each section, not every pixel on the canvas is accessible by the center of the snake’s head. To place food in a position where can be consumed, some care must be given.</p><div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">food</span><span class="p">.</span><span class="nx">x</span> <span class="o">=</span> <span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">10</span><span class="p">)</span> <span class="o">*</span> <span class="nx">snake</span><span class="p">.</span><span class="nx">size</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span> <span class="o">-</span> <span class="nx">snake</span><span class="p">.</span><span class="nx">size</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
-<span class="nx">food</span><span class="p">.</span><span class="nx">y</span> <span class="o">=</span> <span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">10</span><span class="p">)</span> <span class="o">*</span> <span class="nx">snake</span><span class="p">.</span><span class="nx">size</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span> <span class="o">-</span> <span class="nx">snake</span><span class="p">.</span><span class="nx">size</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span></code></pre></div><p>We can determine that <code>Math.ceil(Math.random() * 10</code> will return an integer between 1 and 10, and we can multiply that by <code>snake.size</code> and the ratio it has in relation to the overall canvas. To offset for the center of the snake head, we’ll need to subtract the width, <code>snake.size / 2</code>. This looks complex, but it really just finds an x,y placement that is inside the canvas and accessible to our snake.</p><p>The last method in our <code>food</code> class is <code>draw()</code>. Predictably, this simply calls the <code>game.drawBox()</code> method, and passes along all the food parameters.</p><h4 id="helpers">Helpers</h4><p>To make this game work, we need to be able to utilize a few helpers.</p><div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">inverseDirection</span> <span class="o">=</span> <span class="p">{</span>
+<span class="p">};</span></code></pre></div>
+
+<p>Like the snake object, <code>food</code> must have a <code>size</code>, <code>x</code>, <code>y</code>, and <code>color</code>. The real magic in this object is in the <code>set</code> method.</p>
+
+<p>When <code>food.set</code> is called, the first thing that happens is the size of the food is set to match the size of the snake.  Next, we set this x and y coordinates for randomized food placement.  Because our snake really moves around in a grid that is determined by the width of each section, not every pixel on the canvas is accessible by the center of the snake’s head.  To place food in a position where can be consumed, some care must be given.</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">food</span><span class="p">.</span><span class="nx">x</span> <span class="o">=</span> <span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">10</span><span class="p">)</span> <span class="o">*</span> <span class="nx">snake</span><span class="p">.</span><span class="nx">size</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span> <span class="o">-</span> <span class="nx">snake</span><span class="p">.</span><span class="nx">size</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+<span class="nx">food</span><span class="p">.</span><span class="nx">y</span> <span class="o">=</span> <span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">10</span><span class="p">)</span> <span class="o">*</span> <span class="nx">snake</span><span class="p">.</span><span class="nx">size</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span> <span class="o">-</span> <span class="nx">snake</span><span class="p">.</span><span class="nx">size</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span></code></pre></div>
+
+<p>We can determine that <code>Math.ceil(Math.random() * 10</code> will return an integer between 1 and 10, and we can multiply that by <code>snake.size</code> and the ratio it has in relation to the overall canvas.  To offset for the center of the snake head, we’ll need to subtract the width, <code>snake.size / 2</code>.  This looks complex, but it really just finds an x,y placement that is inside the canvas and accessible to our snake.</p>
+
+<p>The last method in our <code>food</code> class is <code>draw()</code>.  Predictably, this simply calls the <code>game.drawBox()</code> method, and passes along all the food parameters.</p>
+
+<h4 id="helpers">Helpers</h4>
+
+<p>To make this game work, we need to be able to utilize a few helpers.</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">inverseDirection</span> <span class="o">=</span> <span class="p">{</span>
   <span class="s1">&#39;up&#39;</span><span class="o">:</span><span class="s1">&#39;down&#39;</span><span class="p">,</span>
   <span class="s1">&#39;left&#39;</span><span class="o">:</span><span class="s1">&#39;right&#39;</span><span class="p">,</span>
   <span class="s1">&#39;right&#39;</span><span class="o">:</span><span class="s1">&#39;left&#39;</span><span class="p">,</span>
@@ -240,7 +508,21 @@
     <span class="p">}</span>
   <span class="p">}</span>
   <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
-<span class="p">};</span></code></pre></div><p>We cannot allow our snake to move the opposite direction it is currently moving, and having a quick place to lookup the inverse of a direction is helpful, so we have a <code>inverseDirection</code> object where this can be accomplished easily.</p><p>We want our users to be able to use multiple sets of keys to control our snake, so we have a <code>keys</code> object literal that defines our four directions with arrays of <a href="http://www.cambiaresearch.com/articles/15/javascript-char-codes-key-codes">char codes</a> for the respective keys. We’ll be accepting WASD, arrow keys, and the vim movement keys HJKL.</p><p>The last of our helpers adds a <code>getKey()</code> method to the Object prototype so we can see if a key code is present in our <code>keys</code> object, and if so return the key of the matched value. So really all it does it return a direction based on a key’s char code. This makes our life a lot easier when we need to see if a key represents a direction.</p><p>We’re on our way to a complete game. All that is left is a way to listen for new input, and the infamous game loop.</p><h4 id="event-listener">Event Listener</h4><p>Javascript makes it very easy to listen for new inputs from the keyboard.</p><div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;keydown&quot;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+<span class="p">};</span></code></pre></div>
+
+<p>We cannot allow our snake to move the opposite direction it is currently moving, and having a quick place to lookup the inverse of a direction is helpful, so we have a <code>inverseDirection</code> object where this can be accomplished easily.</p>
+
+<p>We want our users to be able to use multiple sets of keys to control our snake, so we have a <code>keys</code> object literal that defines our four directions with arrays of <a href="http://www.cambiaresearch.com/articles/15/javascript-char-codes-key-codes">char codes</a> for the respective keys.  We’ll be accepting WASD, arrow keys, and the vim movement keys HJKL.</p>
+
+<p>The last of our helpers adds a <code>getKey()</code> method to the Object prototype so we can see if a key code is present in our <code>keys</code> object, and if so return the key of the matched value. So really all it does it return a direction based on a key’s char code.  This makes our life a lot easier when we need to see if a key represents a direction.</p>
+
+<p>We’re on our way to a complete game.  All that is left is a way to listen for new input, and the infamous game loop.</p>
+
+<h4 id="event-listener">Event Listener</h4>
+
+<p>Javascript makes it very easy to listen for new inputs from the keyboard.</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;keydown&quot;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">lastKey</span> <span class="o">=</span> <span class="nx">keys</span><span class="p">.</span><span class="nx">getKey</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">keyCode</span><span class="p">);</span>
     <span class="k">if</span> <span class="p">([</span><span class="s1">&#39;up&#39;</span><span class="p">,</span> <span class="s1">&#39;down&#39;</span><span class="p">,</span> <span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="s1">&#39;right&#39;</span><span class="p">].</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">lastKey</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span>
         <span class="o">&amp;&amp;</span> <span class="nx">lastKey</span> <span class="o">!=</span> <span class="nx">inverseDirection</span><span class="p">[</span><span class="nx">snake</span><span class="p">.</span><span class="nx">direction</span><span class="p">])</span> <span class="p">{</span>
@@ -248,7 +530,17 @@
     <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">([</span><span class="s1">&#39;start_game&#39;</span><span class="p">].</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">lastKey</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="nx">game</span><span class="p">.</span><span class="nx">over</span><span class="p">)</span> <span class="p">{</span>
       <span class="nx">game</span><span class="p">.</span><span class="nx">start</span><span class="p">();</span>
     <span class="p">}</span>
-<span class="p">},</span> <span class="kc">false</span><span class="p">);</span></code></pre></div><p>Now when a key is pressed, our event listener will fire, and these few lines of code with execute. Here we utilize our <code>getKey()</code> method to see if the key pressed was a movement key, and if so we also assert that it is not the <code>inverseDirection</code> of our current <code>snake.direction</code>. If these conditions are met, the <code>snake.direction</code> is updated and our snake will be off on a new bearing. If the key was not a direction key, the listener checks to see if it was a spacebar or enter key, and if it is the <code>game.start()</code> method is called. If the key is none of these, the key-press is ignored.</p><p>That is pretty simple, and our helpers made the listener much easier to read and follow along with.</p><h4 id="game-loop">Game loop</h4><p>Here were are, the final stage. We’ve done all the heavy lifting of creating our game environment, our player, objectives, scoring, difficulty increases and even the drawing of our assets. Now we need to pull it all together and make it run.</p><div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">requestAnimationFrame</span> <span class="o">=</span>  <span class="nb">window</span><span class="p">.</span><span class="nx">requestAnimationFrame</span> <span class="o">||</span>
+<span class="p">},</span> <span class="kc">false</span><span class="p">);</span></code></pre></div>
+
+<p>Now when a key is pressed, our event listener will fire, and these few lines of code with execute.  Here we utilize our <code>getKey()</code> method to see if the key pressed was a movement key, and if so we also assert that it is not the <code>inverseDirection</code> of our current <code>snake.direction</code>.  If these conditions are met, the <code>snake.direction</code> is updated and our snake will be off on a new bearing.  If the key was not a direction key, the listener checks to see if it was a spacebar or enter key, and if it is the <code>game.start()</code> method is called.  If the key is none of these, the key-press is ignored.</p>
+
+<p>That is pretty simple, and our helpers made the listener much easier to read and follow along with.</p>
+
+<h4 id="game-loop">Game loop</h4>
+
+<p>Here were are, the final stage.  We’ve done all the heavy lifting of creating our game environment, our player, objectives, scoring, difficulty increases and even the drawing of our assets.  Now we need to pull it all together and make it run.</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">requestAnimationFrame</span> <span class="o">=</span>  <span class="nb">window</span><span class="p">.</span><span class="nx">requestAnimationFrame</span> <span class="o">||</span>
       <span class="nb">window</span><span class="p">.</span><span class="nx">webkitRequestAnimationFrame</span> <span class="o">||</span>
       <span class="nb">window</span><span class="p">.</span><span class="nx">mozRequestAnimationFrame</span><span class="p">;</span>
 
@@ -266,8 +558,232 @@
   <span class="p">},</span> <span class="mi">1000</span> <span class="o">/</span> <span class="nx">game</span><span class="p">.</span><span class="nx">fps</span><span class="p">);</span>
 <span class="p">};</span>
 
-<span class="nx">requestAnimationFrame</span><span class="p">(</span><span class="nx">loop</span><span class="p">);</span></code></pre></div><p>For our game loop, I am using the <code>requestAnimationFrame</code> method, which requires setting the appropriate, browser specific function. For a detailed look at <code>requestAnimationFrame</code>, I recommend consulting <a href="https://developer.mozilla.org/en-US/docs/DOM/window.requestAnimationFrame">The Book of Mozilla</a>.</p><p>Once the <code>requestAnimationFrame</code> is set, it can be called to update our canvas and will keep our refresh rate at or below 60 FPS. The <code>requestAnimationFrame</code> accepts a callback that is invoked no more than 60 times per second, and in our case we’ll use it in a recursive <code>loop()</code> function.</p><p>Looking inside <code>loop()</code>, we see the first thing that happens a check for the games state. If the game is active (not over) then a series of instructions is executed. Let’s review what each of these do:</p><ul><li><code>game.resetCanvas()</code> - Clears the canvas of all drawings</li><li><code>game.drawScore()</code> - Draws the <code>game.score</code> into the background of our game board</li><li><code>snake.move()</code> - Calculates the new head position of our snake</li><li><code>food.draw()</code> - Places a piece of food on the game board</li><li><code>snake.draw()</code> - Draws our snake by iterating through the <code>snake.sections</code> array</li><li><code>game.drawMessage()</code> - Displays game messages on screen, used for GAME OVER message</li></ul><p>By executing these functions multiple times a second, our snake is able to move, and our game becomes alive. To do this, we’ll create an infinite loop.</p><div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">...</span>
+<span class="nx">requestAnimationFrame</span><span class="p">(</span><span class="nx">loop</span><span class="p">);</span></code></pre></div>
+
+<p>For our game loop, I am using the <code>requestAnimationFrame</code> method, which requires setting the appropriate, browser specific function.  For a detailed look at <code>requestAnimationFrame</code>, I recommend consulting <a href="https://developer.mozilla.org/en-US/docs/DOM/window.requestAnimationFrame">The Book of Mozilla</a>.</p>
+
+<p>Once the <code>requestAnimationFrame</code> is set, it can be called to update our canvas and will keep our refresh rate at or below 60 FPS.  The <code>requestAnimationFrame</code> accepts a callback that is invoked no more than 60 times per second, and in our case we’ll use it in a recursive <code>loop()</code> function.</p>
+
+<p>Looking inside <code>loop()</code>, we see the first thing that happens a check for the games state.  If the game is active  (not over) then a series of instructions is executed. Let’s review what each of these do:</p>
+
+<ul>
+  <li><code>game.resetCanvas()</code> - Clears the canvas of all drawings</li>
+  <li><code>game.drawScore()</code> - Draws the <code>game.score</code> into the background of our game board</li>
+  <li><code>snake.move()</code> - Calculates the new head position of our snake</li>
+  <li><code>food.draw()</code> - Places a piece of food on the game board</li>
+  <li><code>snake.draw()</code> - Draws our snake by iterating through the <code>snake.sections</code> array</li>
+  <li><code>game.drawMessage()</code> - Displays game messages on screen, used for GAME OVER message</li>
+</ul>
+
+<p>By executing these functions multiple times a second, our snake is able to move, and our game becomes alive.  To do this, we’ll create an infinite loop.</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">...</span>
   <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">requestAnimationFrame</span><span class="p">(</span><span class="nx">loop</span><span class="p">);</span>
   <span class="p">},</span> <span class="mi">1000</span> <span class="o">/</span> <span class="nx">game</span><span class="p">.</span><span class="nx">fps</span><span class="p">);</span>
-  <span class="p">...</span></code></pre></div><p>No human can control our snake advancing 60 times per second, so to slow down animation we can throttle the <code>requestAnimationFrame</code> to only fire <em>n</em> times per second by using javascript’s native <code>setTimeout()</code> method. Remember we initialize <code>game.fps</code> to 8, so <code>setTimeout()</code> will allow <code>requestAnimationFrame</code> to execute 8 times per second, and it will increase along with <code>game.fps</code> to make the snake move faster over time. There are other methods available for controlling game speed, but I like the way this give the snake that vintage gaming feel, with a bit of a jerking motion when as it slithers to its next meal.</p><p>The script in completed with one final line of code that sets our <code>loop()</code> function in motion:</p><div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">requestAnimationFrame</span><span class="p">(</span><span class="nx">loop</span><span class="p">);</span></code></pre></div><p>We now have a classic game recreated in javascript, in just a couple of hundred lines of code. The source is <a href="https://github.com/JDStraughan/html5-snake">available on GitHub for your forking pleasure</a>. For my second complete HTML5 game, I’m pretty happy and learned a lot about the canvas element, and game development in general. I look forward to your questions and constructive criticism in the comments section below.</p></div><hr><ul class="pager"><li class="previous"> <a href="/2013/02/14/my-first-game-html5-lightcycles" data-toggle="tooltip" data-placement="top" title="My first game - HTML5 lightcycles">&larr; Previous Post</a></li><li class="next"> <a href="/2013/03/14/homemade-ginger-ale-is-so-easy" data-toggle="tooltip" data-placement="top" title="Homemade Ginger Ale that is so easy (even a 7 year old can do it)">Next Post &rarr;</a></li></ul><hr><div id="disqus_thread" itemprop="comment"></div><script type="text/javascript"> /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */ var disqus_shortname = 'jdstraughan'; // required: replace example with your forum shortname /* * * DON'T EDIT BELOW THIS LINE * * */ (function() { var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true; dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js'; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq); })(); </script> <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript> <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a><hr> Related Posts<ul class="naked"><li itemscope="" itemtype="http://schema.org/BlogPosting"> <a href="/2015/06/04/our-walt-disney-world-trip-planning-faq" itemprop="url"><span itemprop="name">Our Walt Disney World Trip Planning Frequently Asked Questions</span></a><meta itemprop="author" content="Jason Straughan" /><meta itemprop="description" content="My family and I are Disney fanatics. These are the questions most often asked by friends traveling to Walt Disney World." /><meta itemprop="datePublished" content="June 4, 2015" /></li><li itemscope="" itemtype="http://schema.org/BlogPosting"> <a href="/2015/05/23/its-a-great-big-beautiful-tomorrowland" itemprop="url"><span itemprop="name">It's a Great Big Beautiful Tomorrowland</span></a><meta itemprop="author" content="Jason Straughan" /><meta itemprop="description" content="Everyone that knows me knows I am a Disneyphile so its no surprise that we were excited to view the new Disney movie Tomorrowland." /><meta itemprop="datePublished" content="May 23, 2015" /></li><li itemscope="" itemtype="http://schema.org/BlogPosting"> <a href="/2013/08/14/3-Day-Startup-San-Antonio-at-Geekdom-2013" itemprop="url"><span itemprop="name">3 Day Startup San Antonio at Geekdom (Summer 2013)</span></a><meta itemprop="author" content="Jason Straughan" /><meta itemprop="description" content="The idea of 3 Day Startup is simple: start a company over the course of three days. This past weekend I was fortunate enough to participate." /><meta itemprop="datePublished" content="August 14, 2013" /></li><li itemscope="" itemtype="http://schema.org/BlogPosting"> <a href="/2013/07/01/neo4j-or-how-I-learned-to-stop-worrying-and-love-the-graph" itemprop="url"><span itemprop="name">Introduction to Graph Databases using Neo4j</span></a><meta itemprop="author" content="Jason Straughan" /><meta itemprop="description" content="For those that are unfamiliar with graph databases, they do not store graphs in the chart sense, but rather graph structures." /><meta itemprop="datePublished" content="July 1, 2013" /></li><li itemscope="" itemtype="http://schema.org/BlogPosting"> <a href="/2013/04/18/the-day-the-music-went-blind" itemprop="url"><span itemprop="name">The day the music went blind</span></a><meta itemprop="author" content="Jason Straughan" /><meta itemprop="description" content="The soundtrack of my youth was illustrated by Storm Thorgerson. He made music visual...a tribute to Storm." /><meta itemprop="datePublished" content="April 18, 2013" /></li><li itemscope="" itemtype="http://schema.org/BlogPosting"> <a href="/2013/03/31/darth-vader-dreams-of-electric-sheep" itemprop="url"><span itemprop="name">Darth Vader Dreams of Electric Sheep</span></a><meta itemprop="author" content="Jason Straughan" /><meta itemprop="description" content="My kid has never heard a busy signal, and I doubt he'd recognize a dial-tone. In his world view, flip phones are the technology of the ancients." /><meta itemprop="datePublished" content="March 31, 2013" /></li><li itemscope="" itemtype="http://schema.org/BlogPosting"> <a href="/2013/03/14/homemade-ginger-ale-is-so-easy" itemprop="url"><span itemprop="name">Homemade Ginger Ale that is so easy (even a 7 year old can do it)</span></a><meta itemprop="author" content="Jason Straughan" /><meta itemprop="description" content="I've enjoyed finding craft sodas, and my son has developed quite the palette for fine root beers. So we decided to make our own ginger beer." /><meta itemprop="datePublished" content="March 14, 2013" /></li><li itemscope="" itemtype="http://schema.org/BlogPosting"> <a href="/2013/02/14/my-first-game-html5-lightcycles" itemprop="url"><span itemprop="name">My first game - HTML5 lightcycles</span></a><meta itemprop="author" content="Jason Straughan" /><meta itemprop="description" content="For the past few months I have been playing with the HTML5 canvas element off and on, eventually building TRON, my first canvas game." /><meta itemprop="datePublished" content="February 14, 2013" /></li><li itemscope="" itemtype="http://schema.org/BlogPosting"> <a href="/2013/02/07/nonews-part-2-the-source" itemprop="url"><span itemprop="name">NoNews Part II - The Source</span></a><meta itemprop="author" content="Jason Straughan" /><meta itemprop="description" content="In this post I'd like to walk-through the source code of the NoNews extensions and explain how it works." /><meta itemprop="datePublished" content="February 7, 2013" /></li><li itemscope="" itemtype="http://schema.org/BlogPosting"> <a href="/2013/01/29/nonews-is-good-news" itemprop="url"><span itemprop="name">NoNews (is Good News!)</span></a><meta itemprop="author" content="Jason Straughan" /><meta itemprop="description" content="NoNews is a Google Chrome extension that was built to assist me (and you) in avoiding passively reading the news. Face it, the news is depressing." /><meta itemprop="datePublished" content="January 29, 2013" /></li></ul></div></div></div></article><hr></div><footer><div class="container"><div class="row"><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><ul class="list-inline text-center"><li> <a href="/feed.xml"> <span class="fa-stack fa-lg"> <i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-rss fa-stack-1x fa-inverse"></i> </span> </a></li><li> <a href="https://www.linkedin.com/in/JDStraughan"> <span class="fa-stack fa-lg"> <i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i> </span> </a></li><li> <a href="https://github.com/JDStraughan"> <span class="fa-stack fa-lg"> <i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-github fa-stack-1x fa-inverse"></i> </span> </a></li><li> <a href="https://twitter.com/jdstraughan"> <span class="fa-stack fa-lg"> <i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-twitter fa-stack-1x fa-inverse"></i> </span> </a></li><li> <a href="https://www.facebook.com/JDStraughan"> <span class="fa-stack fa-lg"> <i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-facebook fa-stack-1x fa-inverse"></i> </span> </a></li></ul><p class="copyright text-muted">Copyright &copy; JDStraughan 2015</p></div></div></div></footer><script src="//code.jquery.com/jquery-1.11.0.min.js"></script> <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>  <script src="/js/bootstrap.min.js "></script>  <script src="/js/clean-blog.js "></script>  <script src="//static.getclicky.com/js" type="text/javascript"></script> <script type="text/javascript">try{ clicky.init(66405120); }catch(e){}</script> <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/66405120ns.gif" /></p></noscript></body></html>
+  <span class="p">...</span></code></pre></div>
+
+<p>No human can control our snake advancing 60 times per second, so to slow down animation we can throttle the <code>requestAnimationFrame</code> to only fire <em>n</em> times per second by using javascript’s native <code>setTimeout()</code> method.  Remember we initialize <code>game.fps</code> to 8, so <code>setTimeout()</code> will allow <code>requestAnimationFrame</code> to execute 8 times per second, and it will increase along with <code>game.fps</code> to make the snake move faster over time. There are other methods available for controlling game speed, but I like the way this give the snake that vintage gaming feel, with a bit of a jerking motion when as it slithers to its next meal.</p>
+
+<p>The script in completed with one final line of code that sets our <code>loop()</code> function in motion:</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">requestAnimationFrame</span><span class="p">(</span><span class="nx">loop</span><span class="p">);</span></code></pre></div>
+
+<p>We now have a classic game recreated in javascript, in just a couple of hundred lines of code.  The source is <a href="https://github.com/JDStraughan/html5-snake">available on GitHub for your forking pleasure</a>.  For my second complete HTML5 game, I’m pretty happy and learned a lot about the canvas element, and game development in general.  I look forward to your questions and constructive criticism in the comments section below.</p>
+
+                    </div>
+                    <hr>
+
+                    <ul class="pager">
+                        
+                        <li class="previous">
+                            <a href="/2013/02/14/my-first-game-html5-lightcycles" data-toggle="tooltip" data-placement="top" title="My first game - HTML5 lightcycles">&larr; Previous Post</a>
+                        </li>
+                        
+                        
+                        <li class="next">
+                            <a href="/2013/03/14/homemade-ginger-ale-is-so-easy" data-toggle="tooltip" data-placement="top" title="Homemade Ginger Ale that is so easy (even a 7 year old can do it)">Next Post &rarr;</a>
+                        </li>
+                        
+                    </ul>
+
+                    <hr>
+                    <div id="disqus_thread" itemprop="comment"></div>
+                    <script type="text/javascript">
+                    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                    var disqus_shortname = 'jdstraughan'; // required: replace example with your forum shortname
+
+                    /* * * DON'T EDIT BELOW THIS LINE * * */
+                    (function() {
+                      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                    })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+                    <hr>
+
+                    Related Posts
+                    <ul class="naked">
+                    
+                    <li itemscope="" itemtype="http://schema.org/BlogPosting">
+                        <a href="/2015/06/04/our-walt-disney-world-trip-planning-faq" itemprop="url"><span itemprop="name">Our Walt Disney World Trip Planning Frequently Asked Questions</span></a>
+                        <meta itemprop="author" content="Jason Straughan" />
+                        <meta itemprop="description" content="My family and I are Disney fanatics. These are the questions most often asked by friends traveling to Walt Disney World." />
+                        <meta itemprop="datePublished" content="June 4, 2015" />
+                    </li>
+                    
+                    <li itemscope="" itemtype="http://schema.org/BlogPosting">
+                        <a href="/2015/05/23/its-a-great-big-beautiful-tomorrowland" itemprop="url"><span itemprop="name">It's a Great Big Beautiful Tomorrowland</span></a>
+                        <meta itemprop="author" content="Jason Straughan" />
+                        <meta itemprop="description" content="Everyone that knows me knows I am a Disneyphile so its no surprise that we were excited to view the new Disney movie Tomorrowland." />
+                        <meta itemprop="datePublished" content="May 23, 2015" />
+                    </li>
+                    
+                    <li itemscope="" itemtype="http://schema.org/BlogPosting">
+                        <a href="/2013/08/14/3-Day-Startup-San-Antonio-at-Geekdom-2013" itemprop="url"><span itemprop="name">3 Day Startup San Antonio at Geekdom (Summer 2013)</span></a>
+                        <meta itemprop="author" content="Jason Straughan" />
+                        <meta itemprop="description" content="The idea of 3 Day Startup is simple: start a company over the course of three days. This past weekend I was fortunate enough to participate." />
+                        <meta itemprop="datePublished" content="August 14, 2013" />
+                    </li>
+                    
+                    <li itemscope="" itemtype="http://schema.org/BlogPosting">
+                        <a href="/2013/07/01/neo4j-or-how-I-learned-to-stop-worrying-and-love-the-graph" itemprop="url"><span itemprop="name">Introduction to Graph Databases using Neo4j</span></a>
+                        <meta itemprop="author" content="Jason Straughan" />
+                        <meta itemprop="description" content="For those that are unfamiliar with graph databases, they do not store graphs in the chart sense, but rather graph structures." />
+                        <meta itemprop="datePublished" content="July 1, 2013" />
+                    </li>
+                    
+                    <li itemscope="" itemtype="http://schema.org/BlogPosting">
+                        <a href="/2013/04/18/the-day-the-music-went-blind" itemprop="url"><span itemprop="name">The day the music went blind</span></a>
+                        <meta itemprop="author" content="Jason Straughan" />
+                        <meta itemprop="description" content="The soundtrack of my youth was illustrated by Storm Thorgerson.  He made music visual...a tribute to Storm." />
+                        <meta itemprop="datePublished" content="April 18, 2013" />
+                    </li>
+                    
+                    <li itemscope="" itemtype="http://schema.org/BlogPosting">
+                        <a href="/2013/03/31/darth-vader-dreams-of-electric-sheep" itemprop="url"><span itemprop="name">Darth Vader Dreams of Electric Sheep</span></a>
+                        <meta itemprop="author" content="Jason Straughan" />
+                        <meta itemprop="description" content="My kid has never heard a busy signal, and I doubt he'd recognize a dial-tone. In his world view, flip phones are the technology of the ancients." />
+                        <meta itemprop="datePublished" content="March 31, 2013" />
+                    </li>
+                    
+                    <li itemscope="" itemtype="http://schema.org/BlogPosting">
+                        <a href="/2013/03/14/homemade-ginger-ale-is-so-easy" itemprop="url"><span itemprop="name">Homemade Ginger Ale that is so easy (even a 7 year old can do it)</span></a>
+                        <meta itemprop="author" content="Jason Straughan" />
+                        <meta itemprop="description" content="I've enjoyed finding craft sodas, and my son has developed quite the palette for fine root beers. So we decided to make our own ginger beer." />
+                        <meta itemprop="datePublished" content="March 14, 2013" />
+                    </li>
+                    
+                    <li itemscope="" itemtype="http://schema.org/BlogPosting">
+                        <a href="/2013/02/14/my-first-game-html5-lightcycles" itemprop="url"><span itemprop="name">My first game - HTML5 lightcycles</span></a>
+                        <meta itemprop="author" content="Jason Straughan" />
+                        <meta itemprop="description" content="For the past few months I have been playing with the HTML5 canvas element off and on, eventually building TRON, my first canvas game." />
+                        <meta itemprop="datePublished" content="February 14, 2013" />
+                    </li>
+                    
+                    <li itemscope="" itemtype="http://schema.org/BlogPosting">
+                        <a href="/2013/02/07/nonews-part-2-the-source" itemprop="url"><span itemprop="name">NoNews Part II - The Source</span></a>
+                        <meta itemprop="author" content="Jason Straughan" />
+                        <meta itemprop="description" content="In this post I'd like to walk-through the source code of the NoNews extensions and explain how it works." />
+                        <meta itemprop="datePublished" content="February 7, 2013" />
+                    </li>
+                    
+                    <li itemscope="" itemtype="http://schema.org/BlogPosting">
+                        <a href="/2013/01/29/nonews-is-good-news" itemprop="url"><span itemprop="name">NoNews (is Good News!)</span></a>
+                        <meta itemprop="author" content="Jason Straughan" />
+                        <meta itemprop="description" content="NoNews is a Google Chrome extension that was built to assist me (and you) in avoiding passively reading the news. Face it, the news is depressing." />
+                        <meta itemprop="datePublished" content="January 29, 2013" />
+                    </li>
+                    
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <hr>
+</div>
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="https://www.linkedin.com/in/JDStraughan">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://github.com/JDStraughan">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://twitter.com/jdstraughan">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://www.facebook.com/JDStraughan">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; JDStraughan 2015</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/clean-blog.js "></script>
+
+<!-- Clicky web analytics -->
+<script src="//static.getclicky.com/js" type="text/javascript"></script>
+<script type="text/javascript">try{ clicky.init(66405120); }catch(e){}</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/66405120ns.gif" /></p></noscript>
+
+
+</body>
+
+</html>
