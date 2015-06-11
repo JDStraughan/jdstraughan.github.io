@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="New year, new blog, new blog engine: jekyll, the blog engine from Tom Preston-Werner of GitHub fame. I am excited to give this a shot.">
 
+
     <meta name="HandheldFriendly" content="True" />
     <meta name="MobileOptimized" content="320" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -25,8 +26,9 @@
     {
         "@context": "http://schema.org",
         "@type": "Blog",
-        "publisher": "jdstraughan.com",
-        "url": "http://jdstraughan.com/2013/01/28/jekyll-is-just-what-the-dr-ordered",
+        "author": "Jason Straughan",
+        "isFamilyFriendly": "http://schema.org/True",
+        "url": "http://jdstraughan.com",
         "description": "New year, new blog, new blog engine: jekyll, the blog engine from Tom Preston-Werner of GitHub fame. I am excited to give this a shot."
     }
     </script>
@@ -35,19 +37,8 @@
 
     <link rel="canonical" href="http://jdstraughan.com/2013/01/28/jekyll-is-just-what-the-dr-ordered">
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/clean-blog.css">
-
-    <!-- Pygments Github CSS -->
-    <link rel="stylesheet" href="/css/syntax.css">
-
-    <!-- Custom Fonts -->
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="/css/site.min.css">
 
     <!-- RSS/XML -->
     <link rel="alternate" type="application/rss+xml" title="jdstraughan.com" href="http://jdstraughan.com/feed.xml" />
@@ -84,6 +75,7 @@
 
     <div itemscope="" itemtype="http://schema.org/BlogPosting">
     <meta itemprop="description" content="New year, new blog, new blog engine: jekyll, the blog engine from Tom Preston-Werner of GitHub fame. I am excited to give this a shot." />
+    <meta itemprop="author" content="Jason Straughan" />
     <!-- Post Header -->
     <header class="intro-header" style="background-image: url('/img/header/rosetta.jpg')">
         <div class="container">
@@ -177,27 +169,77 @@
                     <hr>
 
                     Related Posts
-                    <ul class="naked" itemscope="" itemtype="http://schema.org/Blog">
+                    <ul class="naked">
                     
-                    <li><a href="/2015/06/04/our-walt-disney-world-trip-planning-faq" itemprop="url"><span itemprop="name">Our Walt Disney World Trip Planning Frequently Asked Questions</span></a></li>
+                    <li itemscope="" itemtype="http://schema.org/BlogPosting">
+                        <a href="/2015/06/04/our-walt-disney-world-trip-planning-faq" itemprop="url"><span itemprop="name">Our Walt Disney World Trip Planning Frequently Asked Questions</span></a>
+                        <meta itemprop="author" content="Jason Straughan" />
+                        <meta itemprop="description" content="My family and I are Disney fanatics. These are the questions most often asked by friends traveling to Walt Disney World." />
+                        <meta itemprop="datePublished" content="June 4, 2015" />
+                    </li>
                     
-                    <li><a href="/2015/05/23/its-a-great-big-beautiful-tomorrowland" itemprop="url"><span itemprop="name">It's a Great Big Beautiful Tomorrowland</span></a></li>
+                    <li itemscope="" itemtype="http://schema.org/BlogPosting">
+                        <a href="/2015/05/23/its-a-great-big-beautiful-tomorrowland" itemprop="url"><span itemprop="name">It's a Great Big Beautiful Tomorrowland</span></a>
+                        <meta itemprop="author" content="Jason Straughan" />
+                        <meta itemprop="description" content="Everyone that knows me knows I am a Disneyphile so its no surprise that we were excited to view the new Disney movie Tomorrowland." />
+                        <meta itemprop="datePublished" content="May 23, 2015" />
+                    </li>
                     
-                    <li><a href="/2013/08/14/3-Day-Startup-San-Antonio-at-Geekdom-2013" itemprop="url"><span itemprop="name">3 Day Startup San Antonio at Geekdom (Summer 2013)</span></a></li>
+                    <li itemscope="" itemtype="http://schema.org/BlogPosting">
+                        <a href="/2013/08/14/3-Day-Startup-San-Antonio-at-Geekdom-2013" itemprop="url"><span itemprop="name">3 Day Startup San Antonio at Geekdom (Summer 2013)</span></a>
+                        <meta itemprop="author" content="Jason Straughan" />
+                        <meta itemprop="description" content="The idea of 3 Day Startup is simple: start a company over the course of three days. This past weekend I was fortunate enough to participate." />
+                        <meta itemprop="datePublished" content="August 14, 2013" />
+                    </li>
                     
-                    <li><a href="/2013/07/01/neo4j-or-how-I-learned-to-stop-worrying-and-love-the-graph" itemprop="url"><span itemprop="name">Introduction to Graph Databases using Neo4j</span></a></li>
+                    <li itemscope="" itemtype="http://schema.org/BlogPosting">
+                        <a href="/2013/07/01/neo4j-or-how-I-learned-to-stop-worrying-and-love-the-graph" itemprop="url"><span itemprop="name">Introduction to Graph Databases using Neo4j</span></a>
+                        <meta itemprop="author" content="Jason Straughan" />
+                        <meta itemprop="description" content="For those that are unfamiliar with graph databases, they do not store graphs in the chart sense, but rather graph structures." />
+                        <meta itemprop="datePublished" content="July 1, 2013" />
+                    </li>
                     
-                    <li><a href="/2013/04/18/the-day-the-music-went-blind" itemprop="url"><span itemprop="name">The day the music went blind</span></a></li>
+                    <li itemscope="" itemtype="http://schema.org/BlogPosting">
+                        <a href="/2013/04/18/the-day-the-music-went-blind" itemprop="url"><span itemprop="name">The day the music went blind</span></a>
+                        <meta itemprop="author" content="Jason Straughan" />
+                        <meta itemprop="description" content="The soundtrack of my youth was illustrated by Storm Thorgerson.  He made music visual...a tribute to Storm." />
+                        <meta itemprop="datePublished" content="April 18, 2013" />
+                    </li>
                     
-                    <li><a href="/2013/03/31/darth-vader-dreams-of-electric-sheep" itemprop="url"><span itemprop="name">Darth Vader Dreams of Electric Sheep</span></a></li>
+                    <li itemscope="" itemtype="http://schema.org/BlogPosting">
+                        <a href="/2013/03/31/darth-vader-dreams-of-electric-sheep" itemprop="url"><span itemprop="name">Darth Vader Dreams of Electric Sheep</span></a>
+                        <meta itemprop="author" content="Jason Straughan" />
+                        <meta itemprop="description" content="My kid has never heard a busy signal, and I doubt he'd recognize a dial-tone. In his world view, flip phones are the technology of the ancients." />
+                        <meta itemprop="datePublished" content="March 31, 2013" />
+                    </li>
                     
-                    <li><a href="/2013/03/14/homemade-ginger-ale-is-so-easy" itemprop="url"><span itemprop="name">Homemade Ginger Ale that is so easy (even a 7 year old can do it)</span></a></li>
+                    <li itemscope="" itemtype="http://schema.org/BlogPosting">
+                        <a href="/2013/03/14/homemade-ginger-ale-is-so-easy" itemprop="url"><span itemprop="name">Homemade Ginger Ale that is so easy (even a 7 year old can do it)</span></a>
+                        <meta itemprop="author" content="Jason Straughan" />
+                        <meta itemprop="description" content="I've enjoyed finding craft sodas, and my son has developed quite the palette for fine root beers. So we decided to make our own ginger beer." />
+                        <meta itemprop="datePublished" content="March 14, 2013" />
+                    </li>
                     
-                    <li><a href="/2013/03/05/html5-snake-with-source-code-walkthrough" itemprop="url"><span itemprop="name">HTML5 Snake source code walkthrough</span></a></li>
+                    <li itemscope="" itemtype="http://schema.org/BlogPosting">
+                        <a href="/2013/03/05/html5-snake-with-source-code-walkthrough" itemprop="url"><span itemprop="name">HTML5 Snake source code walkthrough</span></a>
+                        <meta itemprop="author" content="Jason Straughan" />
+                        <meta itemprop="description" content="Learn how to make a version of the popular snake game using the HTML canvas element and javascript. Fun for all ages, and easy to code." />
+                        <meta itemprop="datePublished" content="March 5, 2013" />
+                    </li>
                     
-                    <li><a href="/2013/02/14/my-first-game-html5-lightcycles" itemprop="url"><span itemprop="name">My first game - HTML5 lightcycles</span></a></li>
+                    <li itemscope="" itemtype="http://schema.org/BlogPosting">
+                        <a href="/2013/02/14/my-first-game-html5-lightcycles" itemprop="url"><span itemprop="name">My first game - HTML5 lightcycles</span></a>
+                        <meta itemprop="author" content="Jason Straughan" />
+                        <meta itemprop="description" content="For the past few months I have been playing with the HTML5 canvas element off and on, eventually building TRON, my first canvas game." />
+                        <meta itemprop="datePublished" content="February 14, 2013" />
+                    </li>
                     
-                    <li><a href="/2013/02/07/nonews-part-2-the-source" itemprop="url"><span itemprop="name">NoNews Part II - The Source</span></a></li>
+                    <li itemscope="" itemtype="http://schema.org/BlogPosting">
+                        <a href="/2013/02/07/nonews-part-2-the-source" itemprop="url"><span itemprop="name">NoNews Part II - The Source</span></a>
+                        <meta itemprop="author" content="Jason Straughan" />
+                        <meta itemprop="description" content="In this post I'd like to walk-through the source code of the NoNews extensions and explain how it works." />
+                        <meta itemprop="datePublished" content="February 7, 2013" />
+                    </li>
                     
                     </ul>
                 </div>
