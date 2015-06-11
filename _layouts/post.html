@@ -72,7 +72,7 @@ layout: default
                         <a href="{{ related.url }}" itemprop="url"><span itemprop="name">{{ related.title }}</span></a>
                         <meta itemprop="author" content="Jason Straughan" />
                         <meta itemprop="description" content="{{ related.description }}" />
-                        <meta itemprop="datePublished" content="{{ page.date | date: "%B %-d, %Y" }}" />
+                        <meta itemprop="datePublished" content="{{ related.date | date: "%B %-d, %Y" }}" />
                     </li>
                     {% endfor %}
                     </ul>
