@@ -14,3 +14,11 @@ highlighter: pygments
 permalink: /:year/:month/:day/:title
 paginate: 6
 exclude: ["node_modules"]
+
+# Compress HTML settings
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: []
+  ignore:
+    envs: [local]
