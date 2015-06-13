@@ -6,7 +6,7 @@ tags: ["jekyll"]
 description: "New year, new blog, new blog engine: jekyll, the blog engine from Tom Preston-Werner of GitHub fame. I am excited to give this a shot."
 author:     "Jason Straughan"
 header-img: "img/header/rosetta.jpg"
-image-credit: <a href="http://commons.wikimedia.org/wiki/User:Chris_73">Chris_73</a> [<a href="http://creativecommons.org/licenses/by-sa/3.0">CC-BY-SA-3.0</a>], <a href="http://commons.wikimedia.org/wiki/File:DemoticScriptsRosettaStoneReplica.jpg">via Wikimedia Commons</a>
+image-credit: <a href="http://commons.wikimedia.org/wiki/User:Chris_73">Chris_73</a> [<a href="https://creativecommons.org/licenses/by-sa/3.0">CC-BY-SA-3.0</a>], <a href="http://commons.wikimedia.org/wiki/File:DemoticScriptsRosettaStoneReplica.jpg">via Wikimedia Commons</a>
 
 ---
 

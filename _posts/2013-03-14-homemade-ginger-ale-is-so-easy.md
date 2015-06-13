@@ -5,7 +5,7 @@ title: Homemade Ginger Ale that is so easy (even a 7 year old can do it)
 tags: ["soda making", "cooking"]
 description: "I've enjoyed finding craft sodas, and my son has developed quite the palette for fine root beers. So we decided to make our own ginger beer."
 header-img: "img/header/ginger.jpg"
-image-credit: Tahir mq (Own work) [<a href="http://creativecommons.org/licenses/by-sa/3.0">CC-BY-SA-3.0</a>], <a href="http://commons.wikimedia.org/wiki/File%3AGinger_123.jpg">via Wikimedia Commons</a>
+image-credit: Tahir mq (Own work) [<a href="https://creativecommons.org/licenses/by-sa/3.0">CC-BY-SA-3.0</a>], <a href="http://commons.wikimedia.org/wiki/File%3AGinger_123.jpg">via Wikimedia Commons</a>
 ---
 
 For the past couple of years, I've enjoyed finding craft sodas, and my son has developed quite the palette for fine root beers.  While ginger beer (or ginger ale as some call it) is not his favorite, his mom and I sure think it is nice.
