@@ -8,7 +8,7 @@ header-img: 'img/header/battersea_powerstation.jpg'
 image-credit: Albion at de.wikipedia. Later version(s) were uploaded by Wolpertinger at de.wikipedia. [<a href="http://www.gnu.org/copyleft/fdl.html">GFDL</a> or <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA-3.0</a>], <a href="http://commons.wikimedia.org/wiki/File%3ABattersea_Powerstation.jpg">from Wikimedia Commons</a>
 ---
 
-The soundtrack of my youth was illustrated by [Storm Thorgerson](http://en.wikipedia.org/wiki/Storm_Thorgerson).
+The soundtrack of my youth was illustrated by [Storm Thorgerson](https://en.wikipedia.org/wiki/Storm_Thorgerson).
 
 I cannot listen to _Darkside of the Moon_ without seeing the prism. Just one bar of _Wish You Were Here_ conjures visions of the burning man.  The same is true with _Animals_, _Atom Heart Mother_, and non-Floyd greats by bands like Led Zeppelin, Black Sabbath, Alan Parsons, Phish, and many, many others.
 

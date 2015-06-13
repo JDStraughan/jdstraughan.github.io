@@ -46,7 +46,7 @@ First, we need a basic page setup with a canvas tag.
 <body>
 
 <h1>html5-snake</h1>
-<p><a href="http://en.wikipedia.org/wiki/HTML5">HTML5</a> variation of the classic <a href="http://en.wikipedia.org/wiki/Snake_(video_game)">snake game</a>.</p>
+<p><a href="https://en.wikipedia.org/wiki/HTML5">HTML5</a> variation of the classic <a href="https://en.wikipedia.org/wiki/Snake_(video_game)">snake game</a>.</p>
 
 <div>
   <canvas id="the-game" width="320" height="240">

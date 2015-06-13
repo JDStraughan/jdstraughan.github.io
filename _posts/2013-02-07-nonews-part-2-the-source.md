@@ -148,7 +148,7 @@ if (typeof localStorage.nonews_blacklist_urls === "undefined") {
 }
 {% endhighlight %}
 
-Starting with line 1, I am checking to see if we have already stored the blacklist into [localStorage](http://en.wikipedia.org/wiki/Web_storage#Local_and_session_storage).  This is not incredibly important for this version of the extension, as we could just load the blacklist into a variable that will be used in the event listener, however, adding to localStorage allows us to easily manipulate this list in the future, possibly through and [options page]() interface.
+Starting with line 1, I am checking to see if we have already stored the blacklist into [localStorage](https://en.wikipedia.org/wiki/Web_storage#Local_and_session_storage).  This is not incredibly important for this version of the extension, as we could just load the blacklist into a variable that will be used in the event listener, however, adding to localStorage allows us to easily manipulate this list in the future, possibly through and [options page]() interface.
 
 If the black list is not already loaded, lines 3-6 use a <code>XMLHttpRequest</code> to load the <code>assets/blacklist.json</code> file.  Before we move on, let's take a quick look at the blacklist file:
 
@@ -315,7 +315,7 @@ The icons are defined by their names as a convention for Chrome to know their si
 		A friendly reminder that reading the news is not always a good thing.
 	</p>
 	<p>
-		Inspiration: <a href="http://www.aaronsw.com/weblog/hatethenews" target="_blank">This essay</a> by <a href="http://en.wikipedia.org/wiki/Aaron_Swartz" target="_blank">Aaron Swartz</a>.
+		Inspiration: <a href="http://www.aaronsw.com/weblog/hatethenews" target="_blank">This essay</a> by <a href="https://en.wikipedia.org/wiki/Aaron_Swartz" target="_blank">Aaron Swartz</a>.
 	</p>
 	<p>
 		No News is open source! Visit our <a href="https://github.com/jdstraughan/nonews" target="_blank">GitHub Page</a>.

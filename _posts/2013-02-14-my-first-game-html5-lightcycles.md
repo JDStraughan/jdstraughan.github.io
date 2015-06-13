@@ -8,7 +8,7 @@ header-img: "img/header/tron.jpg"
 image-credit: Pacifier (Own work) [<a href="http://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA-3.0</a>], <a href="http://commons.wikimedia.org/wiki/File%3ATron_bryce.jpg">via Wikimedia Commons</a>
 ---
 
-For the past few months I have been playing with the [HTML5 canvas element](http://en.wikipedia.org/wiki/Canvas_element) off and on.  In recent years it has been the subject of much excitement in the web development community, and as matured rapidly in modern browsers.  Now there are a wide variety of games and activities that utilize this relatively new element.
+For the past few months I have been playing with the [HTML5 canvas element](https://en.wikipedia.org/wiki/Canvas_element) off and on.  In recent years it has been the subject of much excitement in the web development community, and as matured rapidly in modern browsers.  Now there are a wide variety of games and activities that utilize this relatively new element.
 
 For whatever reasons, I just assumed manipulating the canvas would be a pain in the ass, so I avoided it.  I thought, "I am not a game developer, so I have no need for it."  I understood that not all canvas use was in the realm of game development, however, the other use cases weren't inspiring me to learn.
 
