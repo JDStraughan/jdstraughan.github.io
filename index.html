@@ -7,7 +7,7 @@ header-img: "img/header/2015-world-showcase-france-epcot.jpeg"
 
 {% for post in paginator.posts %}
 <div class="post-preview" itemprop="blogPost" itemscope="" itemtype="http://schema.org/BlogPosting">
-    <a href="{{ post.url | prepend: site.baseurl }}" itemprop="url">
+    <a href="{{ post.url | prepend: site.baseurl | append: '/' }}" itemprop="url">
         <h2 class="post-title" itemprop="name">
             {{ post.title }}
         </h2>
@@ -33,12 +33,12 @@ header-img: "img/header/2015-world-showcase-france-epcot.jpeg"
 <ul class="pager">
     {% if paginator.previous_page %}
     <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' | append: '/' }}">&larr; Newer Posts</a>
     </li>
     {% endif %}
     {% if paginator.next_page %}
     <li class="next">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' | append: '/' }}">Older Posts &rarr;</a>
     </li>
     {% endif %}
 </ul>
