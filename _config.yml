@@ -11,7 +11,7 @@ linkedin_username:  JDStraughan
 # Build settings
 markdown: kramdown
 highlighter: pygments
-permalink: /:year/:month/:day/:title
+permalink: /:year/:month/:day/:title/index.html
 paginate: 6
 exclude: ["node_modules"]
 
