@@ -15,6 +15,9 @@ permalink: /:year/:month/:day/:title
 paginate: 6
 exclude: ["node_modules"]
 
+gems:
+  - jekyll-paginate
+
 # Compress HTML settings
 compress_html:
   clippings: all
