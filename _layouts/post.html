@@ -25,25 +25,23 @@ layout: default
     <!-- Post Content -->
     <article>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div itemprop="articleBody">
-        				{{ content }}
-                    </div>
-                    <hr>
+            <div itemprop="articleBody">
+				{{ content }}
+            </div>
+            <hr>
 
-                    <ul class="pager">
-                        {% if page.previous.url %}
-                        <li class="previous">
-                            <a href="{{page.previous.url streaming_mp4_url}}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Previous Post</a>
-                        </li>
-                        {% endif %}
-                        {% if page.next.url %}
-                        <li class="next">
-                            <a href="{{page.next.url streaming_mp4_url}}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Next Post &rarr;</a>
-                        </li>
-                        {% endif %}
-                    </ul>
+            <ul class="pager">
+                {% if page.previous.url %}
+                <li class="previous">
+                    <a href="{{page.previous.url streaming_mp4_url}}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Previous Post</a>
+                </li>
+                {% endif %}
+                {% if page.next.url %}
+                <li class="next">
+                    <a href="{{page.next.url streaming_mp4_url}}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Next Post &rarr;</a>
+                </li>
+                {% endif %}
+            </ul>
 
                     <hr>
                     <div id="disqus_thread" itemprop="comment"></div>
@@ -63,19 +61,27 @@ layout: default
 
                     <hr>
 
-                    Related Posts
-                    <ul class="related_posts">
-                    {% for related in site.related_posts %}
-                    <li itemscope="" itemtype="http://schema.org/BlogPosting">
-                        <a href="{{ related.url streaming_mp4_url }}" itemprop="url"><span itemprop="name">{{ related.title }}</span></a>
-                        <meta itemprop="author" content="Jason Straughan" />
-                        <meta itemprop="description" content="{{ related.description }}" />
-                        <meta itemprop="datePublished" content="{{ related.date | date: "%B %-d, %Y" }}" />
-                    </li>
-                    {% endfor %}
-                    </ul>
-                </div>
-            </div>
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+            <hr>
+
+            Related Posts
+            <ul class="related_posts">
+            {% for related in site.related_posts %}
+            <li itemscope="" itemtype="http://schema.org/BlogPosting">
+                <a href="{{ related.url streaming_mp4_url }}" itemprop="url"><span itemprop="name">{{ related.title }}</span></a>
+                <meta itemprop="author" content="Jason Straughan" />
+                <meta itemprop="description" content="{{ related.description }}" />
+                <meta itemprop="datePublished" content="{{ related.date | date: "%B %-d, %Y" }}" />
+            </li>
+            {% endfor %}
+            </ul>
         </div>
     </article>
 
