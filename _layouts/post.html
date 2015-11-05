@@ -4,23 +4,21 @@ layout: default
 <div itemscope="" itemtype="http://schema.org/BlogPosting">
     <meta itemprop="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.title }}{% endif %}" />
     <meta itemprop="author" content="Jason Straughan" />
+
     <!-- Post Header -->
     <header class="intro-header" style="background-image: url('{{ site.baseurl }}/{{ page.header-img }}')">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="post-heading">
-                        <h1 itemprop="name">{{ page.title }}</h1>
-                        {% if page.subtitle %}
-                        <h2 class="subheading" itemprop="name">{{ page.subtitle }}</h2>
-                        {% endif %}
-                        <span class="meta">Posted on <span itemprop="datePublished">{{ page.date | date: "%B %-d, %Y" }}</span></span>
-                        {% if page.image-credit %}
-                        <span class="image-credit">Image Credit: {{ page.image-credit }}</span>
-                        {% endif %}
-                    </div>
-                </div>
-            </div>
+        {% include nav.html %}
+        <div class="container post-heading">
+            <h1 itemprop="name">{{ page.title }}</h1>
+            {% if page.subtitle %}
+            <h2 class="subheading" itemprop="name">{{ page.subtitle }}</h2>
+            {% endif %}
+            <p>
+                <span class="meta">Posted on <span itemprop="datePublished">{{ page.date | date: "%B %-d, %Y" }}</span></span>
+                {% if page.image-credit %}
+                <span class="image-credit">Image Credit: {{ page.image-credit }}</span>
+                {% endif %}
+            </p>
         </div>
     </header>
 
@@ -66,7 +64,7 @@ layout: default
                     <hr>
 
                     Related Posts
-                    <ul class="naked">
+                    <ul class="related_posts">
                     {% for related in site.related_posts %}
                     <li itemscope="" itemtype="http://schema.org/BlogPosting">
                         <a href="{{ related.url streaming_mp4_url }}" itemprop="url"><span itemprop="name">{{ related.title }}</span></a>

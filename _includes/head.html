@@ -19,10 +19,317 @@
     <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.title }}{% endif %}" />
     <meta name="twitter:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
 
-    <!-- Bootstrap Core CSS -->
-    <!-- <link rel="stylesheet" href="{{ "/css/jdstraughan.min.css" | prepend: site.baseurl }}"> -->
-    <!-- Custom Fonts -->
- <!--    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'> -->
+
+    <style type="text/css">
+
+    html, body, div, span, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    abbr, address, cite, code,
+    del, dfn, em, img, ins, kbd, q, samp,
+    small, strong, sub, sup, var,
+    b, i,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, figcaption, figure,
+    footer, header, hgroup, menu, nav, section, summary,
+    time, mark, audio, video {
+        margin:0;
+        padding:0;
+        border:0;
+        outline:0;
+        font-size:100%;
+        vertical-align:baseline;
+        background:transparent;
+    }
+
+    article,aside,details,figcaption,figure,
+    footer,header,hgroup,menu,nav,section {
+        display:block;
+    }
+    blockquote, q {
+        quotes:none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content:'';
+        content:none;
+    }
+    a {
+        margin:0;
+        padding:0;
+        font-size:100%;
+        vertical-align:baseline;
+        background:transparent;
+        color: inherit;
+    }
+    a:hover {
+        color: #0085a1;
+    }
+    hr {
+        display:block;
+        height:1px;
+        border:0;
+        border-top:1px solid #cccccc;
+        margin:1em 0;
+        padding:0;
+    }
+    body {
+        font-family: 'Times New Roman', serif;
+        font-size: 20px;
+        color: #404040;
+        line-height: 1.42857143;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: 800;
+        line-height: 1.1;
+        color: inherit;
+    }
+
+    h1, .h1, h2, .h2, h3, .h3 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3, h4, h5 {
+        font-size: 22px;
+    }
+
+    p {
+        line-height: 1.5;
+        margin: 30px 0;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    article p img {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    /* SMARTPHONES PORTRAIT */
+    @media only screen and (min-width: 300px) {
+        .site-heading, .post-heading {
+            padding: 45px 12% 12px;
+            font-size: 12px;
+        }
+        .site-heading h1, .post-heading h1{
+             font-size: 18px;
+        }
+        .site-heading h2, .post-heading h2{
+             font-size: inherit;
+        }
+        .intro-header {
+            height: 275px;
+        }
+    }
+
+    /* SMARTPHONES LANDSCAPE */
+    @media only screen and (min-width: 480px) {
+        .site-heading, .post-heading {
+            padding: 65px 12% 15px;
+            font-size: 14px;
+        }
+        .site-heading h1, .post-heading h1{
+             font-size: 24px;
+        }
+        .site-heading h2, .post-heading h2{
+             font-size: inherit;
+        }
+        .intro-header {
+            height: 325px;
+        }
+    }
+
+    /* TABLETS PORTRAIT */
+    @media only screen and (min-width: 768px) {
+        .site-heading, .post-heading {
+            padding: 255px 12% 15px;
+            font-size: 14px;
+        }
+        .site-heading h1, .post-heading h1{
+             font-size: 28px;
+        }
+        .site-heading h2, .post-heading h2{
+             font-size: inherit;
+        }
+        .intro-header {
+            height: 475px;
+        }
+    }
+
+
+    /* TABLET LANDSCAPE / DESKTOP */
+    @media only screen and (min-width: 1024px) {
+        .site-heading, .post-heading {
+            padding: 325px 12% 15px;
+            font-size: 16px;
+        }
+        .site-heading h1, .post-heading h1{
+             font-size: 32px;
+        }
+        .site-heading h2, .post-heading h2{
+             font-size: inherit;
+        }
+        .intro-header {
+            height: 575px;
+        }
+    }
+
+    /* LARGE DESKTOP */
+    @media only screen and (min-width: 1600px) {
+        .site-heading, .post-heading {
+            padding: 470px 12% 15px;
+            font-size: 22px;
+        }
+        .site-heading h1, .post-heading h1{
+             font-size: 36px;
+        }
+        .intro-header {
+            height: 750px;
+        }
+    }
+
+    .container {
+        width: 66.6667%;
+        margin: 2.6667% auto;
+        max-width: 900px;
+    }
+
+    .site-heading, .post-heading {
+        text-align: center;
+    }
+
+    .site-heading h1,
+    .site-heading h2,
+    .site-heading p,
+    .post-heading h1,
+    .post-heading h2,
+    .post-heading p {
+        background-color: rgba(0,0,0,0.5);
+        margin: 0;
+        padding: 8px;
+    }
+
+    .intro-header {
+        color: #FFF;
+        background-color: #808080;
+        background: no-repeat center center;
+        background-attachment: scroll;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+        margin-bottom: 50px;
+        text-shadow: 2px 2px 0 #111;
+        padding: 12px 32px;
+    }
+    .intro-header a {
+        text-decoration: none;
+    }
+
+    .navbar {
+        padding: 6px 20px;
+        background-color: rgba(0,0,0,0.5)
+    }
+
+    .intro-header .navbar-right {
+        float: right;
+        margin-top: -28px;
+        list-style-type: none;
+    }
+
+    ul.navbar-right li {
+        display: inline;
+        margin-left: 18px;
+    }
+
+    .post-preview a, .post-preview a:hover {
+        text-decoration: none;
+    }
+
+    article ul {
+        margin: 15px 15px 15px 45px;
+    }
+
+    /* BELOW THE FOLD */
+
+    .pager li > a, .pager li > span {
+        display: inline-block;
+        border: 1px solid #dddddd;
+        font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        padding: 10px 5px;
+        background-color: white;
+        border-radius: 0;
+    }
+
+    .pager {
+        list-style-type: none;
+        display: inline-block;
+        width: 90%;
+    }
+
+    .pager a {
+        list-style-type: none;
+        text-decoration: none;
+    }
+
+    .previous {
+        float: left;
+    }
+
+    .next {
+        float: right;
+    }
+
+    .related_posts {
+        list-style-type: none;
+    }
+
+    .related_posts li {
+        margin: 6px 0;
+    }
+
+    .related_posts a {
+        text-decoration: none;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    footer ul {
+        list-style-type: none;
+    }
+
+    footer ul li {
+        display: inline;
+        padding: 0 6px;
+    }
+
+    footer ul li a {
+        text-decoration: none;
+    }
+
+    </style>
 
     <script type="application/ld+json">
     {
