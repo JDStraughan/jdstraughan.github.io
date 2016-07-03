@@ -1,3 +1,12 @@
+---
+layout: post
+published: true
+title:
+description:
+header-img: "img/header/"
+image-credit: 
+---
+
 # This is a test
 
 This is only a test.
