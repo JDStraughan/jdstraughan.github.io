@@ -217,7 +217,7 @@ The [Kilimanjaro Safari](https://disneyworld.disney.go.com/attractions/animal-ki
 
 The [Maharajah Jungle Trek](https://disneyworld.disney.go.com/attractions/animal-kingdom/maharajah-jungle-trek/) is a great way to get see some tigers, birds, and other wild animals. It requires a bit of walking, but it is worth every step and is very well shaded. The best part is you can enjoy it at whatever pace you choose. We also like the [Flights of Wonder](https://disneyworld.disney.go.com/entertainment/animal-kingdom/flights-of-wonder/) bird show, where a variety of birds are presented by knowledgeable keepers and researchers.
 
-[Expedition Everest](https://disneyworld.disney.go.com/attractions/animal-kingdom/expedition-everest/) is a good roller coaster with a cool queue full of authentic gear from Mount Everest. It is one of the better coasters at Walt Disney World and is a replica of the same attraction from Disneyland in California.
+[Expedition Everest](https://disneyworld.disney.go.com/attractions/animal-kingdom/expedition-everest/) is a good roller coaster with a cool queue full of authentic gear from Mount Everest. It is one of the better coasters at Walt Disney World.
 
 [DINOSAUR](https://disneyworld.disney.go.com/attractions/animal-kingdom/dinosaur/) is one of my son's favorite rides, where you take a time machine to prehistoric earth and bring back an Iguanodon seconds before a major extinction event. A bit bumpy at times, this ride is perfect for elementary aged kids and above. Pay close attention as this ride is full of easter eggs and fun features.
 
