@@ -1,0 +1,23 @@
+{
+  "name": "@jdstraughan [blog]",
+  "short_name": "JDStraughan",
+  "description": "Blog of Entrepreneur and Disneyphile Jason Straughan",
+  "lang": "en-US",
+  "icons": [
+    {
+      "src": "/images/icons/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/icons/icon--512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#0085a1",
+  "background_color": "#FFF"
+}

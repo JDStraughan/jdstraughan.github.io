@@ -4,3 +4,4 @@ gem "jekyll"
 gem "pygments.rb"
 gem "jekyll-paginate"
 gem "jekyll-sitemap"
+gem 'jekyll-pwa-plugin'

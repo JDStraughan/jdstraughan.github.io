@@ -33,40 +33,15 @@ layout: default
             <ul class="pager">
                 {% if page.previous.url %}
                 <li class="previous">
-                    <a href="{{page.previous.url streaming_mp4_url}}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Previous Post</a>
+                    <a href="{{page.previous.url}}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Previous Post</a>
                 </li>
                 {% endif %}
                 {% if page.next.url %}
                 <li class="next">
-                    <a href="{{page.next.url streaming_mp4_url}}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Next Post &rarr;</a>
+                    <a href="{{page.next.url}}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Next Post &rarr;</a>
                 </li>
                 {% endif %}
             </ul>
-
-            <hr>
-            <div id="disqus_thread"></div>
-            <script type="text/javascript">
-                /**
-                 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                 */
-                var disqus_config = function () {
-                    this.page.url = '{{site.url}}{{page.url}}';
-                    this.page.identifier = '{{page.url}}';
-                };
-
-                (function() {
-                    var d = document, s = d.createElement('script');
-
-                    s.src = '//jdstraughan.disqus.com/embed.js';
-
-                    s.setAttribute('data-timestamp', +new Date());
-                    (d.head || d.body).appendChild(s);
-                })();
-            </script>
-            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-
-            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
             <hr>
 
@@ -74,7 +49,7 @@ layout: default
             <ul class="related_posts">
             {% for related in site.related_posts %}
             <li itemscope="" itemtype="http://schema.org/BlogPosting">
-                <a href="{{ related.url streaming_mp4_url }}" itemprop="url"><span itemprop="name">{{ related.title }}</span></a>
+                <a href="{{ related.url }}" itemprop="url"><span itemprop="name">{{ related.title }}</span></a>
                 <meta itemprop="author" content="Jason Straughan" />
                 <meta itemprop="description" content="{{ related.description }}" />
                 <meta itemprop="datePublished" content="{{ related.date | date: "%B %-d, %Y" }}" />

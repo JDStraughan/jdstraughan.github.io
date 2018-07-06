@@ -1,23 +1,24 @@
 # Site settings
-title: JDStraughan
+title: "@jdstraughan"
 email: jdstraughan@gmail.com
 description: "Blog of Web Developer, Entrepreneur, and Disneyphile Jason D. Straughan. Founder and CEO of Grok Interactive and Co-Founder of Codeup."
 url: "http://jdstraughan.com"
 twitter_username: jdstraughan
-github_username:  JDStraughan
-facebook_username:  JDStraughan
-linkedin_username:  JDStraughan
+github_username:  jdstraughan
+facebook_username:  jdstraughan
+linkedin_username:  jdstraughan
 
 # Build settings
 markdown: kramdown
-highlighter: pygments
+highlighter: rogue
 permalink: /:year/:month/:day/:title/index.html
-paginate: 6
+paginate: 8
 exclude: ["node_modules"]
 
-gems:
+plugins:
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-pwa-plugin
 
 # Compress HTML settings
 compress_html:
@@ -26,3 +27,25 @@ compress_html:
   endings: []
   ignore:
     envs: [local]
+
+baseurl: ""
+
+pwa:
+  sw_filename: service-worker.js # Required
+  dest_js_directory: assets/js # Required
+  cache_name: my-cache # Optional
+  precache_recent_posts_num: 5 # Optional
+  precache_glob_directory: / # Optional
+  precache_glob_patterns: # Optional
+    - "{js,css,fonts}/**/*.{js,css,eot,svg,ttf,woff}"
+    - index.html
+    - about.html
+    - "/page*/*"
+  precache_glob_ignores: # Optional
+    - sw-register.js
+    - "fonts/**/*"
+  runtime_cache: # Optional
+    - route: /^api\/getdata/
+      strategy: networkFirst
+    - route: "'/api/pic'"
+      strategy: cacheFirst

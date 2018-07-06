@@ -2,7 +2,6 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.title }}{% endif %}">
 
     <meta name="HandheldFriendly" content="True" />
@@ -17,6 +16,21 @@
     <meta name="twitter:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}" />
     <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.title }}{% endif %}" />
     <meta name="twitter:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="JDStraughan">
+    <meta name="apple-mobile-web-app-title" content="JDStraughan">
+    <meta name="theme-color" content="#0085a1">
+    <meta name="msapplication-navbutton-color" content="#0085a1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="msapplication-starturl" content="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="manifest" href="/manifest.json">
 
     <style type="text/css">
 

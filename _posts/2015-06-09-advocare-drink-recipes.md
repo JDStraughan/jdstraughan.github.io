@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Advocare Drink Recipes and Mix-Ups
 description: Over the years we have created some Frankenstein concoctions with various Advocare drink mixes, and a handful have been massive successes.
 header-img: "img/header/1_ADVOCARE_WBC_Blue.jpg"
@@ -33,7 +33,7 @@ Nothing starts off a productive day like a glass of orange juice. It is great ta
 
 [Meal Replacement Shake](https://www.advocare.com/130340596/Store/ItemDetail.aspx?itemCode=T1251&id=A&flavor=B) + Water + Ice + Banana + Blender
 
-This combination is a winner. I like to use the [dark chocolate shake mix](https://www.advocare.com/130340596/Store/ItemDetail.aspx?itemCode=T2151&id=A&flavor=h), a ripe banana, and a little less water than usual. The banana adds a lot of flavor and texture to the shake, and I like to throw in a littlRandall MunroeRandall Munroeree bit of ice to keep it cold. My wife prefers to omit the ice, and sometimes uses almond milk instead of water.
+This combination is a winner. I like to use the [dark chocolate shake mix](https://www.advocare.com/130340596/Store/ItemDetail.aspx?itemCode=T2151&id=A&flavor=h), a ripe banana, and a little less water than usual. The banana adds a lot of flavor and texture to the shake, and I like to throw in a little bit of ice to keep it cold. My wife prefers to omit the ice, and sometimes uses almond milk instead of water.
 
 ## Hot SleepWorks Tea
 
