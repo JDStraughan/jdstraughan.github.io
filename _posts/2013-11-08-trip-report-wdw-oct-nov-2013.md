@@ -3,7 +3,7 @@ layout: post
 published: true
 author: Jason Straughan
 title: "Trip Report - Walt Disney World (Port Orleans Riverside)"
-description: "Trip Report"
+description: "Trip Report from Port Orleans Riverside Resort in Walt Disney World, Orland, Fl Oct 27 - Nov 2, 2013"
 header-img: "img/header/wdw-portorleans-2013.jpg"
 image-credit: 
 ---
