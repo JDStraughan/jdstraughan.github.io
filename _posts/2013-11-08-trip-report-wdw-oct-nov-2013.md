@@ -2,8 +2,8 @@
 layout: post
 published: true
 author: Jason Straughan
-title: "Trip Report - Walt Disney World (Port Orleans Riverside)"
-description: "Trip Report from Port Orleans Riverside Resort in Walt Disney World, Orland, Fl Oct 27 - Nov 2, 2013"
+title: "Trip Report - Walt Disney World (Port Orleans French Quarter)"
+description: "Trip Report from Port Orleans French Quarter Resort in Walt Disney World, Orland, Fl Oct 27 - Nov 2, 2013"
 header-img: "img/header/wdw-portorleans-2013.jpg"
 image-credit: 
 ---
@@ -12,23 +12,23 @@ image-credit:
 
 * **Dates:** Oct 27 - Nov 2, 2013
 * **Party Size:** 8 (7 Adults, 1 Child)
-* **Resort:** Port Orleans - Riverside
+* **Resort:** Port Orleans - French Quarter
 * **Meal Plan:** Yes - Included with Special
 * **Extras:** Mickey's Not So Scary Halloween Party
 
 ## Resort Review
 
-Port Orleans Riverside is our first stay at a Disney moderate level resort. Our first two trips have been at the value level, both in All Star Music. This year's special of free dining enticed us to make the upgrade, and we are glad we did.
+Port Orleans French Quarter is our first stay at a Disney moderate level resort. Our first two trips have been at the value level, both in All Star Music. This year's special of free dining enticed us to make the upgrade, and we are glad we did.
 
 The resort has great dining options, a centrally located pool with bar, and the layout is very relaxing. Each building has that Louisiana antebellum architecture and the winding waterways make any walk around this resort a pleasure.
 
-The bar inside offered fun live entertainment and good drinks. The gift shop was certainly an upgrade, and there were options to rent a boat or walk over the the French Quarter portion of the Port Orleans resort.
+The Scat Cat's Club bar inside offered fun live entertainment and good drinks. The gift shop was certainly an upgrade, and there were options to rent a boat or walk over the the Riverside portion of the Port Orleans resort.
 
 The only downside to this resort we found was the frequency and reliability of buses. They would fill up fast and arrive less often than we remember from our ASM stays. Other than the long transportation wait times, this resort was great.
 
 ## Itinerary
 
-After our first Disney trip we've learned to plan things out. 
+After our first Disney trip, we've learned to plan things out. 
 
 ![WDW Oct 2013 Itinerary](/img/post/2013/wdw-portorleans-2013/oct-2013-wdw-schedule.png)
 
@@ -46,11 +46,11 @@ We came back this year because of Epcot's International Food and Wine Festival. 
 
 ![Epcot - Day 1 - Food and Wine Festival](/img/post/2013/wdw-portorleans-2013/day1-epcot-fwf.jpg)
 
-After landing and checking in, we headed straight to Epcot. We had considered stopping by Magic Kingdom first, but the lure of Food and Wine before our reservation at Garden Grill was too hard to pass up.
+After landing and checking in, we headed straight to Epcot. We had considered stopping by the Magic Kingdom first, but the lure of Food and Wine before our reservation at Garden Grill was too hard to pass up.
 
 ![Garden Grill Mickey and Michael](/img/post/2013/wdw-portorleans-2013/garden-grill-mickey-and-michael.jpg)
 
-Our first time to dine at the Garden Grill did not disappoint. This rotating diner serves family style food in the Land Pavilion at Epcot. During the meal the dining room rotates through the rainforest section of the Living with the Land ride, and features character dining experiences. We met Mickey, Chip, and Dale. Interacting with them, especially Chip and Dale, was a lot of fun.
+Our first time to dine at the Garden Grill did not disappoint. This rotating diner serves family-style food in the Land Pavilion at Epcot. During the meal the dining room rotates through the rainforest section of the Living with the Land ride and features character dining experiences. We met Mickey, Chip, and Dale. Interacting with them, especially Chip and Dale, was a lot of fun.
 
 ##### Day 2
 
@@ -60,7 +60,7 @@ Our first time to dine at the Garden Grill did not disappoint. This rotating din
 * Festival of the Lion King
 * Buzz Lightyear's Space Ranger Spin
 * Space Mountain
-* Tomorrowland Terrace Fireworks Desert Party
+* Tomorrowland Terrace Fireworks Dessert Party
 
 We started the day off in Animal Kingdom with breakfast at Tusker House. This buffet is a good way to start the day, especially when you have a large group. The selection is wide, making sure there is something for everyone. Pro tip: you can order Bloody Marys from the bar outside from your server inside. The one with bacon is the best.
 
@@ -102,11 +102,11 @@ King Louie and Baloo hanging out in AK.
 
 ![Animal Kingdom Expedition Everest](/img/post/2013/wdw-portorleans-2013/Expedition-Everest.jpg)
 
-After a ride on Expedition Everest we headed back to the resort to prepare for the Tomorrowland Desert Party at Magic Kingdom.
+After a ride on Expedition Everest, we headed back to the resort to prepare for the Tomorrowland Dessert Party at Magic Kingdom.
 
 ![Magic Kingdom Main St at Night](/img/post/2013/wdw-portorleans-2013/mk-mainst-at-night.jpg)
 
-While the firework show at MK is incredible, the desert party wasn't worth the extra spend in my opinion. The angle of the viewing was worse than almost anywhere on Main Street, and it was hard to hear the audio. The deserts were okay, but I'd not recommend this party for the spend.
+While the firework show at MK is incredible, the dessert party wasn't worth the extra spend in my opinion. The angle of the viewing was worse than almost anywhere on Main Street, and it was hard to hear the audio. The desserts were okay, but I'd not recommend this party for the spend.
 
 ##### Day 3
 
@@ -246,7 +246,7 @@ After dinner we took a ride over to the Polynesian resort under false pretenses.
 
 ![Magic Kingdom Epcot World Showcase](/img/post/2013/wdw-portorleans-2013/birthday-night-6.jpg)
 
-This experience was amazing. We had champagne and strawberries delivered to the boat, and the captain took us out directly across from the Castle. The music and audio was broadcast and played over the boat's radio while we sat back and enjoyed the show. I cannot recommend this enough for your special occasion at WDW.
+This experience was amazing. We had champagne and strawberries delivered to the boat, and the captain took us out directly across from the Castle. The music and audio were broadcast and played over the boat's radio while we sat back and enjoyed the show. I cannot recommend this enough for your special occasion at WDW.
 
 ##### Day 5
 
@@ -298,7 +298,7 @@ Chrystina was able to attend a drawing class with a Disney animator and meet Min
 
 ![Magic Kingdom ](/img/post/2013/wdw-portorleans-2013/hs-11.jpg)
 
-It was a fun filled day at Hollywood Studios. We finished up at Fantasmic, the nighttime show, and it was enjoyed by all. Happy Halloween!
+It was a fun-filled day at Hollywood Studios. We finished up at Fantasmic, the nighttime show, and it was enjoyed by all. Happy Halloween!
 
 ##### Day 6
 
@@ -309,7 +309,7 @@ Back at Epcot, enjoying another day at World Showcase for the festival.
 
 ![Epcot ](/img/post/2013/wdw-portorleans-2013/epcot-day-6-1.jpg)
 
-The entrance to Epcot is a great place to get great picture from a Photopass photographer.
+The entrance to Epcot is a great place to get a memorable picture from a Photopass photographer.
 
 ![Epcot ](/img/post/2013/wdw-portorleans-2013/epcot-day-6-2.jpg)
 
@@ -337,7 +337,7 @@ Michael found a Fez hat he needed all of the sudden, as well as other fun items 
 
 ![Epcot ](/img/post/2013/wdw-portorleans-2013/epcot-day-6-8.jpg)
 
-It was a great day in Epcot. The festival, world showcase, great meals, and low crowds made this a day our family will remember for a long time.
+It was a great day at Epcot. The festival, world showcase, great meals, and low crowds made this a day our family will remember for a long time.
 
 ![Epcot ](/img/post/2013/wdw-portorleans-2013/epcot-day-6-9.jpg)
 
@@ -364,10 +364,7 @@ My sister Kimberly was chosen as a participant in the Indiana Jones Stunt Show. 
 
 ![Hollywood Studios ](/img/post/2013/wdw-portorleans-2013/last-day-4.jpg)
 
-Goodbye for now Disney World. We'll be back!
-
-
-
+Goodbye, for now, Disney World. We'll be back!
 
 
 
