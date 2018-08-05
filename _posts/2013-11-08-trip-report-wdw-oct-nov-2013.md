@@ -292,6 +292,12 @@ This time he was able to fight Darth Vader and was victorious.
 
 I loved this force push of 2 Stormtroopers after he defeated Vader.
 
+<iframe id="ytplayer" type="text/html" width="900" height="506.25"
+src="https://www.youtube.com/embed/A3euhWO75_o"
+frameborder="0" allowfullscreen></iframe>
+
+The full video on YouTube of Michael's Jedi Training II.
+
 ![Magic Kingdom ](/img/post/2013/wdw-portorleans-2013/hs-10.jpg)
 
 Chrystina was able to attend a drawing class with a Disney animator and meet Minnie Mouse in person.
