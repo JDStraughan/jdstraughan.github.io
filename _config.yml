@@ -19,6 +19,7 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-pwa-plugin
+  - jekyll-admin
 
 # Compress HTML settings
 compress_html:
